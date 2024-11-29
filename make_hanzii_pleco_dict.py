@@ -73,6 +73,8 @@ def main():
     # MAX_ITEMS = 100
     REPORT_COUNT = 1000
 
+    clean_dict_data = {}
+    
     output_file = join(DICT_DIR, f"TrungViet-{dict_size}{"_Pleco" if MAKE_PLECO else ""}.txt")
     PC_DICT_NAME = f"//TrungViet Beta {dict_size} Dict"
     with open(output_file, "w", encoding="utf-8") as pleco_import_file:
@@ -106,13 +108,21 @@ def main():
 
             # if dict_size in ['mid', 'big'] and dict_item['amhanviet']:
             # if dict_size == 'big':
+            total = 0
+
+            for wordkind in dict_item["wordkinds"]["list_items"]:
+                total += len(dict_item["wordkinds"]["list_items"][wordkind]) 
+            
+            num = 1
+
             for wordkind in dict_item["wordkinds"]["list_items"]:
                 # pleco_string += f"{pleco_make_dark_gray(pleco_make_bold(wordkind))}\n"
 
                 items = dict_item["wordkinds"]["list_items"][wordkind]
                 for item in items:
-                    if len(items) > 1:
-                        number = number_in_cirle(int(item["definition"]["number"]))
+                    if total > 1:
+                        number = number_in_cirle(num)
+                        num += 1
                         pleco_string += f"{pleco_make_dark_gray(pleco_make_bold(number,make_pleco=MAKE_PLECO),
                                                                 make_pleco=MAKE_PLECO)} "
 
