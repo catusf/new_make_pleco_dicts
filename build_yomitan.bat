@@ -1,0 +1,1 @@
+pyglossary --cmd --read-format=Tabfile --name="Chinese Char Components" --write-format=Yomichan dict/Char-Dict_pleco.tab dict/Char-Dict_pleco.zip

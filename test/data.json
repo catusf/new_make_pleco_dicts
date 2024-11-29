@@ -1,0 +1,14 @@
+[
+    {
+        "word": "apple",
+        "part_of_speech": "noun",
+        "meaning": "A fruit that is typically red, green, or yellow.",
+        "example": "He ate an apple for breakfast."
+    },
+    {
+        "word": "run",
+        "part_of_speech": "verb",
+        "meaning": "To move swiftly on foot.",
+        "example": "She runs every morning to stay fit."
+    }
+]

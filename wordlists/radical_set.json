@@ -1,0 +1,6422 @@
+{
+    "⼀": {
+        "meaning": "one",
+        "number": 1,
+        "pinyin": "yī",
+        "name": "一字旁",
+        "strokes": 1,
+        "frequency": "42",
+        "examples": "王、丁、七、三",
+        "useful": {
+            "distinguish": [
+                "乛",
+                "亠",
+                "冖",
+                "宀"
+            ],
+            "variants": [],
+            "rank": "88.5%",
+            "mnemonic": "",
+            "notes": " Characters are classified here when they have a horizontal stroke and don't fit under any other radicals"
+        },
+        "variants": [
+            "一"
+        ],
+        "standalone": "一",
+        "codepoint": "0x2f00",
+        "standalone_codepoint": "0x4e00",
+        "variant_codepoint": [
+            "0x4e00"
+        ],
+        "viet-pron": "nhất",
+        "viet-meaning": "số một"
+    },
+    "⼁": {
+        "meaning": "line",
+        "number": 2,
+        "pinyin": "gǔn",
+        "name": "",
+        "strokes": 1,
+        "frequency": "21",
+        "examples": "十、中、串、丰",
+        "useful": {
+            "distinguish": [
+                "亅"
+            ],
+            "variants": [],
+            "rank": "66.3%",
+            "mnemonic": "",
+            "notes": " Now simply called shu4 - 竖, which means vertical stroke, see gun3"
+        },
+        "variants": [
+            "丨"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f01",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x4e28"
+        ],
+        "viet-pron": "cổn",
+        "viet-meaning": "nét sổ"
+    },
+    "⼂": {
+        "meaning": "dot",
+        "number": 3,
+        "pinyin": "zhǔ",
+        "name": "丶字旁",
+        "strokes": 1,
+        "frequency": "10",
+        "examples": "丸、凡、丹、户",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "63.1%",
+            "mnemonic": "",
+            "notes": ""
+        },
+        "variants": [
+            "⺀",
+            "丶"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f02",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x2e80",
+            "0x4e36"
+        ],
+        "viet-pron": "chủ",
+        "viet-meaning": "điểm, chấm"
+    },
+    "⼃": {
+        "meaning": "slash",
+        "number": 4,
+        "pinyin": "piě",
+        "name": "",
+        "strokes": 1,
+        "frequency": "33",
+        "examples": "乂、乃、久、八",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "乀",
+                "乁"
+            ],
+            "rank": "76.3%",
+            "mnemonic": "",
+            "notes": " general stroke, sometimes means falling"
+        },
+        "variants": [
+            "丿",
+            "乀",
+            "乁"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f03",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x4e3f",
+            "0x4e40",
+            "0x4e41"
+        ],
+        "viet-pron": "phiệt",
+        "viet-meaning": "nét sổ xiên qua trái"
+    },
+    "⼄": {
+        "meaning": "second",
+        "number": 5,
+        "pinyin": "yǐ",
+        "name": "",
+        "strokes": 1,
+        "frequency": "42",
+        "examples": "九、乞、也",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "乚",
+                "乛"
+            ],
+            "rank": "52.7%",
+            "mnemonic": " possibly represents a sprout",
+            "notes": ""
+        },
+        "variants": [
+            "⺂",
+            "⺃",
+            "⺄",
+            "乙",
+            "乚",
+            "乛"
+        ],
+        "standalone": "乙",
+        "codepoint": "0x2f04",
+        "standalone_codepoint": "0x4e59",
+        "variant_codepoint": [
+            "0x2e82",
+            "0x2e83",
+            "0x2e84",
+            "0x4e59",
+            "0x4e5a",
+            "0x4e5b"
+        ],
+        "viet-pron": "ất",
+        "viet-meaning": "vị trí thứ hai trong thiên can"
+    },
+    "⼅": {
+        "meaning": "hook",
+        "number": 6,
+        "pinyin": "jué",
+        "name": "",
+        "strokes": 1,
+        "frequency": "19",
+        "examples": "了、矛、事",
+        "useful": {
+            "distinguish": [
+                "丨"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": "",
+            "notes": ""
+        },
+        "variants": [
+            "亅",
+            "𠄌"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f05",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x4e85",
+            "0x2010c"
+        ],
+        "viet-pron": "quyết",
+        "viet-meaning": "nét sổ có móc"
+    },
+    "⼆": {
+        "meaning": "two",
+        "number": 7,
+        "pinyin": "èr",
+        "name": "",
+        "strokes": 2,
+        "frequency": "29",
+        "examples": "貳、于、云、些",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "74.6%",
+            "mnemonic": "",
+            "notes": ""
+        },
+        "variants": [
+            "二"
+        ],
+        "standalone": "二",
+        "codepoint": "0x2f06",
+        "standalone_codepoint": "0x4e8c",
+        "variant_codepoint": [
+            "0x4e8c"
+        ],
+        "viet-pron": "nhị",
+        "viet-meaning": "số hai"
+    },
+    "⼇": {
+        "meaning": "lid",
+        "number": 8,
+        "pinyin": "tóu",
+        "name": "六字头",
+        "strokes": 2,
+        "frequency": "38",
+        "examples": "方、亡、亢、交",
+        "useful": {
+            "distinguish": [
+                "一",
+                "冖",
+                "宀",
+                "乛"
+            ],
+            "variants": [],
+            "rank": "75.3%",
+            "mnemonic": "",
+            "notes": " known in chinese as “点横” or “文字头”. Only a couple characters relate to any concept of cover or lid, a few more relate to the idea of a head as something up above. "
+        },
+        "variants": [
+            "亠"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f07",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x4ea0"
+        ],
+        "viet-pron": "đầu",
+        "viet-meaning": "không có ý nghĩa"
+    },
+    "⼈": {
+        "meaning": "man",
+        "number": 9,
+        "pinyin": "rén",
+        "name": "单立人,单人旁",
+        "strokes": 2,
+        "frequency": "794",
+        "examples": "你、什、仁、仇",
+        "useful": {
+            "distinguish": [
+                "入,八"
+            ],
+            "variants": [
+                "亻"
+            ],
+            "rank": "75.3%",
+            "mnemonic": " This is a simple stick figure, or a pair of legs",
+            "notes": " One of the most common radicals, typically used in characters representing human attributes or actions that man undertakes; Modern dictionaries group 人 and 入 together"
+        },
+        "variants": [
+            "⺅",
+            "人",
+            "亻"
+        ],
+        "standalone": "人",
+        "codepoint": "0x2f08",
+        "standalone_codepoint": "0x4eba",
+        "variant_codepoint": [
+            "0x2e85",
+            "0x4eba",
+            "0x4ebb"
+        ],
+        "viet-pron": "nhân",
+        "viet-meaning": "người"
+    },
+    "⼉": {
+        "meaning": "son, legs",
+        "number": 10,
+        "pinyin": "ér",
+        "name": "儿座底",
+        "strokes": 2,
+        "frequency": "52",
+        "examples": "兒、兀、允、元",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "79.1%",
+            "mnemonic": " Depicts the two legs of a person.   Few characters actually represent this meaning.",
+            "notes": " Also known as the LEGS radical due to ancient meaning.  Known now as the short form of 兒."
+        },
+        "variants": [
+            "儿"
+        ],
+        "standalone": "儿",
+        "codepoint": "0x2f09",
+        "standalone_codepoint": "0x513f",
+        "variant_codepoint": [
+            "0x513f"
+        ],
+        "viet-pron": "nhi",
+        "viet-meaning": "trẻ con"
+    },
+    "⼊": {
+        "meaning": "enter",
+        "number": 11,
+        "pinyin": "rù",
+        "name": "入字旁",
+        "strokes": 2,
+        "frequency": "28",
+        "examples": "內、全、兩、汆",
+        "useful": {
+            "distinguish": [
+                "八,人"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " The open door of a tent",
+            "notes": " modern dictionaries group 人 and 入 together"
+        },
+        "variants": [
+            "入"
+        ],
+        "standalone": "入",
+        "codepoint": "0x2f0a",
+        "standalone_codepoint": "0x5165",
+        "variant_codepoint": [
+            "0x5165"
+        ],
+        "viet-pron": "nhập",
+        "viet-meaning": "vào"
+    },
+    "⼋": {
+        "meaning": "eight",
+        "number": 12,
+        "pinyin": "bā",
+        "name": "八字旁",
+        "strokes": 2,
+        "frequency": "44",
+        "examples": "公、六、兮、穴",
+        "useful": {
+            "distinguish": [
+                "入,人"
+            ],
+            "variants": [
+                "丷"
+            ],
+            "rank": "20.1%",
+            "mnemonic": " Indicates separation, to split something. Can also have a meaning like 拔 - to pull out",
+            "notes": " Used in some characters with two downward strokes"
+        },
+        "variants": [
+            "丷",
+            "八"
+        ],
+        "standalone": "八",
+        "codepoint": "0x2f0b",
+        "standalone_codepoint": "0x516b",
+        "variant_codepoint": [
+            "0x4e37",
+            "0x516b"
+        ],
+        "viet-pron": "bát",
+        "viet-meaning": "số tám"
+    },
+    "⼌": {
+        "meaning": "wide",
+        "number": 13,
+        "pinyin": "jiōng",
+        "name": "同字匡",
+        "strokes": 2,
+        "frequency": "50",
+        "examples": "冇、冊、冉、肉",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": "",
+            "notes": " Also known as DOWN BOX radical"
+        },
+        "variants": [
+            "⺆",
+            "冂"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f0c",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x2e86",
+            "0x5182"
+        ],
+        "viet-pron": "quynh",
+        "viet-meaning": "vùng biên giới xa; hoang địa"
+    },
+    "⼍": {
+        "meaning": "cloth cover",
+        "number": 14,
+        "pinyin": "mì",
+        "name": "秃宝盖",
+        "strokes": 2,
+        "frequency": "30",
+        "examples": "冗、冠、冥、運",
+        "useful": {
+            "distinguish": [
+                "一",
+                "亠",
+                "宀",
+                "乛"
+            ],
+            "variants": [],
+            "rank": "59.0%",
+            "mnemonic": "",
+            "notes": " aka COVER radical"
+        },
+        "variants": [
+            "冖"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f0d",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x5196"
+        ],
+        "viet-pron": "mịch",
+        "viet-meaning": "trùm khăn lên"
+    },
+    "⼎": {
+        "meaning": "ice",
+        "number": 15,
+        "pinyin": "bīng",
+        "name": "两点水",
+        "strokes": 2,
+        "frequency": "115",
+        "examples": "冬、冰、冶、凉",
+        "useful": {
+            "distinguish": [
+                "彡，氵"
+            ],
+            "variants": [],
+            "rank": "82.2%",
+            "mnemonic": " possibly a reduction of 仌, sometimes indicates a split",
+            "notes": " All things cold and icy are encompassed by this radical"
+        },
+        "variants": [
+            "冫"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f0e",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x51ab"
+        ],
+        "viet-pron": "băng",
+        "viet-meaning": "nước đá"
+    },
+    "⼏": {
+        "meaning": "table",
+        "number": 16,
+        "pinyin": "jī",
+        "name": "几字旁",
+        "strokes": 2,
+        "frequency": "38",
+        "examples": "風、殳、凡、凱",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "63.1%",
+            "mnemonic": "",
+            "notes": ""
+        },
+        "variants": [
+            "⺇",
+            "几",
+            "𠘧",
+            "𠘨"
+        ],
+        "standalone": "几",
+        "codepoint": "0x2f0f",
+        "standalone_codepoint": "0x51e0",
+        "variant_codepoint": [
+            "0x2e87",
+            "0x51e0",
+            "0x20627",
+            "0x20628"
+        ],
+        "viet-pron": "kỷ",
+        "viet-meaning": "ghế dựa"
+    },
+    "⼐": {
+        "meaning": "receptacle",
+        "number": 17,
+        "pinyin": "kǎn",
+        "name": "凶字框",
+        "strokes": 2,
+        "frequency": "23",
+        "examples": "凶、凸、凹、齒",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "59.0%",
+            "mnemonic": " primitive of an open vessel or receptacle",
+            "notes": " aka open box"
+        },
+        "variants": [
+            "凵"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f10",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x51f5"
+        ],
+        "viet-pron": "khảm",
+        "viet-meaning": "há miệng"
+    },
+    "⼑": {
+        "meaning": "knife",
+        "number": 18,
+        "pinyin": "dāo",
+        "name": "刀字旁,立刀旁",
+        "strokes": 2,
+        "frequency": "377",
+        "examples": "刁、解、分、劍",
+        "useful": {
+            "distinguish": [
+                "力勹"
+            ],
+            "variants": [
+                "刂",
+                "⺈",
+                "刁"
+            ],
+            "rank": "44.4%",
+            "mnemonic": " picture of a ancient bronze knife",
+            "notes": " Encompasses numerous characters relating to sharpness and actions undertaken with sharp items."
+        },
+        "variants": [
+            "⺈",
+            "⺉",
+            "刀",
+            "刁",
+            "刂",
+            "𠂊"
+        ],
+        "standalone": "刀",
+        "codepoint": "0x2f11",
+        "standalone_codepoint": "0x5200",
+        "variant_codepoint": [
+            "0x2e88",
+            "0x2e89",
+            "0x5200",
+            "0x5201",
+            "0x5202",
+            "0x2008a"
+        ],
+        "viet-pron": "đao",
+        "viet-meaning": "con dao, cây đao (vũ khí)"
+    },
+    "⼒": {
+        "meaning": "power",
+        "number": 19,
+        "pinyin": "lì",
+        "name": "力字旁",
+        "strokes": 2,
+        "frequency": "163",
+        "examples": "加、功、劣、男",
+        "useful": {
+            "distinguish": [
+                "刀"
+            ],
+            "variants": [],
+            "rank": "86.1%",
+            "mnemonic": "",
+            "notes": " Used in a variety of characters industrious characters, or those having to do with exertion. aka POWER radical"
+        },
+        "variants": [
+            "力"
+        ],
+        "standalone": "力",
+        "codepoint": "0x2f12",
+        "standalone_codepoint": "0x529b",
+        "variant_codepoint": [
+            "0x529b"
+        ],
+        "viet-pron": "lực",
+        "viet-meaning": "sức mạnh"
+    },
+    "⼓": {
+        "meaning": "wrap",
+        "number": 20,
+        "pinyin": "bāo",
+        "name": "包字头",
+        "strokes": 2,
+        "frequency": "64",
+        "examples": "包、勺、勻、勾",
+        "useful": {
+            "distinguish": [
+                "刀,力"
+            ],
+            "variants": [],
+            "rank": "66.3%",
+            "mnemonic": " A figure leaning over to hold or cover something",
+            "notes": " Adds a grouping or enclosing meaning to a number of characters, more often as a component as the actual 部首"
+        },
+        "variants": [
+            "勹"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f13",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x52f9"
+        ],
+        "viet-pron": "bao",
+        "viet-meaning": "bao bọc"
+    },
+    "⼔": {
+        "meaning": "spoon",
+        "number": 21,
+        "pinyin": "bǐ",
+        "name": "匕字旁",
+        "strokes": 2,
+        "frequency": "19",
+        "examples": "化、北、匙、比",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " picture of a type of spoon or  ladle, possibly an upside down 人 in some characters",
+            "notes": " aka spoon"
+        },
+        "variants": [
+            "匕"
+        ],
+        "standalone": "匕",
+        "codepoint": "0x2f14",
+        "standalone_codepoint": "0x5315",
+        "variant_codepoint": [
+            "0x5315"
+        ],
+        "viet-pron": "chủy",
+        "viet-meaning": "cái thìa (cái muỗng)"
+    },
+    "⼕": {
+        "meaning": "box",
+        "number": 22,
+        "pinyin": "fāng",
+        "name": "医字框",
+        "strokes": 2,
+        "frequency": "64",
+        "examples": "匿、區、巨、匠",
+        "useful": {
+            "distinguish": [
+                "匸"
+            ],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": "",
+            "notes": ""
+        },
+        "variants": [
+            "匚"
+        ],
+        "standalone": "匚",
+        "codepoint": "0x2f15",
+        "standalone_codepoint": "0x531a",
+        "variant_codepoint": [
+            "0x531a"
+        ],
+        "viet-pron": "phương",
+        "viet-meaning": "tủ đựng"
+    },
+    "⼖": {
+        "meaning": "hiding enclosure",
+        "number": 23,
+        "pinyin": "xǐ",
+        "name": "",
+        "strokes": 2,
+        "frequency": "17",
+        "examples": "亡、匹、匼、匽",
+        "useful": {
+            "distinguish": [
+                "匚"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": "",
+            "notes": ""
+        },
+        "variants": [
+            "匸"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f16",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x5338"
+        ],
+        "viet-pron": "hệ",
+        "viet-meaning": "che đậy, giấu giếm"
+    },
+    "⼗": {
+        "meaning": "ten",
+        "number": 24,
+        "pinyin": "shí",
+        "name": "十字旁",
+        "strokes": 2,
+        "frequency": "55",
+        "examples": "千、半、卅、升",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "78.4%",
+            "mnemonic": " originally 丨 meaning straight - pronounced zhi - 一 one unit of 丨 pronounced shi",
+            "notes": ""
+        },
+        "variants": [
+            "十"
+        ],
+        "standalone": "十",
+        "codepoint": "0x2f17",
+        "standalone_codepoint": "0x5341",
+        "variant_codepoint": [
+            "0x5341"
+        ],
+        "viet-pron": "thập",
+        "viet-meaning": "số mười"
+    },
+    "⼘": {
+        "meaning": "divination",
+        "number": 25,
+        "pinyin": "bǔ",
+        "name": "",
+        "strokes": 2,
+        "frequency": "45",
+        "examples": "下、上、卡、占",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⺊"
+            ],
+            "rank": "59.0%",
+            "mnemonic": " represents cracks in a turtle shell which were used for divination",
+            "notes": ""
+        },
+        "variants": [
+            "⺊",
+            "卜"
+        ],
+        "standalone": "卜",
+        "codepoint": "0x2f18",
+        "standalone_codepoint": "0x535c",
+        "variant_codepoint": [
+            "0x2e8a",
+            "0x535c"
+        ],
+        "viet-pron": "bốc",
+        "viet-meaning": "xem bói"
+    },
+    "⼙": {
+        "meaning": "seal (device)",
+        "number": 26,
+        "pinyin": "jié",
+        "name": "单耳刀",
+        "strokes": 2,
+        "frequency": "40",
+        "examples": "即、卬、卷、夗",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⺋"
+            ],
+            "rank": "67.7%",
+            "mnemonic": " A kneeling person - in some cases provides the character meaning as well",
+            "notes": " primary form - used on the left side of a character. Most characters don't relate to the characters meaning."
+        },
+        "variants": [
+            "⺋",
+            "㔾",
+            "卩"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f19",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x2e8b",
+            "0x353e",
+            "0x5369"
+        ],
+        "viet-pron": "tiết",
+        "viet-meaning": "đốt tre"
+    },
+    "⼚": {
+        "meaning": "cliff",
+        "number": 27,
+        "pinyin": "chǎng ",
+        "name": "厂字旁",
+        "strokes": 2,
+        "frequency": "129",
+        "examples": "厄、原、厚、厰",
+        "useful": {
+            "distinguish": [
+                "广,疒,⺁"
+            ],
+            "variants": [],
+            "rank": "79.1%",
+            "mnemonic": "",
+            "notes": " aka SLOPE radical"
+        },
+        "variants": [
+            "⺁",
+            "厂",
+            "𠂆"
+        ],
+        "standalone": "厂",
+        "codepoint": "0x2f1a",
+        "standalone_codepoint": "0x5382",
+        "variant_codepoint": [
+            "0x2e81",
+            "0x5382",
+            "0x20086"
+        ],
+        "viet-pron": "hán",
+        "viet-meaning": "sườn núi, vách đá"
+    },
+    "⼛": {
+        "meaning": "private",
+        "number": 28,
+        "pinyin": "sī",
+        "name": "私字旁",
+        "strokes": 2,
+        "frequency": "40",
+        "examples": "台、公、去、參、",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "59.0%",
+            "mnemonic": " Originally a picture of a tightly wound coccoon.  Some interperetations view it as a mouth whispering",
+            "notes": " Used in many characters related to silk"
+        },
+        "variants": [
+            "厶"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f1b",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x53b6"
+        ],
+        "viet-pron": "tư/khư",
+        "viet-meaning": "riêng tư"
+    },
+    "⼜": {
+        "meaning": "again",
+        "number": 29,
+        "pinyin": "yòu",
+        "name": "又字旁",
+        "strokes": 2,
+        "frequency": "91",
+        "examples": "叉、及、友、取",
+        "useful": {
+            "distinguish": [
+                "攵,文"
+            ],
+            "variants": [],
+            "rank": "76.3%",
+            "mnemonic": " primitive representing the right hand",
+            "notes": " Like 手, this character also signifies things done by man or with one's hand.  Perhaps because of the higher value placed on the right hand in Chinese culture the meanings here may be of similar value, such as offering friendship (友) or turning against (反).  Modern meaning from sound loan, also called the AGAIN radical"
+        },
+        "variants": [
+            "又"
+        ],
+        "standalone": "又",
+        "codepoint": "0x2f1c",
+        "standalone_codepoint": "0x53c8",
+        "variant_codepoint": [
+            "0x53c8"
+        ],
+        "viet-pron": "hựu",
+        "viet-meaning": "lại nữa, một lần nữa"
+    },
+    "⼝": {
+        "meaning": "mouth",
+        "number": 30,
+        "pinyin": "kǒu",
+        "name": "口字旁",
+        "strokes": 3,
+        "frequency": "1,146",
+        "examples": "哎、古、只、品",
+        "useful": {
+            "distinguish": [
+                "囗"
+            ],
+            "variants": [],
+            "rank": "99.3%",
+            "mnemonic": " This is a simple picture of an open mouth",
+            "notes": " Used in characters involving things done with one's mouth, eating, speaking, drinking, etc."
+        },
+        "variants": [
+            "口"
+        ],
+        "standalone": "口",
+        "codepoint": "0x2f1d",
+        "standalone_codepoint": "0x53e3",
+        "variant_codepoint": [
+            "0x53e3"
+        ],
+        "viet-pron": "khẩu",
+        "viet-meaning": "cái miệng"
+    },
+    "⼞": {
+        "meaning": "enclosure",
+        "number": 31,
+        "pinyin": "wéi",
+        "name": "国字框",
+        "strokes": 3,
+        "frequency": "118",
+        "examples": "囚、四、國、圍",
+        "useful": {
+            "distinguish": [
+                "口"
+            ],
+            "variants": [],
+            "rank": "81.2%",
+            "mnemonic": " Represents a wall surrounding something",
+            "notes": " This radical always surrounds or contains other components, that action generally providing a strong clue to the meaning of the character.  Also known as Surround radical"
+        },
+        "variants": [
+            "囗"
+        ],
+        "standalone": "囗",
+        "codepoint": "0x2f1e",
+        "standalone_codepoint": "0x56d7",
+        "variant_codepoint": [
+            "0x56d7"
+        ],
+        "viet-pron": "vi",
+        "viet-meaning": "vây quanh"
+    },
+    "⼟": {
+        "meaning": "earth",
+        "number": 32,
+        "pinyin": "tǔ",
+        "name": "提土旁",
+        "strokes": 3,
+        "frequency": "580",
+        "examples": "地、圣、圭、堯",
+        "useful": {
+            "distinguish": [
+                "士"
+            ],
+            "variants": [
+                "士"
+            ],
+            "rank": "96.5%",
+            "mnemonic": " a lump of clay on a  potter's wheel or a cross in the earth",
+            "notes": " Earthly attributes and forces tend to be represented under this radical.  Merged with 士 in many dictionaries"
+        },
+        "variants": [
+            "土"
+        ],
+        "standalone": "土",
+        "codepoint": "0x2f1f",
+        "standalone_codepoint": "0x571f",
+        "variant_codepoint": [
+            "0x571f"
+        ],
+        "viet-pron": "thổ",
+        "viet-meaning": "đất"
+    },
+    "⼠": {
+        "meaning": "scholar",
+        "number": 33,
+        "pinyin": "shì",
+        "name": "士字旁",
+        "strokes": 3,
+        "frequency": "24",
+        "examples": "壬、喜、時、壽",
+        "useful": {
+            "distinguish": [
+                "土"
+            ],
+            "variants": [
+                "土"
+            ],
+            "rank": "63.1%",
+            "mnemonic": " The story goes that a scholar (士) took ten (十) things and organized them into one (一); possibly a modification of 大",
+            "notes": " This radical is used in characters for desirable human attributes or conditions. Merged with 土 in many dictionaries"
+        },
+        "variants": [
+            "士"
+        ],
+        "standalone": "士",
+        "codepoint": "0x2f20",
+        "standalone_codepoint": "0x58eb",
+        "variant_codepoint": [
+            "0x58eb"
+        ],
+        "viet-pron": "sĩ",
+        "viet-meaning": "kẻ sĩ"
+    },
+    "⼡": {
+        "meaning": "go",
+        "number": 34,
+        "pinyin": "zhǐ",
+        "name": "折文旁",
+        "strokes": 3,
+        "frequency": "11",
+        "examples": "各、冬、夆、愛",
+        "useful": {
+            "distinguish": [
+                "夕,夊,歹"
+            ],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " A footprint",
+            "notes": ""
+        },
+        "variants": [
+            "夂"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f21",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x5902"
+        ],
+        "viet-pron": "tuy",
+        "viet-meaning": "đi chậm"
+    },
+    "⼢": {
+        "meaning": "go slowly",
+        "number": 35,
+        "pinyin": "suī",
+        "name": "",
+        "strokes": 3,
+        "frequency": "23",
+        "examples": "夌、复、夏",
+        "useful": {
+            "distinguish": [
+                "夕,夂,歹"
+            ],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " A footprint",
+            "notes": " This radical only appears in two common characters - the traditional radical was merged with 夂"
+        },
+        "variants": [
+            "夊"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f22",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x590a"
+        ],
+        "viet-pron": "truy",
+        "viet-meaning": "đến sau"
+    },
+    "⼣": {
+        "meaning": "evening",
+        "number": 36,
+        "pinyin": "xī",
+        "name": "夕字旁",
+        "strokes": 3,
+        "frequency": "34",
+        "examples": "外、夗、多、岁",
+        "useful": {
+            "distinguish": [
+                "夂,夊,歹"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " depicts the moon, representing evening",
+            "notes": " Subjects such as dreams and night are categorized here"
+        },
+        "variants": [
+            "夕"
+        ],
+        "standalone": "夕",
+        "codepoint": "0x2f23",
+        "standalone_codepoint": "0x5915",
+        "variant_codepoint": [
+            "0x5915"
+        ],
+        "viet-pron": "tịch",
+        "viet-meaning": "đêm tối"
+    },
+    "⼤": {
+        "meaning": "big",
+        "number": 37,
+        "pinyin": "dà",
+        "name": "大字旁",
+        "strokes": 3,
+        "frequency": "132",
+        "examples": "太、天、夭、夯",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "88.5%",
+            "mnemonic": " A man with arms and legs spread, trying to convey something large",
+            "notes": ""
+        },
+        "variants": [
+            "大"
+        ],
+        "standalone": "大",
+        "codepoint": "0x2f24",
+        "standalone_codepoint": "0x5927",
+        "variant_codepoint": [
+            "0x5927"
+        ],
+        "viet-pron": "đại",
+        "viet-meaning": "to lớn"
+    },
+    "⼥": {
+        "meaning": "woman",
+        "number": 38,
+        "pinyin": "nǚ",
+        "name": "女字旁",
+        "strokes": 3,
+        "frequency": "681",
+        "examples": "妳、婆、奶、如",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "95.4%",
+            "mnemonic": " A woman with crossed legs, or possibly breasts",
+            "notes": " Generally included in all things feminine, also characters relating to marriage and courtship."
+        },
+        "variants": [
+            "女"
+        ],
+        "standalone": "女",
+        "codepoint": "0x2f25",
+        "standalone_codepoint": "0x5973",
+        "variant_codepoint": [
+            "0x5973"
+        ],
+        "viet-pron": "nữ",
+        "viet-meaning": "nữ giới, con gái, đàn bà"
+    },
+    "⼦": {
+        "meaning": "child",
+        "number": 39,
+        "pinyin": "zǐ",
+        "name": "子字旁",
+        "strokes": 3,
+        "frequency": "83",
+        "examples": "孩、學、孔、仔",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "82.2%",
+            "mnemonic": " A baby with arms & head",
+            "notes": " Generally appears in characters relating to life and a child's role in the family"
+        },
+        "variants": [
+            "子"
+        ],
+        "standalone": "子",
+        "codepoint": "0x2f26",
+        "standalone_codepoint": "0x5b50",
+        "variant_codepoint": [
+            "0x5b50"
+        ],
+        "viet-pron": "tử",
+        "viet-meaning": "con; tiếng tôn xưng: thầy, ngài"
+    },
+    "⼧": {
+        "meaning": "roof",
+        "number": 40,
+        "pinyin": "mián",
+        "name": "宝盖头",
+        "strokes": 3,
+        "frequency": "246",
+        "examples": "家、安、寧、它",
+        "useful": {
+            "distinguish": [
+                "一",
+                "亠",
+                "冖",
+                "乛"
+            ],
+            "variants": [],
+            "rank": "93.4%",
+            "mnemonic": " The dot on top may represent a chimney, the edges eaves.",
+            "notes": " The roof radical can represent various things relating to hearth and home."
+        },
+        "variants": [
+            "宀"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f27",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x5b80"
+        ],
+        "viet-pron": "miên",
+        "viet-meaning": "mái nhà mái che"
+    },
+    "⼨": {
+        "meaning": "inch",
+        "number": 41,
+        "pinyin": "cùn",
+        "name": "寸字旁",
+        "strokes": 3,
+        "frequency": "40",
+        "examples": "村、寺、封、射",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "72.5%",
+            "mnemonic": " A hand with finger and thumb measuring something, though the dot could be the thumb itself",
+            "notes": " Often used in characters having to do with investigation or measurement of things, also attentiveness and direction"
+        },
+        "variants": [
+            "寸"
+        ],
+        "standalone": "寸",
+        "codepoint": "0x2f28",
+        "standalone_codepoint": "0x5bf8",
+        "variant_codepoint": [
+            "0x5bf8"
+        ],
+        "viet-pron": "thốn",
+        "viet-meaning": "đơn vị tấc (đo chiều dài)"
+    },
+    "⼩": {
+        "meaning": "small",
+        "number": 42,
+        "pinyin": "xiǎo",
+        "name": "当字头",
+        "strokes": 3,
+        "frequency": "41",
+        "examples": "少、尖、當、栄",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⺌"
+            ],
+            "rank": "63.1%",
+            "mnemonic": " split 八 and make it small",
+            "notes": ""
+        },
+        "variants": [
+            "⺌",
+            "⺍",
+            "小",
+            "𭕄"
+        ],
+        "standalone": "小",
+        "codepoint": "0x2f29",
+        "standalone_codepoint": "0x5c0f",
+        "variant_codepoint": [
+            "0x2e8c",
+            "0x2e8d",
+            "0x5c0f",
+            "0x2d544"
+        ],
+        "viet-pron": "tiểu",
+        "viet-meaning": "nhỏ bé"
+    },
+    "⼪": {
+        "meaning": "lame",
+        "number": 43,
+        "pinyin": "wāng",
+        "name": "",
+        "strokes": 3,
+        "frequency": "66",
+        "examples": "尤、尷、尬、尩",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "尣",
+                "兀"
+            ],
+            "rank": "52.7%",
+            "mnemonic": " This depicts two legs of different lengths to represent lameness.  The horizontal stroke emphasizes the difference, and may represent arms",
+            "notes": ""
+        },
+        "variants": [
+            "⺎",
+            "⺏",
+            "⺐",
+            "⺑",
+            "兀",
+            "尢",
+            "尣",
+            "𡯁",
+            "𡯂"
+        ],
+        "standalone": "兀",
+        "codepoint": "0x2f2a",
+        "standalone_codepoint": "0x5140",
+        "variant_codepoint": [
+            "0x2e8e",
+            "0x2e8f",
+            "0x2e90",
+            "0x2e91",
+            "0x5140",
+            "0x5c22",
+            "0x5c23",
+            "0x21bc1",
+            "0x21bc2"
+        ],
+        "viet-pron": "uông",
+        "viet-meaning": "yếu đuối"
+    },
+    "⼫": {
+        "meaning": "corpse",
+        "number": 44,
+        "pinyin": "shī",
+        "name": "尸字头",
+        "strokes": 3,
+        "frequency": "148",
+        "examples": "屍、尺、尼、尻",
+        "useful": {
+            "distinguish": [
+                "戶"
+            ],
+            "variants": [],
+            "rank": "85.0%",
+            "mnemonic": " A sitting person facing left (possibly laying)",
+            "notes": ""
+        },
+        "variants": [
+            "尸"
+        ],
+        "standalone": "尸",
+        "codepoint": "0x2f2b",
+        "standalone_codepoint": "0x5c38",
+        "variant_codepoint": [
+            "0x5c38"
+        ],
+        "viet-pron": "thi",
+        "viet-meaning": "xác chết, thây ma"
+    },
+    "⼬": {
+        "meaning": "sprout",
+        "number": 45,
+        "pinyin": "chè",
+        "name": "",
+        "strokes": 3,
+        "frequency": "38",
+        "examples": "艸、屯、屰、頓",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " This is a picture of a sprout",
+            "notes": " Rare, but worthwhile remembering, as it links to more common words like 出, which is a picture of a 屮 growing out of a 凵"
+        },
+        "variants": [
+            "屮"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f2c",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x5c6e"
+        ],
+        "viet-pron": "triệt",
+        "viet-meaning": "mầm non"
+    },
+    "⼭": {
+        "meaning": "mountain",
+        "number": 46,
+        "pinyin": "shān",
+        "name": "山字旁",
+        "strokes": 3,
+        "frequency": "636",
+        "examples": "嵗、密、峰、幽",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "89.5%",
+            "mnemonic": " Picture of a mountain",
+            "notes": " Almost every character under the mountain radical is used for describing landscape features or heights"
+        },
+        "variants": [
+            "山"
+        ],
+        "standalone": "山",
+        "codepoint": "0x2f2d",
+        "standalone_codepoint": "0x5c71",
+        "variant_codepoint": [
+            "0x5c71"
+        ],
+        "viet-pron": "sơn",
+        "viet-meaning": "núi non"
+    },
+    "⼮": {
+        "meaning": "river",
+        "number": 47,
+        "pinyin": "chuān",
+        "name": "",
+        "strokes": 3,
+        "frequency": "26",
+        "examples": "川、州、順、災",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "川",
+                "巜"
+            ],
+            "rank": "20.1%",
+            "mnemonic": " Picture of moving water",
+            "notes": ""
+        },
+        "variants": [
+            "巛",
+            "巜",
+            "川"
+        ],
+        "standalone": "川",
+        "codepoint": "0x2f2e",
+        "standalone_codepoint": "0x5ddd",
+        "variant_codepoint": [
+            "0x5ddb",
+            "0x5ddc",
+            "0x5ddd"
+        ],
+        "viet-pron": "xuyên",
+        "viet-meaning": "sông ngòi"
+    },
+    "⼯": {
+        "meaning": "work",
+        "number": 48,
+        "pinyin": "gōng",
+        "name": "工字旁",
+        "strokes": 3,
+        "frequency": "17",
+        "examples": "左、巧、功、式",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "59.0%",
+            "mnemonic": " Depicts a carpenter's square.",
+            "notes": ""
+        },
+        "variants": [
+            "工"
+        ],
+        "standalone": "工",
+        "codepoint": "0x2f2f",
+        "standalone_codepoint": "0x5de5",
+        "variant_codepoint": [
+            "0x5de5"
+        ],
+        "viet-pron": "công",
+        "viet-meaning": "người thợ, công việc"
+    },
+    "⼰": {
+        "meaning": "oneself",
+        "number": 49,
+        "pinyin": "jǐ",
+        "name": "",
+        "strokes": 3,
+        "frequency": "20",
+        "examples": "記、改、忌、龍",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "已",
+                "巳"
+            ],
+            "rank": "44.4%",
+            "mnemonic": " represents the back and forth motion of the warp string in weaving",
+            "notes": ""
+        },
+        "variants": [
+            "⺒",
+            "己",
+            "已",
+            "巳"
+        ],
+        "standalone": "己",
+        "codepoint": "0x2f30",
+        "standalone_codepoint": "0x5df1",
+        "variant_codepoint": [
+            "0x2e92",
+            "0x5df1",
+            "0x5df2",
+            "0x5df3"
+        ],
+        "viet-pron": "kỷ",
+        "viet-meaning": "bản thân mình"
+    },
+    "⼱": {
+        "meaning": "turban",
+        "number": 50,
+        "pinyin": "jīn",
+        "name": "巾字儿",
+        "strokes": 3,
+        "frequency": "295",
+        "examples": "市、帥、刷、砸",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "87.8%",
+            "mnemonic": " cloth hanging down, possibly from a loom",
+            "notes": " The characters under this radical usually represent things made of large expanses of cloth, though smaller items such as headpieces and handkerchiefs are sometimes covered as well."
+        },
+        "variants": [
+            "巾"
+        ],
+        "standalone": "巾",
+        "codepoint": "0x2f31",
+        "standalone_codepoint": "0x5dfe",
+        "variant_codepoint": [
+            "0x5dfe"
+        ],
+        "viet-pron": "cân",
+        "viet-meaning": "cái khăn"
+    },
+    "⼲": {
+        "meaning": "dry",
+        "number": 51,
+        "pinyin": "gān",
+        "name": "干字旁",
+        "strokes": 3,
+        "frequency": "9",
+        "examples": "旱、开、平、年",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " Etymology indicates this is a pestle, but could also be construed as a shield primitive",
+            "notes": ""
+        },
+        "variants": [
+            "干"
+        ],
+        "standalone": "干",
+        "codepoint": "0x2f32",
+        "standalone_codepoint": "0x5e72",
+        "variant_codepoint": [
+            "0x5e72"
+        ],
+        "viet-pron": "can",
+        "viet-meaning": "thiên can, can dự"
+    },
+    "⼳": {
+        "meaning": "short thread",
+        "number": 52,
+        "pinyin": "yāo",
+        "name": "",
+        "strokes": 3,
+        "frequency": "50",
+        "examples": "幻、麼、幽、幾",
+        "useful": {
+            "distinguish": [
+                "糸,",
+                "纟"
+            ],
+            "variants": [
+                "乡"
+            ],
+            "rank": "35.0%",
+            "mnemonic": " evolved from a depiction of coiled silk thread",
+            "notes": " Also known as the SLENDER radical. Seems to relate to that which is seemingly small or slight yet quite the opposite in reality."
+        },
+        "variants": [
+            "⺓",
+            "乡",
+            "幺"
+        ],
+        "standalone": "幺",
+        "codepoint": "0x2f33",
+        "standalone_codepoint": "0x5e7a",
+        "variant_codepoint": [
+            "0x2e93",
+            "0x4e61",
+            "0x5e7a"
+        ],
+        "viet-pron": "yêu",
+        "viet-meaning": "nhỏ nhắn"
+    },
+    "⼴": {
+        "meaning": "dotted cliff",
+        "number": 53,
+        "pinyin": "guǎng",
+        "name": "广字旁",
+        "strokes": 3,
+        "frequency": "15",
+        "examples": "庀、庂、庄",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "86.8%",
+            "mnemonic": " This is a picture of a simple shelter, simplification gave the standalone 部首 a new meaning",
+            "notes": " Traditional form with this specific pronunciation/meaning is a different character. Generally in characters relating to different sorts of structures"
+        },
+        "variants": [
+            "广"
+        ],
+        "standalone": "广",
+        "codepoint": "0x2f34",
+        "standalone_codepoint": "0x5e7f",
+        "variant_codepoint": [
+            "0x5e7f"
+        ],
+        "viet-pron": "nghiễm",
+        "viet-meaning": "mái nhà"
+    },
+    "⼵": {
+        "meaning": "long stride",
+        "number": 54,
+        "pinyin": "yǐn",
+        "name": "建之旁",
+        "strokes": 3,
+        "frequency": "9",
+        "examples": "廵、廷、延",
+        "useful": {
+            "distinguish": [
+                "辶,",
+                "⻎,",
+                "⻍"
+            ],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " Depicts a man marching out",
+            "notes": " References only three common modern characters"
+        },
+        "variants": [
+            "廴"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f35",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x5ef4"
+        ],
+        "viet-pron": "dẫn",
+        "viet-meaning": "bước dài"
+    },
+    "⼶": {
+        "meaning": "arch",
+        "number": 55,
+        "pinyin": "gǒng",
+        "name": "弄字底",
+        "strokes": 3,
+        "frequency": "50",
+        "examples": "廿、弁、弄",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " Rough drawing of two joined hands",
+            "notes": ""
+        },
+        "variants": [
+            "廾"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f36",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x5efe"
+        ],
+        "viet-pron": "củng",
+        "viet-meaning": "chắp tay"
+    },
+    "⼷": {
+        "meaning": "shoot",
+        "number": 56,
+        "pinyin": "yì",
+        "name": "",
+        "strokes": 3,
+        "frequency": "15",
+        "examples": "弌、弍、弎",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " Depicts an ancient weapon described as a retrievable arrow with a string attached",
+            "notes": " Also known as the dart radical"
+        },
+        "variants": [
+            "弋"
+        ],
+        "standalone": "弋",
+        "codepoint": "0x2f37",
+        "standalone_codepoint": "0x5f0b",
+        "variant_codepoint": [
+            "0x5f0b"
+        ],
+        "viet-pron": "dặc",
+        "viet-meaning": "bắn, chiếm lấy"
+    },
+    "⼸": {
+        "meaning": "bow",
+        "number": 57,
+        "pinyin": "gōng",
+        "name": "弓字旁",
+        "strokes": 3,
+        "frequency": "165",
+        "examples": "弔、引、弗",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "78.4%",
+            "mnemonic": " a bow",
+            "notes": " As a bow must be stretched to be shot, characters under this radical tend to deal with elasticity and shooting things"
+        },
+        "variants": [
+            "弓"
+        ],
+        "standalone": "弓",
+        "codepoint": "0x2f38",
+        "standalone_codepoint": "0x5f13",
+        "variant_codepoint": [
+            "0x5f13"
+        ],
+        "viet-pron": "cung",
+        "viet-meaning": "cái cung (để bắn tên)"
+    },
+    "⼹": {
+        "meaning": "snout",
+        "number": 58,
+        "pinyin": "jì",
+        "name": "",
+        "strokes": 3,
+        "frequency": "25",
+        "examples": "彔、彖、彗",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "彑"
+            ],
+            "rank": "44.4%",
+            "mnemonic": " tusks and nose of a pig",
+            "notes": " There is a third alternate form of this radical which doesn't appear to be encoded in unicode"
+        },
+        "variants": [
+            "⺔",
+            "⺕",
+            "彐",
+            "彑"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f39",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x2e94",
+            "0x2e95",
+            "0x5f50",
+            "0x5f51"
+        ],
+        "viet-pron": "kệ",
+        "viet-meaning": "đầu con nhím"
+    },
+    "⼺": {
+        "meaning": "bristle",
+        "number": 59,
+        "pinyin": "shān",
+        "name": "三撇儿",
+        "strokes": 3,
+        "frequency": "62",
+        "examples": "形、彤、彥",
+        "useful": {
+            "distinguish": [
+                "氵,",
+                "冫"
+            ],
+            "variants": [],
+            "rank": "67.7%",
+            "mnemonic": " Typically represents hair, sometimes rays or three",
+            "notes": " This radical shows up in characters relating to stripes or imagery, and occasionally to hair.  Also referred to as the bristle radical"
+        },
+        "variants": [
+            "彡"
+        ],
+        "standalone": "彡",
+        "codepoint": "0x2f3a",
+        "standalone_codepoint": "0x5f61",
+        "variant_codepoint": [
+            "0x5f61"
+        ],
+        "viet-pron": "sam",
+        "viet-meaning": "lông tóc dài"
+    },
+    "⼻": {
+        "meaning": "step",
+        "number": 60,
+        "pinyin": "chì",
+        "name": "双立人",
+        "strokes": 3,
+        "frequency": "215",
+        "examples": "㣔、彴、彷",
+        "useful": {
+            "distinguish": [
+                "亻"
+            ],
+            "variants": [],
+            "rank": "82.2%",
+            "mnemonic": " This is the 亻radical with an extra stroke, likely representing movement.",
+            "notes": " Unlike 辶部 which relates to the greater journey, this 部首 focuses on smaller actions and relates the details of the trip"
+        },
+        "variants": [
+            "彳"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f3b",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x5f73"
+        ],
+        "viet-pron": "xích",
+        "viet-meaning": "bước chân trái."
+    },
+    "⼼": {
+        "meaning": "heart",
+        "number": 61,
+        "pinyin": "xīn",
+        "name": "竖心旁",
+        "strokes": 4,
+        "frequency": "1,115",
+        "examples": "必、忉、忌",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "忄",
+                "⺗"
+            ],
+            "rank": "94.0%",
+            "mnemonic": " heart lung",
+            "notes": " Used in characters relating to emotions."
+        },
+        "variants": [
+            "⺖",
+            "⺗",
+            "㣺",
+            "心",
+            "忄"
+        ],
+        "standalone": "心",
+        "codepoint": "0x2f3c",
+        "standalone_codepoint": "0x5fc3",
+        "variant_codepoint": [
+            "0x2e96",
+            "0x2e97",
+            "0x38fa",
+            "0x5fc3",
+            "0x5fc4"
+        ],
+        "viet-pron": "tâm",
+        "viet-meaning": "quả tim, tâm trí, tấm lòng"
+    },
+    "⼽": {
+        "meaning": "halberd",
+        "number": 62,
+        "pinyin": "gē",
+        "name": "戈字旁",
+        "strokes": 4,
+        "frequency": "116",
+        "examples": "戊、戉、戌",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "戈"
+            ],
+            "rank": "71.5%",
+            "mnemonic": " This is likely a picture of an ancient weapon called a ge1 which can be seen in museums.  Some suggest it could represent any long handled instrument such as a hoe or axe.",
+            "notes": " Often lends a military or combative meaning to its characters"
+        },
+        "variants": [
+            "戈"
+        ],
+        "standalone": "戈",
+        "codepoint": "0x2f3d",
+        "standalone_codepoint": "0x6208",
+        "variant_codepoint": [
+            "0x6208"
+        ],
+        "viet-pron": "qua",
+        "viet-meaning": "cây qua (một thứ binh khí dài)"
+    },
+    "⼾": {
+        "meaning": "door",
+        "number": 63,
+        "pinyin": "hù",
+        "name": "户字旁",
+        "strokes": 4,
+        "frequency": "44",
+        "examples": "戹、戼、戽",
+        "useful": {},
+        "variants": [
+            "戶",
+            "户",
+            "戸"
+        ],
+        "standalone": "户",
+        "codepoint": "0x2f3e",
+        "standalone_codepoint": "0x6237",
+        "variant_codepoint": [
+            "0x6236",
+            "0x6237",
+            "0x6238"
+        ],
+        "viet-pron": "hộ",
+        "viet-meaning": "cửa một cánh"
+    },
+    "⼿": {
+        "meaning": "hand",
+        "number": 64,
+        "pinyin": "shǒu",
+        "name": "提手旁,看字头",
+        "strokes": 4,
+        "frequency": "1,203",
+        "examples": "才、扎、扐",
+        "useful": {
+            "distinguish": [
+                "毛"
+            ],
+            "variants": [
+                "扌",
+                "才"
+            ],
+            "rank": "74.6%",
+            "mnemonic": " Represents the palm of the hand, possibly the lines of the palm",
+            "notes": " Typically signifies actions executed by one's hand."
+        },
+        "variants": [
+            "⺘",
+            "手",
+            "扌",
+            "才",
+            "龵"
+        ],
+        "standalone": "手",
+        "codepoint": "0x2f3f",
+        "standalone_codepoint": "0x624b",
+        "variant_codepoint": [
+            "0x2e98",
+            "0x624b",
+            "0x624c",
+            "0x624d",
+            "0x9fb5"
+        ],
+        "viet-pron": "thủ",
+        "viet-meaning": "tay"
+    },
+    "⽀": {
+        "meaning": "branch",
+        "number": 65,
+        "pinyin": "zhī",
+        "name": "",
+        "strokes": 4,
+        "frequency": "26",
+        "examples": "攰、攱、攲",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " Hand 又 holding a branch",
+            "notes": ""
+        },
+        "variants": [
+            "支"
+        ],
+        "standalone": "支",
+        "codepoint": "0x2f40",
+        "standalone_codepoint": "0x652f",
+        "variant_codepoint": [
+            "0x652f"
+        ],
+        "viet-pron": "chi",
+        "viet-meaning": "cành nhánh"
+    },
+    "⽁": {
+        "meaning": "rap, tap",
+        "number": 66,
+        "pinyin": "pū",
+        "name": "反文旁,旧反文旁",
+        "strokes": 4,
+        "frequency": "296",
+        "examples": "收、攷、攸",
+        "useful": {
+            "distinguish": [
+                "文"
+            ],
+            "variants": [
+                "攵"
+            ],
+            "rank": "20.1%",
+            "mnemonic": " primitive of a hand 又 holding a tool 卜",
+            "notes": " As the hand is engaged in knocking, a number of the characters under this radical relate to actions one may make with their hands"
+        },
+        "variants": [
+            "⺙",
+            "攴",
+            "攵"
+        ],
+        "standalone": "攴",
+        "codepoint": "0x2f41",
+        "standalone_codepoint": "0x6534",
+        "variant_codepoint": [
+            "0x2e99",
+            "0x6534",
+            "0x6535"
+        ],
+        "viet-pron": "phộc",
+        "viet-meaning": "đánh khẽ"
+    },
+    "⽂": {
+        "meaning": "script",
+        "number": 67,
+        "pinyin": "wén",
+        "name": "",
+        "strokes": 4,
+        "frequency": "26",
+        "examples": "斉、斌、斐",
+        "useful": {
+            "distinguish": [
+                "攵",
+                "又"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " a tatto on a chest inside cloths",
+            "notes": ""
+        },
+        "variants": [
+            "文"
+        ],
+        "standalone": "文",
+        "codepoint": "0x2f42",
+        "standalone_codepoint": "0x6587",
+        "variant_codepoint": [
+            "0x6587"
+        ],
+        "viet-pron": "văn",
+        "viet-meaning": "nét vằn"
+    },
+    "⽃": {
+        "meaning": "dipper",
+        "number": 68,
+        "pinyin": "dǒu",
+        "name": "",
+        "strokes": 4,
+        "frequency": "32",
+        "examples": "料、斚、斛",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " This is a picture of a dipper, measuring out grains represented by the two dots.",
+            "notes": " Stands on it's own as a radical, but traditional variant of this character is 鬥, Radical 191. See dou3"
+        },
+        "variants": [
+            "斗"
+        ],
+        "standalone": "斗",
+        "codepoint": "0x2f43",
+        "standalone_codepoint": "0x6597",
+        "variant_codepoint": [
+            "0x6597"
+        ],
+        "viet-pron": "đẩu",
+        "viet-meaning": "cái đấu để đong"
+    },
+    "⽄": {
+        "meaning": "axe",
+        "number": 69,
+        "pinyin": "jīn",
+        "name": "斤字旁",
+        "strokes": 4,
+        "frequency": "55",
+        "examples": "斥、斧、斨",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "63.1%",
+            "mnemonic": " an axe over or penetrating into an object (the left-most stroke)",
+            "notes": " Characters with this radical relate to breaking or dividing actions/concepts"
+        },
+        "variants": [
+            "斤"
+        ],
+        "standalone": "斤",
+        "codepoint": "0x2f44",
+        "standalone_codepoint": "0x65a4",
+        "variant_codepoint": [
+            "0x65a4"
+        ],
+        "viet-pron": "cân",
+        "viet-meaning": "cái búa, rìu"
+    },
+    "⽅": {
+        "meaning": "square",
+        "number": 70,
+        "pinyin": "fāng",
+        "name": "方字旁",
+        "strokes": 4,
+        "frequency": "92",
+        "examples": "㫃、於、㫄",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " a man 人 carrying a load 工 which must be balanced ",
+            "notes": " In a number of 字 relating to flags and banners, otherwise doesn't seem to relate to many character's meaning"
+        },
+        "variants": [
+            "方"
+        ],
+        "standalone": "方",
+        "codepoint": "0x2f45",
+        "standalone_codepoint": "0x65b9",
+        "variant_codepoint": [
+            "0x65b9"
+        ],
+        "viet-pron": "phương",
+        "viet-meaning": "vuông"
+    },
+    "⽆": {
+        "meaning": "not",
+        "number": 71,
+        "pinyin": "wú",
+        "name": "",
+        "strokes": 4,
+        "frequency": "12",
+        "examples": "既、旣、旤",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "旡"
+            ],
+            "rank": "20.1%",
+            "mnemonic": "",
+            "notes": " This variant was introduced with simplified characters, traditional form represents a dancer"
+        },
+        "variants": [
+            "⺛",
+            "无",
+            "旡"
+        ],
+        "standalone": "无",
+        "codepoint": "0x2f46",
+        "standalone_codepoint": "0x65e0",
+        "variant_codepoint": [
+            "0x2e9b",
+            "0x65e0",
+            "0x65e1"
+        ],
+        "viet-pron": "vô",
+        "viet-meaning": "không"
+    },
+    "⽇": {
+        "meaning": "sun",
+        "number": 72,
+        "pinyin": "rì",
+        "name": "日字旁",
+        "strokes": 4,
+        "frequency": "453",
+        "examples": "旦、旨、早",
+        "useful": {
+            "distinguish": [
+                "曰,",
+                "白,",
+                "臼"
+            ],
+            "variants": [
+                "⺜"
+            ],
+            "rank": "94.7%",
+            "mnemonic": " primitive of the sun, possibly represents the two halves of a day",
+            "notes": " As the sun is the original source of heat and light as well as time keeping such characters are found to use this radical"
+        },
+        "variants": [
+            "⺜",
+            "冃",
+            "日"
+        ],
+        "standalone": "日",
+        "codepoint": "0x2f47",
+        "standalone_codepoint": "0x65e5",
+        "variant_codepoint": [
+            "0x2e9c",
+            "0x5183",
+            "0x65e5"
+        ],
+        "viet-pron": "nhật",
+        "viet-meaning": "ngày, mặt trời"
+    },
+    "⽈": {
+        "meaning": "say",
+        "number": 73,
+        "pinyin": "yuē",
+        "name": "",
+        "strokes": 4,
+        "frequency": "37",
+        "examples": "曲、曳、更",
+        "useful": {
+            "distinguish": [
+                "日,",
+                "白,",
+                "臼"
+            ],
+            "variants": [],
+            "rank": "67.7%",
+            "mnemonic": " a mouth with something - words - in it",
+            "notes": " Most 字 under this radical have little to do with speaking"
+        },
+        "variants": [
+            "曰"
+        ],
+        "standalone": "曰",
+        "codepoint": "0x2f48",
+        "standalone_codepoint": "0x66f0",
+        "variant_codepoint": [
+            "0x66f0"
+        ],
+        "viet-pron": "viết",
+        "viet-meaning": "nói rằng"
+    },
+    "⽉": {
+        "meaning": "moon",
+        "number": 74,
+        "pinyin": "yuè",
+        "name": "月字旁",
+        "strokes": 4,
+        "frequency": "69",
+        "examples": "有、朋、服",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⺝"
+            ],
+            "rank": "67.7%",
+            "mnemonic": " primitive of the crescent moon",
+            "notes": " Be careful to distinguish this from the meat radical, which looks identical. Often used in characters associated with friendship or romance"
+        },
+        "variants": [
+            "⺝",
+            "月"
+        ],
+        "standalone": "月",
+        "codepoint": "0x2f49",
+        "standalone_codepoint": "0x6708",
+        "variant_codepoint": [
+            "0x2e9d",
+            "0x6708"
+        ],
+        "viet-pron": "nguyệt",
+        "viet-meaning": "tháng, mặt trăng"
+    },
+    "⽊": {
+        "meaning": "tree",
+        "number": 75,
+        "pinyin": "mù",
+        "name": "木字旁",
+        "strokes": 4,
+        "frequency": "1,369",
+        "examples": "未、末、本",
+        "useful": {
+            "distinguish": [
+                "禾,",
+                "釆,",
+                "米"
+            ],
+            "variants": [
+                "朩"
+            ],
+            "rank": "98.9%",
+            "mnemonic": " Primitive, Something like a banyan tree with branches and above ground roots on the bottom",
+            "notes": " Another very common radical, a large portion of the characters using this radical are items manufactured from wood. Also used for trees and fruits"
+        },
+        "variants": [
+            "木",
+            "朩"
+        ],
+        "standalone": "木",
+        "codepoint": "0x2f4a",
+        "standalone_codepoint": "0x6728",
+        "variant_codepoint": [
+            "0x6728",
+            "0x6729"
+        ],
+        "viet-pron": "mộc",
+        "viet-meaning": "gỗ, cây cối"
+    },
+    "⽋": {
+        "meaning": "lack",
+        "number": 76,
+        "pinyin": "qiàn",
+        "name": "欠字旁",
+        "strokes": 4,
+        "frequency": "235",
+        "examples": "次、欣、欥",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "71.5%",
+            "mnemonic": " a man yawning - think of the upper part as a hand covering the mouth while in the act",
+            "notes": " The mouth is involved in yawning, and it's also involved in many other emotional displays and vocal actions, many of which are categorized under this 部首"
+        },
+        "variants": [
+            "欠"
+        ],
+        "standalone": "欠",
+        "codepoint": "0x2f4b",
+        "standalone_codepoint": "0x6b20",
+        "variant_codepoint": [
+            "0x6b20"
+        ],
+        "viet-pron": "khiếm",
+        "viet-meaning": "khiếm khuyết, thiếu vắng"
+    },
+    "⽌": {
+        "meaning": "stop",
+        "number": 77,
+        "pinyin": "zhǐ",
+        "name": "止字旁",
+        "strokes": 4,
+        "frequency": "99",
+        "examples": "正、此、步",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "63.1%",
+            "mnemonic": " This is a primitive of a foot",
+            "notes": ""
+        },
+        "variants": [
+            "止",
+            "龰"
+        ],
+        "standalone": "止",
+        "codepoint": "0x2f4c",
+        "standalone_codepoint": "0x6b62",
+        "variant_codepoint": [
+            "0x6b62",
+            "0x9fb0"
+        ],
+        "viet-pron": "chỉ",
+        "viet-meaning": "dừng lại"
+    },
+    "⽍": {
+        "meaning": "death",
+        "number": 78,
+        "pinyin": "dǎi",
+        "name": "",
+        "strokes": 4,
+        "frequency": "231",
+        "examples": "歺、死、歿",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "歺"
+            ],
+            "rank": "67.7%",
+            "mnemonic": " A chip or remnant of a scapula bone 骨",
+            "notes": ""
+        },
+        "variants": [
+            "⺞",
+            "歹",
+            "歺"
+        ],
+        "standalone": "歹",
+        "codepoint": "0x2f4d",
+        "standalone_codepoint": "0x6b79",
+        "variant_codepoint": [
+            "0x2e9e",
+            "0x6b79",
+            "0x6b7a"
+        ],
+        "viet-pron": "ngạt",
+        "viet-meaning": "xấu xa, tệ hại"
+    },
+    "⽎": {
+        "meaning": "weapon",
+        "number": 79,
+        "pinyin": "shū",
+        "name": "殳字旁",
+        "strokes": 4,
+        "frequency": "93",
+        "examples": "段、殷、殺",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "59.0%",
+            "mnemonic": " A hand 又 holding a weapon, probably a club",
+            "notes": " Also known as the KILL radical.  A number of actions of violence are categorized under this 部首. In context usually means -ing"
+        },
+        "variants": [
+            "殳"
+        ],
+        "standalone": "殳",
+        "codepoint": "0x2f4e",
+        "standalone_codepoint": "0x6bb3",
+        "variant_codepoint": [
+            "0x6bb3"
+        ],
+        "viet-pron": "thù",
+        "viet-meaning": "binh khí dài"
+    },
+    "⽏": {
+        "meaning": "do not",
+        "number": 80,
+        "pinyin": "wú",
+        "name": "",
+        "strokes": 4,
+        "frequency": "16",
+        "examples": "母、每、毐",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "母",
+                "毌"
+            ],
+            "rank": "35.0%",
+            "mnemonic": " a woman with bound breasts - untouchable",
+            "notes": " Removed from modern simplified radical tables"
+        },
+        "variants": [
+            "⺟",
+            "毋",
+            "毌",
+            "母"
+        ],
+        "standalone": "毋",
+        "codepoint": "0x2f4f",
+        "standalone_codepoint": "0x6bcb",
+        "variant_codepoint": [
+            "0x2e9f",
+            "0x6bcb",
+            "0x6bcc",
+            "0x6bcd"
+        ],
+        "viet-pron": "vô",
+        "viet-meaning": "chớ, đừng"
+    },
+    "⽐": {
+        "meaning": "compare",
+        "number": 81,
+        "pinyin": "bǐ",
+        "name": "",
+        "strokes": 4,
+        "frequency": "21",
+        "examples": "毖、毗、毘",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " Two people or objects side by side for comparison",
+            "notes": ""
+        },
+        "variants": [
+            "比"
+        ],
+        "standalone": "比",
+        "codepoint": "0x2f50",
+        "standalone_codepoint": "0x6bd4",
+        "variant_codepoint": [
+            "0x6bd4"
+        ],
+        "viet-pron": "tỷ",
+        "viet-meaning": "so sánh"
+    },
+    "⽑": {
+        "meaning": "fur",
+        "number": 82,
+        "pinyin": "máo",
+        "name": "",
+        "strokes": 4,
+        "frequency": "211",
+        "examples": "毡、毣、毧",
+        "useful": {
+            "distinguish": [
+                "手"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " a feather",
+            "notes": " This radical relates to fur and feathers as garments, and by extension most types of garments"
+        },
+        "variants": [
+            "毛"
+        ],
+        "standalone": "毛",
+        "codepoint": "0x2f51",
+        "standalone_codepoint": "0x6bdb",
+        "variant_codepoint": [
+            "0x6bdb"
+        ],
+        "viet-pron": "mao",
+        "viet-meaning": "lông"
+    },
+    "⽒": {
+        "meaning": "clan",
+        "number": 83,
+        "pinyin": "shì",
+        "name": "",
+        "strokes": 4,
+        "frequency": "10",
+        "examples": "氐、民、氓",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " a man bowing",
+            "notes": ""
+        },
+        "variants": [
+            "⺠",
+            "氏",
+            "民"
+        ],
+        "standalone": "氏",
+        "codepoint": "0x2f52",
+        "standalone_codepoint": "0x6c0f",
+        "variant_codepoint": [
+            "0x2ea0",
+            "0x6c0f",
+            "0x6c11"
+        ],
+        "viet-pron": "thị",
+        "viet-meaning": "họ"
+    },
+    "⽓": {
+        "meaning": "steam",
+        "number": 84,
+        "pinyin": "qì",
+        "name": "",
+        "strokes": 4,
+        "frequency": "17",
+        "examples": "氕、氘、氚",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "72.5%",
+            "mnemonic": " a man blowing air from his mouth",
+            "notes": ""
+        },
+        "variants": [
+            "气"
+        ],
+        "standalone": "气",
+        "codepoint": "0x2f53",
+        "standalone_codepoint": "0x6c14",
+        "variant_codepoint": [
+            "0x6c14"
+        ],
+        "viet-pron": "khí",
+        "viet-meaning": "hơi nước"
+    },
+    "⽔": {
+        "meaning": "water",
+        "number": 85,
+        "pinyin": "shuǐ",
+        "name": "三点水",
+        "strokes": 4,
+        "frequency": "1,595",
+        "examples": "永、氷、氾",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "氵",
+                "氺"
+            ],
+            "rank": "52.7%",
+            "mnemonic": " A drawing of waves",
+            "notes": " The standalone version of the radical typically is not used as a character component, see 氵"
+        },
+        "variants": [
+            "⺡",
+            "⺢",
+            "水",
+            "氵",
+            "氺"
+        ],
+        "standalone": "水",
+        "codepoint": "0x2f54",
+        "standalone_codepoint": "0x6c34",
+        "variant_codepoint": [
+            "0x2ea1",
+            "0x2ea2",
+            "0x6c34",
+            "0x6c35",
+            "0x6c3a"
+        ],
+        "viet-pron": "thủy",
+        "viet-meaning": "nước"
+    },
+    "⽕": {
+        "meaning": "fire",
+        "number": 86,
+        "pinyin": "huǒ",
+        "name": "四点底,火字旁",
+        "strokes": 4,
+        "frequency": "639",
+        "examples": "灰、灯、灶",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "灬"
+            ],
+            "rank": "95.1%",
+            "mnemonic": " drawing of fire",
+            "notes": " Represents characters having to do with fire, heat, and cooking"
+        },
+        "variants": [
+            "⺣",
+            "火",
+            "灬"
+        ],
+        "standalone": "火",
+        "codepoint": "0x2f55",
+        "standalone_codepoint": "0x706b",
+        "variant_codepoint": [
+            "0x2ea3",
+            "0x706b",
+            "0x706c"
+        ],
+        "viet-pron": "hỏa",
+        "viet-meaning": "lửa"
+    },
+    "⽖": {
+        "meaning": "claw",
+        "number": 87,
+        "pinyin": "zhǎo",
+        "name": "受字头",
+        "strokes": 4,
+        "frequency": "36",
+        "examples": "爬、爭、爰",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "爫"
+            ],
+            "rank": "20.1%",
+            "mnemonic": " Hand or claw 爫爪 grabbing something from above",
+            "notes": ""
+        },
+        "variants": [
+            "⺤",
+            "⺥",
+            "爪",
+            "爫"
+        ],
+        "standalone": "爪",
+        "codepoint": "0x2f56",
+        "standalone_codepoint": "0x722a",
+        "variant_codepoint": [
+            "0x2ea4",
+            "0x2ea5",
+            "0x722a",
+            "0x722b"
+        ],
+        "viet-pron": "trảo",
+        "viet-meaning": "móng vuốt cầm thú"
+    },
+    "⽗": {
+        "meaning": "father",
+        "number": 88,
+        "pinyin": "fù",
+        "name": "",
+        "strokes": 4,
+        "frequency": "10",
+        "examples": "爸、爹、爺",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " Hand, sound borrowed from 斧",
+            "notes": ""
+        },
+        "variants": [
+            "父"
+        ],
+        "standalone": "父",
+        "codepoint": "0x2f57",
+        "standalone_codepoint": "0x7236",
+        "variant_codepoint": [
+            "0x7236"
+        ],
+        "viet-pron": "phụ",
+        "viet-meaning": "cha"
+    },
+    "⽘": {
+        "meaning": "Trigrams",
+        "number": 89,
+        "pinyin": "yáo",
+        "name": "",
+        "strokes": 4,
+        "frequency": "16",
+        "examples": "爼、爽、爾",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " Indicates strokes, marked or cut",
+            "notes": ""
+        },
+        "variants": [
+            "爻"
+        ],
+        "standalone": "爻",
+        "codepoint": "0x2f58",
+        "standalone_codepoint": "0x723b",
+        "variant_codepoint": [
+            "0x723b"
+        ],
+        "viet-pron": "hào",
+        "viet-meaning": "hào âm, hào dương (kinh dịch)"
+    },
+    "⽙": {
+        "meaning": "split wood",
+        "number": 90,
+        "pinyin": "qiáng",
+        "name": "将字旁",
+        "strokes": 4,
+        "frequency": "48",
+        "examples": "牀、牁、牂",
+        "useful": {
+            "distinguish": [
+                "片"
+            ],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " right hand table/board",
+            "notes": ""
+        },
+        "variants": [
+            "⺦",
+            "丬",
+            "爿"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f59",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x2ea6",
+            "0x4e2c",
+            "0x723f"
+        ],
+        "viet-pron": "tường",
+        "viet-meaning": "mảnh gỗ, cái giường"
+    },
+    "⽚": {
+        "meaning": "slice",
+        "number": 91,
+        "pinyin": "piàn",
+        "name": "",
+        "strokes": 4,
+        "frequency": "77",
+        "examples": "版、牉、牌",
+        "useful": {
+            "distinguish": [
+                "爿"
+            ],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " A table with legs (possibly a bed), i.e. the reverse of 爿, which also represents a table. A place where documents are created.",
+            "notes": " This radical is primarily used for representing various types of documents"
+        },
+        "variants": [
+            "片"
+        ],
+        "standalone": "片",
+        "codepoint": "0x2f5a",
+        "standalone_codepoint": "0x7247",
+        "variant_codepoint": [
+            "0x7247"
+        ],
+        "viet-pron": "phiến",
+        "viet-meaning": "mảnh, tấm, miếng"
+    },
+    "⽛": {
+        "meaning": "fang",
+        "number": 92,
+        "pinyin": "yá",
+        "name": "",
+        "strokes": 4,
+        "frequency": "9",
+        "examples": "㸦、㸧、牚",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " This is a picture of teeth",
+            "notes": " Usually loans it's sound to other characters"
+        },
+        "variants": [
+            "牙"
+        ],
+        "standalone": "牙",
+        "codepoint": "0x2f5b",
+        "standalone_codepoint": "0x7259",
+        "variant_codepoint": [
+            "0x7259"
+        ],
+        "viet-pron": "nha",
+        "viet-meaning": "răng"
+    },
+    "⽜": {
+        "meaning": "cow",
+        "number": 93,
+        "pinyin": "niú",
+        "name": "牛字旁",
+        "strokes": 4,
+        "frequency": "233",
+        "examples": "牝、牟、牠",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "牜",
+                "⺧"
+            ],
+            "rank": "59.0%",
+            "mnemonic": " A cow with horns and ears",
+            "notes": ""
+        },
+        "variants": [
+            "⺧",
+            "牛",
+            "牜",
+            "𠂒"
+        ],
+        "standalone": "牛",
+        "codepoint": "0x2f5c",
+        "standalone_codepoint": "0x725b",
+        "variant_codepoint": [
+            "0x2ea7",
+            "0x725b",
+            "0x725c",
+            "0x20092"
+        ],
+        "viet-pron": "ngưu",
+        "viet-meaning": "trâu"
+    },
+    "⽝": {
+        "meaning": "dog",
+        "number": 94,
+        "pinyin": "quǎn",
+        "name": "反犬旁",
+        "strokes": 4,
+        "frequency": "444",
+        "examples": "犮、犯、犰",
+        "useful": {
+            "distinguish": [
+                "大太"
+            ],
+            "variants": [
+                "犭"
+            ],
+            "rank": "20.1%",
+            "mnemonic": " This is a picture of a dog - rotate in the same direction as other animal radicals such as 龜 and the similarity becomes clearer",
+            "notes": " The dog radical is often used for medium sized animals and dog-like personality traits, leaning towards the fiercer traits"
+        },
+        "variants": [
+            "⺨",
+            "犬",
+            "犭"
+        ],
+        "standalone": "犬",
+        "codepoint": "0x2f5d",
+        "standalone_codepoint": "0x72ac",
+        "variant_codepoint": [
+            "0x2ea8",
+            "0x72ac",
+            "0x72ad"
+        ],
+        "viet-pron": "khuyển",
+        "viet-meaning": "con chó"
+    },
+    "⽞": {
+        "meaning": "profound",
+        "number": 95,
+        "pinyin": "xuán",
+        "name": "",
+        "strokes": 5,
+        "frequency": "6",
+        "examples": "玅、率、玈",
+        "useful": {
+            "distinguish": [
+                "幺,纟"
+            ],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " a piece of yarn 糸 being dyed black",
+            "notes": ""
+        },
+        "variants": [
+            "玄"
+        ],
+        "standalone": "玄",
+        "codepoint": "0x2f5e",
+        "standalone_codepoint": "0x7384",
+        "variant_codepoint": [
+            "0x7384"
+        ],
+        "viet-pron": "huyền",
+        "viet-meaning": "màu đen huyền, huyền bí"
+    },
+    "⽟": {
+        "meaning": "jade",
+        "number": 96,
+        "pinyin": "yù",
+        "name": "王字旁",
+        "strokes": 5,
+        "frequency": "473",
+        "examples": "玻、瑪、璧",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "王"
+            ],
+            "rank": "20.1%",
+            "mnemonic": " Originally represented jade disks on a string.",
+            "notes": " This variant is infrequently used.  Typically found in characters having to do with precious/valuable things, stones in particular"
+        },
+        "variants": [
+            "⺩",
+            "玉",
+            "玊",
+            "王",
+            "𤣩"
+        ],
+        "standalone": "玉",
+        "codepoint": "0x2f5f",
+        "standalone_codepoint": "0x7389",
+        "variant_codepoint": [
+            "0x2ea9",
+            "0x7389",
+            "0x738a",
+            "0x738b",
+            "0x248e9"
+        ],
+        "viet-pron": "ngọc",
+        "viet-meaning": "đá quý, ngọc"
+    },
+    "⽠": {
+        "meaning": "melon",
+        "number": 97,
+        "pinyin": "guā",
+        "name": "",
+        "strokes": 5,
+        "frequency": "55",
+        "examples": "瓝、瓞、瓟",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " A sprawling plant, the gourd is the hook at the bottom",
+            "notes": ""
+        },
+        "variants": [
+            "瓜"
+        ],
+        "standalone": "瓜",
+        "codepoint": "0x2f60",
+        "standalone_codepoint": "0x74dc",
+        "variant_codepoint": [
+            "0x74dc"
+        ],
+        "viet-pron": "qua",
+        "viet-meaning": "quả dưa"
+    },
+    "⽡": {
+        "meaning": "tile",
+        "number": 98,
+        "pinyin": "wǎ",
+        "name": "",
+        "strokes": 5,
+        "frequency": "174",
+        "examples": "㼚、瓮、瓫",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " A curved interlocking roof tile",
+            "notes": " The few characters under this radical were all originally earthenware items."
+        },
+        "variants": [
+            "瓦"
+        ],
+        "standalone": "瓦",
+        "codepoint": "0x2f61",
+        "standalone_codepoint": "0x74e6",
+        "variant_codepoint": [
+            "0x74e6"
+        ],
+        "viet-pron": "ngõa",
+        "viet-meaning": "ngói"
+    },
+    "⽢": {
+        "meaning": "sweet",
+        "number": 99,
+        "pinyin": "gān",
+        "name": "",
+        "strokes": 5,
+        "frequency": "22",
+        "examples": "甚、甜、甛",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " something sweet in the mouth 口",
+            "notes": ""
+        },
+        "variants": [
+            "甘"
+        ],
+        "standalone": "甘",
+        "codepoint": "0x2f62",
+        "standalone_codepoint": "0x7518",
+        "variant_codepoint": [
+            "0x7518"
+        ],
+        "viet-pron": "cam",
+        "viet-meaning": "ngọt"
+    },
+    "⽣": {
+        "meaning": "life",
+        "number": 100,
+        "pinyin": "shēng",
+        "name": "",
+        "strokes": 5,
+        "frequency": "22",
+        "examples": "甡、產、甥",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " a plant 屮 sprouting from the ground 土",
+            "notes": ""
+        },
+        "variants": [
+            "生"
+        ],
+        "standalone": "生",
+        "codepoint": "0x2f63",
+        "standalone_codepoint": "0x751f",
+        "variant_codepoint": [
+            "0x751f"
+        ],
+        "viet-pron": "sinh",
+        "viet-meaning": "sinh sôi,nảy nở"
+    },
+    "⽤": {
+        "meaning": "use",
+        "number": 101,
+        "pinyin": "yòng",
+        "name": "",
+        "strokes": 5,
+        "frequency": "10",
+        "examples": "甩、甫、甬",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "甩"
+            ],
+            "rank": "35.0%",
+            "mnemonic": " Likely represents a container",
+            "notes": ""
+        },
+        "variants": [
+            "用",
+            "甩"
+        ],
+        "standalone": "用",
+        "codepoint": "0x2f64",
+        "standalone_codepoint": "0x7528",
+        "variant_codepoint": [
+            "0x7528",
+            "0x7529"
+        ],
+        "viet-pron": "dụng",
+        "viet-meaning": "dùng"
+    },
+    "⽥": {
+        "meaning": "field",
+        "number": 102,
+        "pinyin": "tián",
+        "name": "田字旁",
+        "strokes": 5,
+        "frequency": "192",
+        "examples": "由、甲、申",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "由",
+                "甲",
+                "申",
+                "电"
+            ],
+            "rank": "76.3%",
+            "mnemonic": " represents a rice paddy",
+            "notes": ""
+        },
+        "variants": [
+            "田",
+            "由",
+            "甲",
+            "申",
+            "电"
+        ],
+        "standalone": "田",
+        "codepoint": "0x2f65",
+        "standalone_codepoint": "0x7530",
+        "variant_codepoint": [
+            "0x7530",
+            "0x7531",
+            "0x7532",
+            "0x7533",
+            "0x7535"
+        ],
+        "viet-pron": "điền",
+        "viet-meaning": "ruộng"
+    },
+    "⽦": {
+        "meaning": "bolt of cloth",
+        "number": 103,
+        "pinyin": "pǐ",
+        "name": "疋字底",
+        "strokes": 5,
+        "frequency": "15",
+        "examples": "疌、疏、疎",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⺪"
+            ],
+            "rank": "5.2%",
+            "mnemonic": "",
+            "notes": " generally superseded by 匹"
+        },
+        "variants": [
+            "⺪",
+            "疋",
+            "𤴔"
+        ],
+        "standalone": "疋",
+        "codepoint": "0x2f66",
+        "standalone_codepoint": "0x758b",
+        "variant_codepoint": [
+            "0x2eaa",
+            "0x758b",
+            "0x24d14"
+        ],
+        "viet-pron": "thất/sơ",
+        "viet-meaning": "đơn vị đo chiều dài, tấm (vải)"
+    },
+    "⽧": {
+        "meaning": "sickness",
+        "number": 104,
+        "pinyin": "nè",
+        "name": "病字旁",
+        "strokes": 5,
+        "frequency": "526",
+        "examples": "疔、疚、疝",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "92.3%",
+            "mnemonic": " A sick person stretched out on a bed (on the left - 丬)",
+            "notes": " If the character represents some disease or affliction then odds are good that this is the 部首"
+        },
+        "variants": [
+            "疒"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f67",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x7592"
+        ],
+        "viet-pron": "nạch",
+        "viet-meaning": "bệnh tật"
+    },
+    "⽨": {
+        "meaning": "footsteps",
+        "number": 105,
+        "pinyin": "bō",
+        "name": "登字头",
+        "strokes": 5,
+        "frequency": "15",
+        "examples": "癸、癹、発",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " Two feet - 止 - back-to-back",
+            "notes": " This radical only links to three characters in modern usage - 發，噔，and 癸"
+        },
+        "variants": [
+            "癶"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f68",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x7676"
+        ],
+        "viet-pron": "bát",
+        "viet-meaning": "gạt ngược lại, trở lại"
+    },
+    "⽩": {
+        "meaning": "white",
+        "number": 106,
+        "pinyin": "bái",
+        "name": "白字旁",
+        "strokes": 5,
+        "frequency": "109",
+        "examples": "百、皀、皁",
+        "useful": {
+            "distinguish": [
+                "日,",
+                "曰,",
+                "臼,",
+                "目"
+            ],
+            "variants": [],
+            "rank": "67.7%",
+            "mnemonic": " A modification of the sun - 日 - to represent white",
+            "notes": " Associated with the idea of purity and brightness in many 字"
+        },
+        "variants": [
+            "白"
+        ],
+        "standalone": "白",
+        "codepoint": "0x2f69",
+        "standalone_codepoint": "0x767d",
+        "variant_codepoint": [
+            "0x767d"
+        ],
+        "viet-pron": "bạch",
+        "viet-meaning": "màu trắng"
+    },
+    "⽪": {
+        "meaning": "skin",
+        "number": 107,
+        "pinyin": "pí",
+        "name": "皮字旁",
+        "strokes": 5,
+        "frequency": "94",
+        "examples": "皯、皰、皴",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " A hand 又 flaying an animal hide",
+            "notes": " In a number of characters relating to different skin attributes/conditions as well as a number of different articles of clothing which once may have been made from hides"
+        },
+        "variants": [
+            "皮"
+        ],
+        "standalone": "皮",
+        "codepoint": "0x2f6a",
+        "standalone_codepoint": "0x76ae",
+        "variant_codepoint": [
+            "0x76ae"
+        ],
+        "viet-pron": "bì",
+        "viet-meaning": "da"
+    },
+    "⽫": {
+        "meaning": "dish",
+        "number": 108,
+        "pinyin": "mǐn",
+        "name": "皿字底",
+        "strokes": 5,
+        "frequency": "129",
+        "examples": "盂、盃、盅",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "79.1%",
+            "mnemonic": " Primitive of a tub or plate",
+            "notes": " Numerous types of receptacles and their uses are categorized under this 部首"
+        },
+        "variants": [
+            "皿"
+        ],
+        "standalone": "皿",
+        "codepoint": "0x2f6b",
+        "standalone_codepoint": "0x76bf",
+        "variant_codepoint": [
+            "0x76bf"
+        ],
+        "viet-pron": "mãnh",
+        "viet-meaning": "bát dĩa"
+    },
+    "⽬": {
+        "meaning": "eye",
+        "number": 109,
+        "pinyin": "mù",
+        "name": "目字旁",
+        "strokes": 5,
+        "frequency": "647",
+        "examples": "盯、盱、盲",
+        "useful": {
+            "distinguish": [
+                "日,",
+                "曰,",
+                "臼"
+            ],
+            "variants": [],
+            "rank": "91.6%",
+            "mnemonic": " This is a picture of an eye (on its' side)",
+            "notes": " Used in characters which relate to seeing (or not seeing)"
+        },
+        "variants": [
+            "目"
+        ],
+        "standalone": "目",
+        "codepoint": "0x2f6c",
+        "standalone_codepoint": "0x76ee",
+        "variant_codepoint": [
+            "0x76ee"
+        ],
+        "viet-pron": "mục",
+        "viet-meaning": "mắt"
+    },
+    "⽭": {
+        "meaning": "spear",
+        "number": 110,
+        "pinyin": "máo",
+        "name": "",
+        "strokes": 5,
+        "frequency": "65",
+        "examples": "矜、矞、矟",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " A saw lance made of flint disks",
+            "notes": ""
+        },
+        "variants": [
+            "矛"
+        ],
+        "standalone": "矛",
+        "codepoint": "0x2f6d",
+        "standalone_codepoint": "0x77db",
+        "variant_codepoint": [
+            "0x77db"
+        ],
+        "viet-pron": "mâu",
+        "viet-meaning": "cây giáo để đâm"
+    },
+    "⽮": {
+        "meaning": "arrow",
+        "number": 111,
+        "pinyin": "shǐ",
+        "name": "",
+        "strokes": 5,
+        "frequency": "64",
+        "examples": "矣、知、矧",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "63.1%",
+            "mnemonic": " A picture - the point is at the top, feathers and knock below",
+            "notes": ""
+        },
+        "variants": [
+            "矢"
+        ],
+        "standalone": "矢",
+        "codepoint": "0x2f6e",
+        "standalone_codepoint": "0x77e2",
+        "variant_codepoint": [
+            "0x77e2"
+        ],
+        "viet-pron": "thỉ",
+        "viet-meaning": "cây tên, mũi tên"
+    },
+    "⽯": {
+        "meaning": "stone",
+        "number": 112,
+        "pinyin": "shí",
+        "name": "石字旁",
+        "strokes": 5,
+        "frequency": "499",
+        "examples": "矸、矻、矼",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "94.4%",
+            "mnemonic": " 口 represents a rock which has rolled to the bottom of a cliff",
+            "notes": " Used in characters for hard, rocklike things"
+        },
+        "variants": [
+            "石"
+        ],
+        "standalone": "石",
+        "codepoint": "0x2f6f",
+        "standalone_codepoint": "0x77f3",
+        "variant_codepoint": [
+            "0x77f3"
+        ],
+        "viet-pron": "thạch",
+        "viet-meaning": "đá"
+    },
+    "⽰": {
+        "meaning": "spirit",
+        "number": 113,
+        "pinyin": "shì",
+        "name": "示字旁",
+        "strokes": 5,
+        "frequency": "213",
+        "examples": "礼、礽、社",
+        "useful": {
+            "distinguish": [
+                "衤"
+            ],
+            "variants": [
+                "礻"
+            ],
+            "rank": "5.2%",
+            "mnemonic": " image of an altar",
+            "notes": " Also known as the SIGN radical - think divine or mystical signs.This form is not common as a character component.  Considered a separate radical from 礻in some modern simplified tables."
+        },
+        "variants": [
+            "⺬",
+            "⺭",
+            "示",
+            "礻"
+        ],
+        "standalone": "示",
+        "codepoint": "0x2f70",
+        "standalone_codepoint": "0x793a",
+        "variant_codepoint": [
+            "0x2eac",
+            "0x2ead",
+            "0x793a",
+            "0x793b"
+        ],
+        "viet-pron": "thị/kỳ",
+        "viet-meaning": "chỉ thị; thần đất"
+    },
+    "⽱": {
+        "meaning": "track",
+        "number": 114,
+        "pinyin": "róu",
+        "name": "",
+        "strokes": 5,
+        "frequency": "12",
+        "examples": "禹、禺、离",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " typically indicates a rump and tail",
+            "notes": ""
+        },
+        "variants": [
+            "禸"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f71",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x79b8"
+        ],
+        "viet-pron": "nhựu",
+        "viet-meaning": "vết chân, lốt chân"
+    },
+    "⽲": {
+        "meaning": "grain",
+        "number": 115,
+        "pinyin": "hé",
+        "name": "禾木旁",
+        "strokes": 5,
+        "frequency": "431",
+        "examples": "禿、秀、私",
+        "useful": {
+            "distinguish": [
+                "釆,",
+                "米,",
+                "木"
+            ],
+            "variants": [],
+            "rank": "90.9%",
+            "mnemonic": " represents a sheath of grain with a sagging head",
+            "notes": " Characters relating to farming, harvesting, and of course grains contain this radical"
+        },
+        "variants": [
+            "禾"
+        ],
+        "standalone": "禾",
+        "codepoint": "0x2f72",
+        "standalone_codepoint": "0x79be",
+        "variant_codepoint": [
+            "0x79be"
+        ],
+        "viet-pron": "hòa",
+        "viet-meaning": "lúa"
+    },
+    "⽳": {
+        "meaning": "cave",
+        "number": 116,
+        "pinyin": "xué",
+        "name": "穴宝盖",
+        "strokes": 5,
+        "frequency": "298",
+        "examples": "究、穸、空",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "82.2%",
+            "mnemonic": " a house 宀 with an entrance 入",
+            "notes": " This radical is used for cave-like things and investigation"
+        },
+        "variants": [
+            "穴"
+        ],
+        "standalone": "穴",
+        "codepoint": "0x2f73",
+        "standalone_codepoint": "0x7a74",
+        "variant_codepoint": [
+            "0x7a74"
+        ],
+        "viet-pron": "huyệt",
+        "viet-meaning": "hang lỗ"
+    },
+    "⽴": {
+        "meaning": "stand",
+        "number": 117,
+        "pinyin": "lì",
+        "name": "立字旁",
+        "strokes": 5,
+        "frequency": "101",
+        "examples": "竑、竒、竘",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "67.7%",
+            "mnemonic": " This is a image of a man standing on the ground, arms raised",
+            "notes": ""
+        },
+        "variants": [
+            "立"
+        ],
+        "standalone": "立",
+        "codepoint": "0x2f74",
+        "standalone_codepoint": "0x7acb",
+        "variant_codepoint": [
+            "0x7acb"
+        ],
+        "viet-pron": "lập",
+        "viet-meaning": "đứng, thành lập"
+    },
+    "⽵": {
+        "meaning": "bamboo",
+        "number": 118,
+        "pinyin": "zhú",
+        "name": "竹字头",
+        "strokes": 6,
+        "frequency": "953",
+        "examples": "竺、竽、竿",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⺮"
+            ],
+            "rank": "5.2%",
+            "mnemonic": " Two bamboo stalks with leaves",
+            "notes": " Items which are or once were fashioned of bamboo are found under this radical. This full 字 isn't actually used as a component, see ⺮"
+        },
+        "variants": [
+            "⺮",
+            "竹",
+            "𥫗"
+        ],
+        "standalone": "竹",
+        "codepoint": "0x2f75",
+        "standalone_codepoint": "0x7af9",
+        "variant_codepoint": [
+            "0x2eae",
+            "0x7af9",
+            "0x25ad7"
+        ],
+        "viet-pron": "trúc",
+        "viet-meaning": "tre trúc"
+    },
+    "⽶": {
+        "meaning": "rice",
+        "number": 119,
+        "pinyin": "mǐ",
+        "name": "米字旁",
+        "strokes": 6,
+        "frequency": "318",
+        "examples": "籸、籹、籽",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "85.0%",
+            "mnemonic": " Originally a picture of rice growing in a paddie, the horizontal line is the water line",
+            "notes": " Products of rice and their qualities are covered here, but also characters having to do with business practices and quality grades"
+        },
+        "variants": [
+            "米"
+        ],
+        "standalone": "米",
+        "codepoint": "0x2f76",
+        "standalone_codepoint": "0x7c73",
+        "variant_codepoint": [
+            "0x7c73"
+        ],
+        "viet-pron": "mễ",
+        "viet-meaning": "gạo"
+    },
+    "⽷": {
+        "meaning": "silk",
+        "number": 120,
+        "pinyin": "mì",
+        "name": "绞丝旁",
+        "strokes": 6,
+        "frequency": "823",
+        "examples": "系、糾、紀",
+        "useful": {
+            "distinguish": [
+                "幺,",
+                "玄"
+            ],
+            "variants": [
+                "纟",
+                "糹"
+            ],
+            "rank": "72.5%",
+            "mnemonic": " twisted string",
+            "notes": " Characters having to do with rope, threads, as well as actions having to do with the manufacturing of fabrics use this radical"
+        },
+        "variants": [
+            "⺯",
+            "⺰",
+            "糸",
+            "糹",
+            "纟"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f77",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x2eaf",
+            "0x2eb0",
+            "0x7cf8",
+            "0x7cf9",
+            "0x7e9f"
+        ],
+        "viet-pron": "mịch",
+        "viet-meaning": "sợi tơ nhỏ"
+    },
+    "⽸": {
+        "meaning": "jar",
+        "number": 121,
+        "pinyin": "fǒu",
+        "name": "",
+        "strokes": 6,
+        "frequency": "77",
+        "examples": "缸、缺、缽",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " pot with a lid",
+            "notes": " Earthenware vessels, jars, and their attributes use this radical"
+        },
+        "variants": [
+            "缶"
+        ],
+        "standalone": "缶",
+        "codepoint": "0x2f78",
+        "standalone_codepoint": "0x7f36",
+        "variant_codepoint": [
+            "0x7f36"
+        ],
+        "viet-pron": "phẫu",
+        "viet-meaning": "đồ sành"
+    },
+    "⽹": {
+        "meaning": "net",
+        "number": 122,
+        "pinyin": "wǎng",
+        "name": "四字头",
+        "strokes": 6,
+        "frequency": "163",
+        "examples": "罔、罕、罘",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "罒",
+                "⺳",
+                "罓"
+            ],
+            "rank": "5.2%",
+            "mnemonic": "",
+            "notes": " As nets are used to trap some thing or even a person, the characters under this radical generally relate to that concept, in particular a few characters relate to crime.  Traditional form for this pronunciation is 惘, not a radical though - see 罔"
+        },
+        "variants": [
+            "⺫",
+            "⺱",
+            "⺲",
+            "⺳",
+            "⺴",
+            "⺵",
+            "㓁",
+            "网",
+            "罒",
+            "罓",
+            "𦉫"
+        ],
+        "standalone": "网",
+        "codepoint": "0x2f79",
+        "standalone_codepoint": "0x7f51",
+        "variant_codepoint": [
+            "0x2eab",
+            "0x2eb1",
+            "0x2eb2",
+            "0x2eb3",
+            "0x2eb4",
+            "0x2eb5",
+            "0x34c1",
+            "0x7f51",
+            "0x7f52",
+            "0x7f53",
+            "0x2626b"
+        ],
+        "viet-pron": "võng",
+        "viet-meaning": "cái lưới"
+    },
+    "⽺": {
+        "meaning": "sheep",
+        "number": 123,
+        "pinyin": "yáng",
+        "name": "羊字旁",
+        "strokes": 6,
+        "frequency": "156",
+        "examples": "羋、羌、美",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⺶",
+                "羋",
+                "⺷"
+            ],
+            "rank": "52.7%",
+            "mnemonic": " This is an image of a goat/sheep, horns, ears, and legs",
+            "notes": " For whatever reason, 羊 is often used as the radical virtuous or noble attributes.  Also used as the radical for a variety of grazing animals."
+        },
+        "variants": [
+            "⺶",
+            "⺷",
+            "⺸",
+            "羊",
+            "羋",
+            "𦍋",
+            "𦍌"
+        ],
+        "standalone": "羊",
+        "codepoint": "0x2f7a",
+        "standalone_codepoint": "0x7f8a",
+        "variant_codepoint": [
+            "0x2eb6",
+            "0x2eb7",
+            "0x2eb8",
+            "0x7f8a",
+            "0x7f8b",
+            "0x2634b",
+            "0x2634c"
+        ],
+        "viet-pron": "dương",
+        "viet-meaning": "con dê"
+    },
+    "⽻": {
+        "meaning": "feather",
+        "number": 124,
+        "pinyin": "yǔ",
+        "name": "羽字旁",
+        "strokes": 6,
+        "frequency": "220",
+        "examples": "羿、翀、翁",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "羽"
+            ],
+            "rank": "75.3%",
+            "mnemonic": " This is an image of wings",
+            "notes": " Birdlike attributes, and more specifically attributes of a bird's plumage are represented by this radical."
+        },
+        "variants": [
+            "羽",
+            "羽"
+        ],
+        "standalone": "羽",
+        "codepoint": "0x2f7b",
+        "standalone_codepoint": "0x7fbd",
+        "variant_codepoint": [
+            "0x7fbd",
+            "0xfa1e"
+        ],
+        "viet-pron": "vũ",
+        "viet-meaning": "lông vũ"
+    },
+    "⽼": {
+        "meaning": "old",
+        "number": 125,
+        "pinyin": "lǎo",
+        "name": "老字头",
+        "strokes": 6,
+        "frequency": "22",
+        "examples": "考、者、耆",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "耂"
+            ],
+            "rank": "44.4%",
+            "mnemonic": " an old man with long hair leaning on a cane 匕",
+            "notes": " Used in characters conveying age. Not actually used as a radical, see variant"
+        },
+        "variants": [
+            "⺹",
+            "老",
+            "耂"
+        ],
+        "standalone": "老",
+        "codepoint": "0x2f7c",
+        "standalone_codepoint": "0x8001",
+        "variant_codepoint": [
+            "0x2eb9",
+            "0x8001",
+            "0x8002"
+        ],
+        "viet-pron": "lão",
+        "viet-meaning": "già"
+    },
+    "⽽": {
+        "meaning": "and",
+        "number": 126,
+        "pinyin": "ér",
+        "name": "",
+        "strokes": 6,
+        "frequency": "22",
+        "examples": "耍、耎、耏",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " possibly represents a beard",
+            "notes": ""
+        },
+        "variants": [
+            "而"
+        ],
+        "standalone": "而",
+        "codepoint": "0x2f7d",
+        "standalone_codepoint": "0x800c",
+        "variant_codepoint": [
+            "0x800c"
+        ],
+        "viet-pron": "nhi",
+        "viet-meaning": "mà, và"
+    },
+    "⽾": {
+        "meaning": "plough",
+        "number": 127,
+        "pinyin": "lěi",
+        "name": "",
+        "strokes": 6,
+        "frequency": "84",
+        "examples": "耔、耕、耖",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " A plow handle of wood and originally 3 cross lines indicating the furrows made",
+            "notes": " The few characters under this radical generally relate to cultivation of crops"
+        },
+        "variants": [
+            "耒"
+        ],
+        "standalone": "耒",
+        "codepoint": "0x2f7e",
+        "standalone_codepoint": "0x8012",
+        "variant_codepoint": [
+            "0x8012"
+        ],
+        "viet-pron": "lỗi",
+        "viet-meaning": "cái cày"
+    },
+    "⽿": {
+        "meaning": "ear",
+        "number": 128,
+        "pinyin": "ěr",
+        "name": "耳字旁",
+        "strokes": 6,
+        "frequency": "172",
+        "examples": "耴、耵、耷",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "76.3%",
+            "mnemonic": " This is a picture of an ear",
+            "notes": " Typically associated with characters having to do with listening and comprehending"
+        },
+        "variants": [
+            "耳"
+        ],
+        "standalone": "耳",
+        "codepoint": "0x2f7f",
+        "standalone_codepoint": "0x8033",
+        "variant_codepoint": [
+            "0x8033"
+        ],
+        "viet-pron": "nhĩ",
+        "viet-meaning": "lỗ tai"
+    },
+    "⾀": {
+        "meaning": "brush",
+        "number": 129,
+        "pinyin": "yù",
+        "name": "",
+        "strokes": 6,
+        "frequency": "19",
+        "examples": "肄、肆、肅",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "肀",
+                "⺻"
+            ],
+            "rank": "35.0%",
+            "mnemonic": " a hand with a brush, drawing a pair of lines",
+            "notes": ""
+        },
+        "variants": [
+            "⺺",
+            "⺻",
+            "聿",
+            "肀"
+        ],
+        "standalone": "聿",
+        "codepoint": "0x2f80",
+        "standalone_codepoint": "0x807f",
+        "variant_codepoint": [
+            "0x2eba",
+            "0x2ebb",
+            "0x807f",
+            "0x8080"
+        ],
+        "viet-pron": "duật",
+        "viet-meaning": "cây bút"
+    },
+    "⾁": {
+        "meaning": "meat",
+        "number": 130,
+        "pinyin": "ròu",
+        "name": "",
+        "strokes": 6,
+        "frequency": "674",
+        "examples": "肊、肋、然",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⺼"
+            ],
+            "rank": "20.1%",
+            "mnemonic": " ribs of an animal",
+            "notes": " Fleshy things and body parts are represented by this radical.  An additional variant of the flesh radical is the top half of 炙, representing meat over a fire. This variant can be seen in several characters"
+        },
+        "variants": [
+            "⺼",
+            "肉"
+        ],
+        "standalone": "肉",
+        "codepoint": "0x2f81",
+        "standalone_codepoint": "0x8089",
+        "variant_codepoint": [
+            "0x2ebc",
+            "0x8089"
+        ],
+        "viet-pron": "nhục",
+        "viet-meaning": "thịt"
+    },
+    "⾂": {
+        "meaning": "minister",
+        "number": 131,
+        "pinyin": "chén",
+        "name": "",
+        "strokes": 6,
+        "frequency": "16",
+        "examples": "臤、臥、臧",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " a sideways version of an eye or a head",
+            "notes": ""
+        },
+        "variants": [
+            "臣",
+            "𦣝"
+        ],
+        "standalone": "臣",
+        "codepoint": "0x2f82",
+        "standalone_codepoint": "0x81e3",
+        "variant_codepoint": [
+            "0x81e3",
+            "0x268dd"
+        ],
+        "viet-pron": "thần",
+        "viet-meaning": "bầy tôi"
+    },
+    "⾃": {
+        "meaning": "self",
+        "number": 132,
+        "pinyin": "zì",
+        "name": "",
+        "strokes": 6,
+        "frequency": "34",
+        "examples": "臬、臭、臯",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " primitive of a nose - one points to their nose when pointing at themselves",
+            "notes": ""
+        },
+        "variants": [
+            "自"
+        ],
+        "standalone": "自",
+        "codepoint": "0x2f83",
+        "standalone_codepoint": "0x81ea",
+        "variant_codepoint": [
+            "0x81ea"
+        ],
+        "viet-pron": "tự",
+        "viet-meaning": "tự bản thân, kể từ"
+    },
+    "⾄": {
+        "meaning": "arrive",
+        "number": 133,
+        "pinyin": "zhì",
+        "name": "",
+        "strokes": 6,
+        "frequency": "24",
+        "examples": "致、臷、臺",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " an upside down arrow 矢 stuck in the ground where it (arrived) at after being shot",
+            "notes": ""
+        },
+        "variants": [
+            "至"
+        ],
+        "standalone": "至",
+        "codepoint": "0x2f84",
+        "standalone_codepoint": "0x81f3",
+        "variant_codepoint": [
+            "0x81f3"
+        ],
+        "viet-pron": "chí",
+        "viet-meaning": "đến"
+    },
+    "⾅": {
+        "meaning": "mortar",
+        "number": 134,
+        "pinyin": "jiù",
+        "name": "",
+        "strokes": 6,
+        "frequency": "71",
+        "examples": "臾、臿、舁",
+        "useful": {
+            "distinguish": [
+                "日,",
+                "曰,",
+                "白"
+            ],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " Picture of a large wood mortar for pounding rice flour ( Usu in Japanese - still in use today for making Mochi)",
+            "notes": " There is a variant form of this radical with 8 or 10 strokes, this variant seems to have different types of concepts placed into a mortar, such as 舉, 興, 輿 and 釁"
+        },
+        "variants": [
+            "⺽",
+            "臼",
+            "𦥑"
+        ],
+        "standalone": "臼",
+        "codepoint": "0x2f85",
+        "standalone_codepoint": "0x81fc",
+        "variant_codepoint": [
+            "0x2ebd",
+            "0x81fc",
+            "0x26951"
+        ],
+        "viet-pron": "cữu",
+        "viet-meaning": "cái cối giã gạo"
+    },
+    "⾆": {
+        "meaning": "tongue",
+        "number": 135,
+        "pinyin": "shé",
+        "name": "舌字旁",
+        "strokes": 6,
+        "frequency": "31",
+        "examples": "舍、舐、舑",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " A tongue sticking out of a mouth 口",
+            "notes": " Most of the characters under this radical do relate to things done with the tongue, a variant radical is 舍, which appears in words relating to housing"
+        },
+        "variants": [
+            "舌"
+        ],
+        "standalone": "舌",
+        "codepoint": "0x2f86",
+        "standalone_codepoint": "0x820c",
+        "variant_codepoint": [
+            "0x820c"
+        ],
+        "viet-pron": "thiệt",
+        "viet-meaning": "cái lưỡi"
+    },
+    "⾇": {
+        "meaning": "oppose",
+        "number": 136,
+        "pinyin": "chuǎn",
+        "name": "",
+        "strokes": 6,
+        "frequency": "10",
+        "examples": "舜、舝、舞",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " two feet opposed",
+            "notes": ""
+        },
+        "variants": [
+            "舛"
+        ],
+        "standalone": "舛",
+        "codepoint": "0x2f87",
+        "standalone_codepoint": "0x821b",
+        "variant_codepoint": [
+            "0x821b"
+        ],
+        "viet-pron": "suyễn",
+        "viet-meaning": "sai lầm"
+    },
+    "⾈": {
+        "meaning": "boat",
+        "number": 137,
+        "pinyin": "zhōu",
+        "name": "舟字旁",
+        "strokes": 6,
+        "frequency": "197",
+        "examples": "舠、舡、舢",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "72.5%",
+            "mnemonic": " A primitive of a boat",
+            "notes": " If this is the radical, then the character more than likely has a nautical nature"
+        },
+        "variants": [
+            "舟"
+        ],
+        "standalone": "舟",
+        "codepoint": "0x2f88",
+        "standalone_codepoint": "0x821f",
+        "variant_codepoint": [
+            "0x821f"
+        ],
+        "viet-pron": "chu",
+        "viet-meaning": "cái thuyền"
+    },
+    "⾉": {
+        "meaning": "stopping",
+        "number": 138,
+        "pinyin": "gèn",
+        "name": "艮字旁",
+        "strokes": 6,
+        "frequency": "5",
+        "examples": "良、艱",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " A man 匕 with an eye 目 on top, originally just the mirror of 見",
+            "notes": ""
+        },
+        "variants": [
+            "艮"
+        ],
+        "standalone": "艮",
+        "codepoint": "0x2f89",
+        "standalone_codepoint": "0x826e",
+        "variant_codepoint": [
+            "0x826e"
+        ],
+        "viet-pron": "cấn",
+        "viet-meaning": "quẻ cấn (kinh dịch), dừng, bền cứng"
+    },
+    "⾊": {
+        "meaning": "colour",
+        "number": 139,
+        "pinyin": "sè",
+        "name": "",
+        "strokes": 6,
+        "frequency": "21",
+        "examples": "艳、艴、艵",
+        "useful": {
+            "distinguish": [
+                "邑"
+            ],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " The top portion is thought to be derived from 人, the bottom derived from the character for seal - 卩, so color is the thing a man chooses when he places his seal",
+            "notes": ""
+        },
+        "variants": [
+            "色"
+        ],
+        "standalone": "色",
+        "codepoint": "0x2f8a",
+        "standalone_codepoint": "0x8272",
+        "variant_codepoint": [
+            "0x8272"
+        ],
+        "viet-pron": "sắc",
+        "viet-meaning": "màu, dáng vẻ, nữ sắc"
+    },
+    "⾋": {
+        "meaning": "grass",
+        "number": 140,
+        "pinyin": "cǎo",
+        "name": "草字头",
+        "strokes": 6,
+        "frequency": "1,902",
+        "examples": "艽、艾、芃",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "艹"
+            ],
+            "rank": "0.0%",
+            "mnemonic": " Two plants of grass",
+            "notes": " AKA 草字頭, the grass radical covers most all flora and fauna, as well as things like medicine, arts, and crafts which come from manipulating the natural world."
+        },
+        "variants": [
+            "⺾",
+            "⺿",
+            "⻀",
+            "艸",
+            "艹",
+            "艹"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f8b",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x2ebe",
+            "0x2ebf",
+            "0x2ec0",
+            "0x8278",
+            "0x8279",
+            "0xfa5d"
+        ],
+        "viet-pron": "thảo",
+        "viet-meaning": "cỏ"
+    },
+    "⾌": {
+        "meaning": "tiger",
+        "number": 141,
+        "pinyin": "hū",
+        "name": "",
+        "strokes": 6,
+        "frequency": "114",
+        "examples": "虎、虐、虒",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "虎"
+            ],
+            "rank": "52.7%",
+            "mnemonic": " A tigers head pointing left",
+            "notes": ""
+        },
+        "variants": [
+            "⻁",
+            "虍",
+            "虎"
+        ],
+        "standalone": "虎",
+        "codepoint": "0x2f8c",
+        "standalone_codepoint": "0x864e",
+        "variant_codepoint": [
+            "0x2ec1",
+            "0x864d",
+            "0x864e"
+        ],
+        "viet-pron": "hổ",
+        "viet-meaning": "vằn vện của con hổ"
+    },
+    "⾍": {
+        "meaning": "insect",
+        "number": 142,
+        "pinyin": "chóng",
+        "name": "虫字旁",
+        "strokes": 6,
+        "frequency": "1,067",
+        "examples": "虬、虯、虱",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "93.0%",
+            "mnemonic": " picture of a snake",
+            "notes": " This radical covers all things of the insect kingdom along with the insect-like crustacea.  Originally a snake, this character eventually came to represent insects. This is an alternate of 蟲"
+        },
+        "variants": [
+            "虫"
+        ],
+        "standalone": "虫",
+        "codepoint": "0x2f8d",
+        "standalone_codepoint": "0x866b",
+        "variant_codepoint": [
+            "0x866b"
+        ],
+        "viet-pron": "trùng",
+        "viet-meaning": "sâu bọ"
+    },
+    "⾎": {
+        "meaning": "blood",
+        "number": 143,
+        "pinyin": "xuè",
+        "name": "",
+        "strokes": 6,
+        "frequency": "60",
+        "examples": "衁、衂、衃",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " A bowl 皿 of blood",
+            "notes": ""
+        },
+        "variants": [
+            "血"
+        ],
+        "standalone": "血",
+        "codepoint": "0x2f8e",
+        "standalone_codepoint": "0x8840",
+        "variant_codepoint": [
+            "0x8840"
+        ],
+        "viet-pron": "huyết",
+        "viet-meaning": "máu"
+    },
+    "⾏": {
+        "meaning": "walk enclosure",
+        "number": 144,
+        "pinyin": "xíng",
+        "name": "",
+        "strokes": 6,
+        "frequency": "53",
+        "examples": "衍、衎、衒",
+        "useful": {
+            "distinguish": [
+                "彳"
+            ],
+            "variants": [],
+            "rank": "59.0%",
+            "mnemonic": " step 彳 + step 亍 = go 行",
+            "notes": " When this radical is used some other character component is always inserted between 彳 and 亍"
+        },
+        "variants": [
+            "行"
+        ],
+        "standalone": "行",
+        "codepoint": "0x2f8f",
+        "standalone_codepoint": "0x884c",
+        "variant_codepoint": [
+            "0x884c"
+        ],
+        "viet-pron": "hành/hàng",
+        "viet-meaning": "đi, thi hành, làm được"
+    },
+    "⾐": {
+        "meaning": "clothes",
+        "number": 145,
+        "pinyin": "yī",
+        "name": "衣字旁",
+        "strokes": 6,
+        "frequency": "607",
+        "examples": "初、表、衫",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "衤"
+            ],
+            "rank": "79.1%",
+            "mnemonic": " cloth top indicating shoulders and head, bottom indicating flaps or folds",
+            "notes": " Used for different articles of clothing as well as specific parts of garments"
+        },
+        "variants": [
+            "⻂",
+            "衣",
+            "衤",
+            "𧘇"
+        ],
+        "standalone": "衣",
+        "codepoint": "0x2f90",
+        "standalone_codepoint": "0x8863",
+        "variant_codepoint": [
+            "0x2ec2",
+            "0x8863",
+            "0x8864",
+            "0x27607"
+        ],
+        "viet-pron": "y",
+        "viet-meaning": "áo"
+    },
+    "⾑": {
+        "meaning": "cover",
+        "number": 146,
+        "pinyin": "yà",
+        "name": "",
+        "strokes": 6,
+        "frequency": "29",
+        "examples": "西、要、覂",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "西",
+                "覀"
+            ],
+            "rank": "0.0%",
+            "mnemonic": " a picture of a stopper in a jar",
+            "notes": ""
+        },
+        "variants": [
+            "⻃",
+            "⻄",
+            "襾",
+            "西",
+            "覀"
+        ],
+        "standalone": "襾",
+        "codepoint": "0x2f91",
+        "standalone_codepoint": "0x897e",
+        "variant_codepoint": [
+            "0x2ec3",
+            "0x2ec4",
+            "0x897e",
+            "0x897f",
+            "0x8980"
+        ],
+        "viet-pron": "á",
+        "viet-meaning": "che đậy, úp lên"
+    },
+    "⾒": {
+        "meaning": "see",
+        "number": 147,
+        "pinyin": "jiàn",
+        "name": "见字旁",
+        "strokes": 7,
+        "frequency": "161",
+        "examples": "規、覓、視",
+        "useful": {},
+        "variants": [
+            "⻅",
+            "見",
+            "见"
+        ],
+        "standalone": "见",
+        "codepoint": "0x2f92",
+        "standalone_codepoint": "0x89c1",
+        "variant_codepoint": [
+            "0x2ec5",
+            "0x898b",
+            "0x89c1"
+        ],
+        "viet-pron": "kiến",
+        "viet-meaning": "trông thấy"
+    },
+    "⾓": {
+        "meaning": "horn",
+        "number": 148,
+        "pinyin": "jiǎo",
+        "name": "",
+        "strokes": 7,
+        "frequency": "158",
+        "examples": "觓、觔、觕",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⻇"
+            ],
+            "rank": "35.0%",
+            "mnemonic": " image of an animal horn",
+            "notes": ""
+        },
+        "variants": [
+            "⻆",
+            "⻇",
+            "角",
+            "𧢲"
+        ],
+        "standalone": "角",
+        "codepoint": "0x2f93",
+        "standalone_codepoint": "0x89d2",
+        "variant_codepoint": [
+            "0x2ec6",
+            "0x2ec7",
+            "0x89d2",
+            "0x278b2"
+        ],
+        "viet-pron": "giác",
+        "viet-meaning": "góc, sừng thú"
+    },
+    "⾔": {
+        "meaning": "speech",
+        "number": 149,
+        "pinyin": "yán",
+        "name": "言字旁",
+        "strokes": 7,
+        "frequency": "861",
+        "examples": "訂、訃、計",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "66.3%",
+            "mnemonic": " a mouth and tongue with words on it",
+            "notes": ""
+        },
+        "variants": [
+            "⻈",
+            "言",
+            "訁",
+            "讠"
+        ],
+        "standalone": "言",
+        "codepoint": "0x2f94",
+        "standalone_codepoint": "0x8a00",
+        "variant_codepoint": [
+            "0x2ec8",
+            "0x8a00",
+            "0x8a01",
+            "0x8ba0"
+        ],
+        "viet-pron": "ngôn",
+        "viet-meaning": "nói"
+    },
+    "⾕": {
+        "meaning": "valley",
+        "number": 150,
+        "pinyin": "gǔ",
+        "name": "",
+        "strokes": 7,
+        "frequency": "54",
+        "examples": "谹、谽、谿",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " water flowing forth 八八 from an opening 口",
+            "notes": ""
+        },
+        "variants": [
+            "谷"
+        ],
+        "standalone": "谷",
+        "codepoint": "0x2f95",
+        "standalone_codepoint": "0x8c37",
+        "variant_codepoint": [
+            "0x8c37"
+        ],
+        "viet-pron": "cốc",
+        "viet-meaning": "khe nước chảy giữa hai núi, thung lũng"
+    },
+    "⾖": {
+        "meaning": "bean",
+        "number": 151,
+        "pinyin": "dòu",
+        "name": "",
+        "strokes": 7,
+        "frequency": "68",
+        "examples": "豇、豈、豉",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " a steamed rice container on a stand - loaned it's sound",
+            "notes": " Few characters are categorized under this radical, most have no clear relationship to beans"
+        },
+        "variants": [
+            "豆"
+        ],
+        "standalone": "豆",
+        "codepoint": "0x2f96",
+        "standalone_codepoint": "0x8c46",
+        "variant_codepoint": [
+            "0x8c46"
+        ],
+        "viet-pron": "đậu",
+        "viet-meaning": "hạt đậu, cây đậu"
+    },
+    "⾗": {
+        "meaning": "pig",
+        "number": 152,
+        "pinyin": "shǐ",
+        "name": "",
+        "strokes": 7,
+        "frequency": "148",
+        "examples": "豗、豚、豜",
+        "useful": {
+            "distinguish": [
+                "豸,",
+                "犭"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " This is a picture, head is replaced by the horizontal line on top",
+            "notes": " Mostly covers swine related terminology"
+        },
+        "variants": [
+            "豕"
+        ],
+        "standalone": "豕",
+        "codepoint": "0x2f97",
+        "standalone_codepoint": "0x8c55",
+        "variant_codepoint": [
+            "0x8c55"
+        ],
+        "viet-pron": "thỉ",
+        "viet-meaning": "con heo, con lợn"
+    },
+    "⾘": {
+        "meaning": "badger",
+        "number": 153,
+        "pinyin": "zhì",
+        "name": "",
+        "strokes": 7,
+        "frequency": "140",
+        "examples": "豺、豻、豹",
+        "useful": {
+            "distinguish": [
+                "豕,",
+                "犭"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " primitive of a small animal, possibly a reptile",
+            "notes": " Tends to cover a variety of wild and mythical animals, with the large cats seeing heavy representation"
+        },
+        "variants": [
+            "豸"
+        ],
+        "standalone": "",
+        "codepoint": "0x2f98",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x8c78"
+        ],
+        "viet-pron": "trãi",
+        "viet-meaning": "loài sâu không chân"
+    },
+    "⾙": {
+        "meaning": "shell",
+        "number": 154,
+        "pinyin": "bèi",
+        "name": "贝字旁",
+        "strokes": 7,
+        "frequency": "277",
+        "examples": "貞、負、財",
+        "useful": {},
+        "variants": [
+            "⻉",
+            "貝",
+            "贝"
+        ],
+        "standalone": "贝",
+        "codepoint": "0x2f99",
+        "standalone_codepoint": "0x8d1d",
+        "variant_codepoint": [
+            "0x2ec9",
+            "0x8c9d",
+            "0x8d1d"
+        ],
+        "viet-pron": "bối",
+        "viet-meaning": "vật báu"
+    },
+    "⾚": {
+        "meaning": "red",
+        "number": 155,
+        "pinyin": "chì",
+        "name": "",
+        "strokes": 7,
+        "frequency": "31",
+        "examples": "赦、赧、赨",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " 土 in this character was originally 大, representing a person over a fire - 火, put them together and you have a red blushing or angry person",
+            "notes": ""
+        },
+        "variants": [
+            "赤"
+        ],
+        "standalone": "赤",
+        "codepoint": "0x2f9a",
+        "standalone_codepoint": "0x8d64",
+        "variant_codepoint": [
+            "0x8d64"
+        ],
+        "viet-pron": "xích",
+        "viet-meaning": "màu đỏ"
+    },
+    "⾛": {
+        "meaning": "run",
+        "number": 156,
+        "pinyin": "zǒu",
+        "name": "走字旁",
+        "strokes": 7,
+        "frequency": "285",
+        "examples": "赳、赴、赶",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "72.5%",
+            "mnemonic": " a man 土大 with foot 止",
+            "notes": " Many characters relating to human motion through walking, running use this radical"
+        },
+        "variants": [
+            "走",
+            "赱"
+        ],
+        "standalone": "走",
+        "codepoint": "0x2f9b",
+        "standalone_codepoint": "0x8d70",
+        "variant_codepoint": [
+            "0x8d70",
+            "0x8d71"
+        ],
+        "viet-pron": "tẩu",
+        "viet-meaning": "đi, chạy"
+    },
+    "⾜": {
+        "meaning": "foot",
+        "number": 157,
+        "pinyin": "zú",
+        "name": "足字旁",
+        "strokes": 7,
+        "frequency": "580",
+        "examples": "趴、趵、趷",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⻊"
+            ],
+            "rank": "5.2%",
+            "mnemonic": " a foot and a leg",
+            "notes": " Used for actions done with the foot"
+        },
+        "variants": [
+            "⻊",
+            "足",
+            "𧾷"
+        ],
+        "standalone": "足",
+        "codepoint": "0x2f9c",
+        "standalone_codepoint": "0x8db3",
+        "variant_codepoint": [
+            "0x2eca",
+            "0x8db3",
+            "0x27fb7"
+        ],
+        "viet-pron": "túc",
+        "viet-meaning": "chân, đầy đủ"
+    },
+    "⾝": {
+        "meaning": "body",
+        "number": 158,
+        "pinyin": "shēn",
+        "name": "",
+        "strokes": 7,
+        "frequency": "97",
+        "examples": "躬、躭、躰",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " a body with stomach and leg walking",
+            "notes": " This radical represents things having to do with the body or actions one might take with it."
+        },
+        "variants": [
+            "身"
+        ],
+        "standalone": "身",
+        "codepoint": "0x2f9d",
+        "standalone_codepoint": "0x8eab",
+        "variant_codepoint": [
+            "0x8eab"
+        ],
+        "viet-pron": "thân",
+        "viet-meaning": "thân thể, thân mình"
+    },
+    "⾞": {
+        "meaning": "cart",
+        "number": 159,
+        "pinyin": "chē",
+        "name": "车字旁",
+        "strokes": 7,
+        "frequency": "361",
+        "examples": "軋、軌、軍",
+        "useful": {},
+        "variants": [
+            "⻋",
+            "車",
+            "车"
+        ],
+        "standalone": "车",
+        "codepoint": "0x2f9e",
+        "standalone_codepoint": "0x8f66",
+        "variant_codepoint": [
+            "0x2ecb",
+            "0x8eca",
+            "0x8f66"
+        ],
+        "viet-pron": "xa",
+        "viet-meaning": "chiếc xe"
+    },
+    "⾟": {
+        "meaning": "bitter",
+        "number": 160,
+        "pinyin": "xīn",
+        "name": "辛字旁",
+        "strokes": 7,
+        "frequency": "36",
+        "examples": "辜、辝、辟",
+        "useful": {
+            "distinguish": [
+                "幸"
+            ],
+            "variants": [],
+            "rank": "52.7%",
+            "mnemonic": " The lower part (below 亠) means 'to oppose', 亠 in this context may mean superiors or that above. Another interperation is this is an upside down person, with all the negative connotations of a person who may be in that position",
+            "notes": " Duplicated in many characters, like 辩.  It's bitter connotations reveal themselves in many characters, as do the connotations of hard work and suffering."
+        },
+        "variants": [
+            "辛"
+        ],
+        "standalone": "辛",
+        "codepoint": "0x2f9f",
+        "standalone_codepoint": "0x8f9b",
+        "variant_codepoint": [
+            "0x8f9b"
+        ],
+        "viet-pron": "tân",
+        "viet-meaning": "cay"
+    },
+    "⾠": {
+        "meaning": "morning",
+        "number": 161,
+        "pinyin": "chén",
+        "name": "",
+        "strokes": 7,
+        "frequency": "15",
+        "examples": "辱、農、辴",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " A man handling an Egyptian hoe",
+            "notes": ""
+        },
+        "variants": [
+            "辰"
+        ],
+        "standalone": "辰",
+        "codepoint": "0x2fa0",
+        "standalone_codepoint": "0x8fb0",
+        "variant_codepoint": [
+            "0x8fb0"
+        ],
+        "viet-pron": "thần/thìn",
+        "viet-meaning": "nhật, nguyệt, tinh; thìn (12 chi)"
+    },
+    "⾡": {
+        "meaning": "walk",
+        "number": 162,
+        "pinyin": "chuò",
+        "name": "走之底",
+        "strokes": 7,
+        "frequency": "381",
+        "examples": "边、巡、迂",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "辶",
+                "⻎",
+                "⻍"
+            ],
+            "rank": "5.2%",
+            "mnemonic": "  辶辵 foot prints 止 on a road 彳",
+            "notes": " This form is not used, see 辶"
+        },
+        "variants": [
+            "⻌",
+            "⻍",
+            "⻎",
+            "辵",
+            "辶"
+        ],
+        "standalone": "辵",
+        "codepoint": "0x2fa1",
+        "standalone_codepoint": "0x8fb5",
+        "variant_codepoint": [
+            "0x2ecc",
+            "0x2ecd",
+            "0x2ece",
+            "0x8fb5",
+            "0x8fb6"
+        ],
+        "viet-pron": "sước",
+        "viet-meaning": "chợt bước đi chợt dừng lại"
+    },
+    "⾢": {
+        "meaning": "city",
+        "number": 163,
+        "pinyin": "yì",
+        "name": "右耳朵",
+        "strokes": 7,
+        "frequency": "350",
+        "examples": "邕、邗、邘",
+        "useful": {
+            "distinguish": [
+                "色"
+            ],
+            "variants": [
+                "⻏",
+                "阝"
+            ],
+            "rank": "5.2%",
+            "mnemonic": " A city with buildings - 口, and subservient people -卩 ",
+            "notes": ""
+        },
+        "variants": [
+            "⻏",
+            "邑"
+        ],
+        "standalone": "邑",
+        "codepoint": "0x2fa2",
+        "standalone_codepoint": "0x9091",
+        "variant_codepoint": [
+            "0x2ecf",
+            "0x9091"
+        ],
+        "viet-pron": "ấp",
+        "viet-meaning": "vùng đất, đất phong cho quan"
+    },
+    "⾣": {
+        "meaning": "wine",
+        "number": 164,
+        "pinyin": "yǒu",
+        "name": "酉字旁",
+        "strokes": 7,
+        "frequency": "290",
+        "examples": "酊、酋、酌",
+        "useful": {
+            "distinguish": [
+                "西"
+            ],
+            "variants": [],
+            "rank": "86.8%",
+            "mnemonic": " This is a picture of a jug.  Another ancient form was 丣, representing the handles of a sealed wine jug.",
+            "notes": " Used in characters relating to alcohol, celebration, and other reasons one might turn to the bottle.  Also in a few characters relating to cooking and fermented foodstuffs"
+        },
+        "variants": [
+            "酉"
+        ],
+        "standalone": "酉",
+        "codepoint": "0x2fa3",
+        "standalone_codepoint": "0x9149",
+        "variant_codepoint": [
+            "0x9149"
+        ],
+        "viet-pron": "dậu",
+        "viet-meaning": "một trong 12 địa chi"
+    },
+    "⾤": {
+        "meaning": "distinguish",
+        "number": 165,
+        "pinyin": "biàn",
+        "name": "",
+        "strokes": 7,
+        "frequency": "14",
+        "examples": "采、釉、釋",
+        "useful": {
+            "distinguish": [
+                "米,",
+                "禾,",
+                "木"
+            ],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " Represents sorting the rocks out of rice",
+            "notes": " Used in few characters, among others, those for weight, quantity, and distance"
+        },
+        "variants": [
+            "釆"
+        ],
+        "standalone": "釆",
+        "codepoint": "0x2fa4",
+        "standalone_codepoint": "0x91c6",
+        "variant_codepoint": [
+            "0x91c6"
+        ],
+        "viet-pron": "biện",
+        "viet-meaning": "phân biệt"
+    },
+    "⾥": {
+        "meaning": "village",
+        "number": 166,
+        "pinyin": "lǐ",
+        "name": "里字旁",
+        "strokes": 7,
+        "frequency": "14",
+        "examples": "重、野、量",
+        "useful": {
+            "distinguish": [
+                "cai3"
+            ],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " a measurement or combination of land 土 and fields 田",
+            "notes": ""
+        },
+        "variants": [
+            "里"
+        ],
+        "standalone": "里",
+        "codepoint": "0x2fa5",
+        "standalone_codepoint": "0x91cc",
+        "variant_codepoint": [
+            "0x91cc"
+        ],
+        "viet-pron": "lý",
+        "viet-meaning": "dặm; làng xóm"
+    },
+    "⾦": {
+        "meaning": "gold",
+        "number": 167,
+        "pinyin": "jīn",
+        "name": "金字旁",
+        "strokes": 8,
+        "frequency": "806",
+        "examples": "釓、釔、釕",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " This represents a cast musical metal bell of the ancient variety seen in China, with bumps on the outside",
+            "notes": " Many characters relating to metal, metal objects, and valuable items use this radical"
+        },
+        "variants": [
+            "⻐",
+            "金",
+            "釒",
+            "钅"
+        ],
+        "standalone": "金",
+        "codepoint": "0x2fa6",
+        "standalone_codepoint": "0x91d1",
+        "variant_codepoint": [
+            "0x2ed0",
+            "0x91d1",
+            "0x91d2",
+            "0x9485"
+        ],
+        "viet-pron": "kim",
+        "viet-meaning": "kim loại nói chung, vàng"
+    },
+    "⾧": {
+        "meaning": "long",
+        "number": 168,
+        "pinyin": "cháng",
+        "name": "",
+        "strokes": 8,
+        "frequency": "55",
+        "examples": "镺、镻、镼",
+        "useful": {},
+        "variants": [
+            "⻑",
+            "⻒",
+            "⻓",
+            "長",
+            "镸",
+            "长"
+        ],
+        "standalone": "长",
+        "codepoint": "0x2fa7",
+        "standalone_codepoint": "0x957f",
+        "variant_codepoint": [
+            "0x2ed1",
+            "0x2ed2",
+            "0x2ed3",
+            "0x9577",
+            "0x9578",
+            "0x957f"
+        ],
+        "viet-pron": "trường/trưởng",
+        "viet-meaning": "dài, lớn (trưởng)"
+    },
+    "⾨": {
+        "meaning": "gate",
+        "number": 169,
+        "pinyin": "mén",
+        "name": "门字框",
+        "strokes": 8,
+        "frequency": "246",
+        "examples": "閂、閃、閆",
+        "useful": {},
+        "variants": [
+            "⻔",
+            "門",
+            "门"
+        ],
+        "standalone": "门",
+        "codepoint": "0x2fa8",
+        "standalone_codepoint": "0x95e8",
+        "variant_codepoint": [
+            "0x2ed4",
+            "0x9580",
+            "0x95e8"
+        ],
+        "viet-pron": "môn",
+        "viet-meaning": "cửa hai cánh"
+    },
+    "⾩": {
+        "meaning": "mound",
+        "number": 170,
+        "pinyin": "fù",
+        "name": "双耳刀,左耳刀",
+        "strokes": 8,
+        "frequency": "348",
+        "examples": "阞、阡、阢",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "阝"
+            ],
+            "rank": "5.2%",
+            "mnemonic": " Represents steps coming down from a city, or possiby a wall",
+            "notes": " Rare variant.  If one things of something like the great wall as the ultimate mound, a lot of the characters under this radical make quite a bit of sense"
+        },
+        "variants": [
+            "⻕",
+            "⻖",
+            "阜",
+            "阝",
+            "𨸏"
+        ],
+        "standalone": "阜",
+        "codepoint": "0x2fa9",
+        "standalone_codepoint": "0x961c",
+        "variant_codepoint": [
+            "0x2ed5",
+            "0x2ed6",
+            "0x961c",
+            "0x961d",
+            "0x28e0f"
+        ],
+        "viet-pron": "phụ",
+        "viet-meaning": "đống đất, gò đất"
+    },
+    "⾪": {
+        "meaning": "slave",
+        "number": 171,
+        "pinyin": "lì",
+        "name": "",
+        "strokes": 8,
+        "frequency": "12",
+        "examples": "𨽻、隷、隸",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " a subordinate who has a futile 柰 life with a broom 隶",
+            "notes": ""
+        },
+        "variants": [
+            "隶"
+        ],
+        "standalone": "隶",
+        "codepoint": "0x2faa",
+        "standalone_codepoint": "0x96b6",
+        "variant_codepoint": [
+            "0x96b6"
+        ],
+        "viet-pron": "đãi",
+        "viet-meaning": "kịp, kịp đến"
+    },
+    "⾫": {
+        "meaning": "short-tailed bird",
+        "number": 172,
+        "pinyin": "zhuī",
+        "name": "隹字旁",
+        "strokes": 8,
+        "frequency": "233",
+        "examples": "隻、隼、隽",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "72.5%",
+            "mnemonic": " A small bird, wings outstretched",
+            "notes": " Smaller birds are under this radical, as are a lot of characters which don't immediately make one think of birds."
+        },
+        "variants": [
+            "隹"
+        ],
+        "standalone": "隹",
+        "codepoint": "0x2fab",
+        "standalone_codepoint": "0x96b9",
+        "variant_codepoint": [
+            "0x96b9"
+        ],
+        "viet-pron": "chuy",
+        "viet-meaning": "chim non"
+    },
+    "⾬": {
+        "meaning": "rain",
+        "number": 173,
+        "pinyin": "yǔ",
+        "name": "雨字头",
+        "strokes": 8,
+        "frequency": "298",
+        "examples": "雩、雪、雯",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "⻗"
+            ],
+            "rank": "81.2%",
+            "mnemonic": " Rain drops falling from sky",
+            "notes": " Characters representing various climate and weather conditions are represented here"
+        },
+        "variants": [
+            "⻗",
+            "雨"
+        ],
+        "standalone": "雨",
+        "codepoint": "0x2fac",
+        "standalone_codepoint": "0x96e8",
+        "variant_codepoint": [
+            "0x2ed7",
+            "0x96e8"
+        ],
+        "viet-pron": "vũ",
+        "viet-meaning": "mưa"
+    },
+    "⾭": {
+        "meaning": "blue",
+        "number": 174,
+        "pinyin": "qīng",
+        "name": "青字旁",
+        "strokes": 8,
+        "frequency": "17",
+        "examples": "靖、静、靚",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "青"
+            ],
+            "rank": "0.0%",
+            "mnemonic": " grass 生 around a well 井 (not 月)",
+            "notes": ""
+        },
+        "variants": [
+            "⻘",
+            "靑",
+            "青"
+        ],
+        "standalone": "青",
+        "codepoint": "0x2fad",
+        "standalone_codepoint": "0x9752",
+        "variant_codepoint": [
+            "0x2ed8",
+            "0x9751",
+            "0x9752"
+        ],
+        "viet-pron": "thanh",
+        "viet-meaning": "màu xanh"
+    },
+    "⾮": {
+        "meaning": "wrong",
+        "number": 175,
+        "pinyin": "fēi",
+        "name": "",
+        "strokes": 8,
+        "frequency": "25",
+        "examples": "靟、靠、靡",
+        "useful": {
+            "distinguish": [
+                "韭"
+            ],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " outward turned (broken) wings which do not function",
+            "notes": ""
+        },
+        "variants": [
+            "非"
+        ],
+        "standalone": "非",
+        "codepoint": "0x2fae",
+        "standalone_codepoint": "0x975e",
+        "variant_codepoint": [
+            "0x975e"
+        ],
+        "viet-pron": "phi",
+        "viet-meaning": "không"
+    },
+    "⾯": {
+        "meaning": "face",
+        "number": 176,
+        "pinyin": "miàn",
+        "name": "",
+        "strokes": 9,
+        "frequency": "66",
+        "examples": "靤、靦、靧",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " a face with an eye 目 in the middle",
+            "notes": ""
+        },
+        "variants": [
+            "面",
+            "靣"
+        ],
+        "standalone": "面",
+        "codepoint": "0x2faf",
+        "standalone_codepoint": "0x9762",
+        "variant_codepoint": [
+            "0x9762",
+            "0x9763"
+        ],
+        "viet-pron": "diện",
+        "viet-meaning": "mặt, bề mặt"
+    },
+    "⾰": {
+        "meaning": "leather",
+        "number": 177,
+        "pinyin": "gé",
+        "name": "",
+        "strokes": 9,
+        "frequency": "305",
+        "examples": "靭、靮、靳",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "67.7%",
+            "mnemonic": " Represents a spread out animal skin",
+            "notes": " Leather goods are categorized under this radical"
+        },
+        "variants": [
+            "革"
+        ],
+        "standalone": "革",
+        "codepoint": "0x2fb0",
+        "standalone_codepoint": "0x9769",
+        "variant_codepoint": [
+            "0x9769"
+        ],
+        "viet-pron": "cách",
+        "viet-meaning": "da thú, thay đổi"
+    },
+    "⾱": {
+        "meaning": "tanned leather",
+        "number": 178,
+        "pinyin": "wéi",
+        "name": "",
+        "strokes": 9,
+        "frequency": "100",
+        "examples": "韌、韍、韎",
+        "useful": {},
+        "variants": [
+            "⻙",
+            "韋",
+            "韦"
+        ],
+        "standalone": "韦",
+        "codepoint": "0x2fb1",
+        "standalone_codepoint": "0x97e6",
+        "variant_codepoint": [
+            "0x2ed9",
+            "0x97cb",
+            "0x97e6"
+        ],
+        "viet-pron": "vi",
+        "viet-meaning": "da đã thuộc rồi"
+    },
+    "⾲": {
+        "meaning": "leek",
+        "number": 179,
+        "pinyin": "jiǔ",
+        "name": "",
+        "strokes": 9,
+        "frequency": "20",
+        "examples": "韰、韲、䪢",
+        "useful": {
+            "distinguish": [
+                "非"
+            ],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " an ideograph of leeks",
+            "notes": ""
+        },
+        "variants": [
+            "韭"
+        ],
+        "standalone": "韭",
+        "codepoint": "0x2fb2",
+        "standalone_codepoint": "0x97ed",
+        "variant_codepoint": [
+            "0x97ed"
+        ],
+        "viet-pron": "phỉ",
+        "viet-meaning": "rau hẹ"
+    },
+    "⾳": {
+        "meaning": "sound",
+        "number": 180,
+        "pinyin": "yīn",
+        "name": "",
+        "strokes": 9,
+        "frequency": "43",
+        "examples": "竟、章、韵",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " a mouth with something in it and a tongue sticking out with something on it",
+            "notes": ""
+        },
+        "variants": [
+            "音"
+        ],
+        "standalone": "音",
+        "codepoint": "0x2fb3",
+        "standalone_codepoint": "0x97f3",
+        "variant_codepoint": [
+            "0x97f3"
+        ],
+        "viet-pron": "âm",
+        "viet-meaning": "âm thanh, tiếng"
+    },
+    "⾴": {
+        "meaning": "leaf",
+        "number": 181,
+        "pinyin": "yè",
+        "name": "页字旁",
+        "strokes": 9,
+        "frequency": "372",
+        "examples": "頂、頃、頄",
+        "useful": {},
+        "variants": [
+            "⻚",
+            "頁",
+            "页"
+        ],
+        "standalone": "页",
+        "codepoint": "0x2fb4",
+        "standalone_codepoint": "0x9875",
+        "variant_codepoint": [
+            "0x2eda",
+            "0x9801",
+            "0x9875"
+        ],
+        "viet-pron": "hiệt",
+        "viet-meaning": "đầu; trang giấy"
+    },
+    "⾵": {
+        "meaning": "wind",
+        "number": 182,
+        "pinyin": "fēng",
+        "name": "",
+        "strokes": 9,
+        "frequency": "182",
+        "examples": "颩、颭、颮",
+        "useful": {},
+        "variants": [
+            "⻛",
+            "風",
+            "风"
+        ],
+        "standalone": "风",
+        "codepoint": "0x2fb5",
+        "standalone_codepoint": "0x98ce",
+        "variant_codepoint": [
+            "0x2edb",
+            "0x98a8",
+            "0x98ce"
+        ],
+        "viet-pron": "phong",
+        "viet-meaning": "gió"
+    },
+    "⾶": {
+        "meaning": "fly",
+        "number": 183,
+        "pinyin": "fēi",
+        "name": "",
+        "strokes": 9,
+        "frequency": "92",
+        "examples": "䬡、飜、飝",
+        "useful": {},
+        "variants": [
+            "⻜",
+            "飛",
+            "飞"
+        ],
+        "standalone": "飞",
+        "codepoint": "0x2fb6",
+        "standalone_codepoint": "0x98de",
+        "variant_codepoint": [
+            "0x2edc",
+            "0x98db",
+            "0x98de"
+        ],
+        "viet-pron": "phi",
+        "viet-meaning": "bay"
+    },
+    "⾷": {
+        "meaning": "eat",
+        "number": 184,
+        "pinyin": "shí",
+        "name": "食字旁",
+        "strokes": 9,
+        "frequency": "403",
+        "examples": "飡、飢、飣",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " a man's mouth 亼 over a bowl of rice on a stand 皀 (the two dots combine). Note the lower part is not 艮",
+            "notes": " Many types of food and mealtime activities are encompassed by characters with this radical"
+        },
+        "variants": [
+            "⻝",
+            "⻞",
+            "⻟",
+            "⻠",
+            "食",
+            "飠",
+            "饣",
+            "𩙿"
+        ],
+        "standalone": "食",
+        "codepoint": "0x2fb7",
+        "standalone_codepoint": "0x98df",
+        "variant_codepoint": [
+            "0x2edd",
+            "0x2ede",
+            "0x2edf",
+            "0x2ee0",
+            "0x98df",
+            "0x98e0",
+            "0x9963",
+            "0x2967f"
+        ],
+        "viet-pron": "thực",
+        "viet-meaning": "ăn"
+    },
+    "⾸": {
+        "meaning": "head",
+        "number": 185,
+        "pinyin": "shǒu",
+        "name": "",
+        "strokes": 9,
+        "frequency": "20",
+        "examples": "馗、䭫、馘",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " a head like 頁 but with hair on top",
+            "notes": ""
+        },
+        "variants": [
+            "⻡",
+            "首",
+            "𩠐"
+        ],
+        "standalone": "首",
+        "codepoint": "0x2fb8",
+        "standalone_codepoint": "0x9996",
+        "variant_codepoint": [
+            "0x2ee1",
+            "0x9996",
+            "0x29810"
+        ],
+        "viet-pron": "thủ",
+        "viet-meaning": "đầu"
+    },
+    "⾹": {
+        "meaning": "fragrant",
+        "number": 186,
+        "pinyin": "xiāng",
+        "name": "",
+        "strokes": 9,
+        "frequency": "37",
+        "examples": "馝、馞、馡",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " represents nice food going in the mouth",
+            "notes": ""
+        },
+        "variants": [
+            "香"
+        ],
+        "standalone": "香",
+        "codepoint": "0x2fb9",
+        "standalone_codepoint": "0x9999",
+        "variant_codepoint": [
+            "0x9999"
+        ],
+        "viet-pron": "hương",
+        "viet-meaning": "mùi thơm"
+    },
+    "⾺": {
+        "meaning": "horse",
+        "number": 187,
+        "pinyin": "mǎ",
+        "name": "马字旁",
+        "strokes": 10,
+        "frequency": "472",
+        "examples": "馭、馮、馯",
+        "useful": {},
+        "variants": [
+            "⻢",
+            "馬",
+            "马"
+        ],
+        "standalone": "马",
+        "codepoint": "0x2fba",
+        "standalone_codepoint": "0x9a6c",
+        "variant_codepoint": [
+            "0x2ee2",
+            "0x99ac",
+            "0x9a6c"
+        ],
+        "viet-pron": "mã",
+        "viet-meaning": "con ngựa"
+    },
+    "⾻": {
+        "meaning": "bone",
+        "number": 188,
+        "pinyin": "gǔ",
+        "name": "",
+        "strokes": 10,
+        "frequency": "185",
+        "examples": "骫、骭、骯",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " scapula with the meat radical (moon variant)",
+            "notes": " Characters under this radical cover various body parts, and not surprisingly, bones.  Things associated with bones are also covered such as 骯髒 and 骴. Simplification has occasionally replaced 骨 with the standing meat radical (月)"
+        },
+        "variants": [
+            "⻣",
+            "骨"
+        ],
+        "standalone": "骨",
+        "codepoint": "0x2fbb",
+        "standalone_codepoint": "0x9aa8",
+        "variant_codepoint": [
+            "0x2ee3",
+            "0x9aa8"
+        ],
+        "viet-pron": "cốt",
+        "viet-meaning": "xương"
+    },
+    "⾼": {
+        "meaning": "tall",
+        "number": 189,
+        "pinyin": "gāo",
+        "name": "",
+        "strokes": 10,
+        "frequency": "34",
+        "examples": "髚、髛、𩫛",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " represents a high building",
+            "notes": ""
+        },
+        "variants": [
+            "高",
+            "髙"
+        ],
+        "standalone": "高",
+        "codepoint": "0x2fbc",
+        "standalone_codepoint": "0x9ad8",
+        "variant_codepoint": [
+            "0x9ad8",
+            "0x9ad9"
+        ],
+        "viet-pron": "cao",
+        "viet-meaning": "cao"
+    },
+    "⾽": {
+        "meaning": "hair",
+        "number": 190,
+        "pinyin": "biāo",
+        "name": "",
+        "strokes": 10,
+        "frequency": "243",
+        "examples": "髠、髡、髢",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " 長 long hair and 彡 more hair",
+            "notes": " Not surprisingly, shows up in characters describing all things hairy"
+        },
+        "variants": [
+            "髟"
+        ],
+        "standalone": "髟",
+        "codepoint": "0x2fbd",
+        "standalone_codepoint": "0x9adf",
+        "variant_codepoint": [
+            "0x9adf"
+        ],
+        "viet-pron": "bưu/tiêu",
+        "viet-meaning": "tóc dài"
+    },
+    "⾾": {
+        "meaning": "fight",
+        "number": 191,
+        "pinyin": "dòu",
+        "name": "",
+        "strokes": 10,
+        "frequency": "23",
+        "examples": "鬦、鬧、鬨",
+        "useful": {},
+        "variants": [
+            "鬥"
+        ],
+        "standalone": "",
+        "codepoint": "0x2fbe",
+        "standalone_codepoint": "",
+        "variant_codepoint": [
+            "0x9b25"
+        ],
+        "viet-pron": "đấu",
+        "viet-meaning": "đánh nhau"
+    },
+    "⾿": {
+        "meaning": "sacrificial wine",
+        "number": 192,
+        "pinyin": "chàng",
+        "name": "",
+        "strokes": 10,
+        "frequency": "8",
+        "examples": "鬰、鬱",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " a container of rice",
+            "notes": ""
+        },
+        "variants": [
+            "鬯"
+        ],
+        "standalone": "鬯",
+        "codepoint": "0x2fbf",
+        "standalone_codepoint": "0x9b2f",
+        "variant_codepoint": [
+            "0x9b2f"
+        ],
+        "viet-pron": "sưởng",
+        "viet-meaning": "ủ rượu nếp"
+    },
+    "⿀": {
+        "meaning": "cauldron",
+        "number": 193,
+        "pinyin": "lì",
+        "name": "",
+        "strokes": 10,
+        "frequency": "73",
+        "examples": "鬳、鬴、鬵",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " three legged cauldron",
+            "notes": ""
+        },
+        "variants": [
+            "鬲"
+        ],
+        "standalone": "鬲",
+        "codepoint": "0x2fc0",
+        "standalone_codepoint": "0x9b32",
+        "variant_codepoint": [
+            "0x9b32"
+        ],
+        "viet-pron": "cách",
+        "viet-meaning": "nồi, chõ"
+    },
+    "⿁": {
+        "meaning": "ghost",
+        "number": 194,
+        "pinyin": "guǐ",
+        "name": "",
+        "strokes": 10,
+        "frequency": "141",
+        "examples": "鬾、魁、魂",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "59.0%",
+            "mnemonic": " A man (goblin) with an ugly head and a tail",
+            "notes": " Otherworldy things tend to be represented by this radical"
+        },
+        "variants": [
+            "⻤",
+            "鬼"
+        ],
+        "standalone": "鬼",
+        "codepoint": "0x2fc1",
+        "standalone_codepoint": "0x9b3c",
+        "variant_codepoint": [
+            "0x2ee4",
+            "0x9b3c"
+        ],
+        "viet-pron": "quỷ",
+        "viet-meaning": "con quỷ"
+    },
+    "⿂": {
+        "meaning": "fish",
+        "number": 195,
+        "pinyin": "yú",
+        "name": "",
+        "strokes": 11,
+        "frequency": "571",
+        "examples": "魟、魠、魦",
+        "useful": {},
+        "variants": [
+            "⻥",
+            "魚",
+            "鱼"
+        ],
+        "standalone": "鱼",
+        "codepoint": "0x2fc2",
+        "standalone_codepoint": "0x9c7c",
+        "variant_codepoint": [
+            "0x2ee5",
+            "0x9b5a",
+            "0x9c7c"
+        ],
+        "viet-pron": "ngư",
+        "viet-meaning": "con cá"
+    },
+    "⿃": {
+        "meaning": "bird",
+        "number": 196,
+        "pinyin": "niǎo",
+        "name": "鸟字旁",
+        "strokes": 11,
+        "frequency": "750",
+        "examples": "鳦、鳧、鳩",
+        "useful": {},
+        "variants": [
+            "⻦",
+            "鳥",
+            "鸟"
+        ],
+        "standalone": "鸟",
+        "codepoint": "0x2fc3",
+        "standalone_codepoint": "0x9e1f",
+        "variant_codepoint": [
+            "0x2ee6",
+            "0x9ce5",
+            "0x9e1f"
+        ],
+        "viet-pron": "điểu",
+        "viet-meaning": "con chim"
+    },
+    "⿄": {
+        "meaning": "salt",
+        "number": 197,
+        "pinyin": "lǔ",
+        "name": "",
+        "strokes": 11,
+        "frequency": "44",
+        "examples": "鹹、鹺、鹼",
+        "useful": {},
+        "variants": [
+            "⻧",
+            "卤",
+            "鹵"
+        ],
+        "standalone": "卤",
+        "codepoint": "0x2fc4",
+        "standalone_codepoint": "0x5364",
+        "variant_codepoint": [
+            "0x2ee7",
+            "0x5364",
+            "0x9e75"
+        ],
+        "viet-pron": "lỗ",
+        "viet-meaning": "đất mặn"
+    },
+    "⿅": {
+        "meaning": "deer",
+        "number": 198,
+        "pinyin": "lù",
+        "name": "",
+        "strokes": 11,
+        "frequency": "104",
+        "examples": "麀、麁、麂",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.1%",
+            "mnemonic": " primitive of an antlered deer - see seal characters",
+            "notes": " Denotes the most attractive aspects of the wilderness and wild things"
+        },
+        "variants": [
+            "鹿"
+        ],
+        "standalone": "鹿",
+        "codepoint": "0x2fc5",
+        "standalone_codepoint": "0x9e7f",
+        "variant_codepoint": [
+            "0x9e7f"
+        ],
+        "viet-pron": "lộc",
+        "viet-meaning": "con hươu"
+    },
+    "⿆": {
+        "meaning": "wheat",
+        "number": 199,
+        "pinyin": "mài",
+        "name": "",
+        "strokes": 11,
+        "frequency": "131",
+        "examples": "麨、麩、麪",
+        "useful": {},
+        "variants": [
+            "⻨",
+            "麥",
+            "麦"
+        ],
+        "standalone": "麦",
+        "codepoint": "0x2fc6",
+        "standalone_codepoint": "0x9ea6",
+        "variant_codepoint": [
+            "0x2ee8",
+            "0x9ea5",
+            "0x9ea6"
+        ],
+        "viet-pron": "mạch",
+        "viet-meaning": "lúa mạch"
+    },
+    "⿇": {
+        "meaning": "hemp",
+        "number": 200,
+        "pinyin": "má",
+        "name": "",
+        "strokes": 11,
+        "frequency": "34",
+        "examples": "麼、麾、黁",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " hemp (from 痲) in the barn  广 - separate etymology from 林",
+            "notes": ""
+        },
+        "variants": [
+            "麻"
+        ],
+        "standalone": "麻",
+        "codepoint": "0x2fc7",
+        "standalone_codepoint": "0x9ebb",
+        "variant_codepoint": [
+            "0x9ebb"
+        ],
+        "viet-pron": "ma",
+        "viet-meaning": "cây gai"
+    },
+    "⿈": {
+        "meaning": "yellow",
+        "number": 201,
+        "pinyin": "huáng",
+        "name": "",
+        "strokes": 12,
+        "frequency": "42",
+        "examples": "黈、䵍、黌",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " a man 大 with a (yellow) pendant, now 璜",
+            "notes": ""
+        },
+        "variants": [
+            "⻩",
+            "黃",
+            "黄"
+        ],
+        "standalone": "黄",
+        "codepoint": "0x2fc8",
+        "standalone_codepoint": "0x9ec4",
+        "variant_codepoint": [
+            "0x2ee9",
+            "0x9ec3",
+            "0x9ec4"
+        ],
+        "viet-pron": "hoàng",
+        "viet-meaning": "màu vàng"
+    },
+    "⿉": {
+        "meaning": "millet",
+        "number": 202,
+        "pinyin": "shǔ",
+        "name": "",
+        "strokes": 12,
+        "frequency": "46",
+        "examples": "黎、黏、黐",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "5.2%",
+            "mnemonic": " grain 禾 that grows by water 水",
+            "notes": ""
+        },
+        "variants": [
+            "黍"
+        ],
+        "standalone": "黍",
+        "codepoint": "0x2fc9",
+        "standalone_codepoint": "0x9ecd",
+        "variant_codepoint": [
+            "0x9ecd"
+        ],
+        "viet-pron": "thử",
+        "viet-meaning": "lúa nếp"
+    },
+    "⿊": {
+        "meaning": "black",
+        "number": 203,
+        "pinyin": "hēi",
+        "name": "",
+        "strokes": 12,
+        "frequency": "172",
+        "examples": "墨、黓、黔",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "黒"
+            ],
+            "rank": "84.3%",
+            "mnemonic": " black from charcoal grain in an air tight container over a fire, in early forms the bottom half was more clearly 炎",
+            "notes": " Primary form.  Opposite of 白, blackness can often add dark connotations to many characters"
+        },
+        "variants": [
+            "黑",
+            "黒"
+        ],
+        "standalone": "黑",
+        "codepoint": "0x2fca",
+        "standalone_codepoint": "0x9ed1",
+        "variant_codepoint": [
+            "0x9ed1",
+            "0x9ed2"
+        ],
+        "viet-pron": "hắc",
+        "viet-meaning": "màu đen"
+    },
+    "⿋": {
+        "meaning": "embroidery",
+        "number": 204,
+        "pinyin": "zhǐ",
+        "name": "",
+        "strokes": 12,
+        "frequency": "8",
+        "examples": "黺、黻、黼",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " primitive of embroidery",
+            "notes": ""
+        },
+        "variants": [
+            "黹"
+        ],
+        "standalone": "黹",
+        "codepoint": "0x2fcb",
+        "standalone_codepoint": "0x9ef9",
+        "variant_codepoint": [
+            "0x9ef9"
+        ],
+        "viet-pron": "chỉ",
+        "viet-meaning": "may áo, khâu vá"
+    },
+    "⿌": {
+        "meaning": "frog",
+        "number": 205,
+        "pinyin": "mǐn",
+        "name": "",
+        "strokes": 13,
+        "frequency": "40",
+        "examples": "黿、鼀、鼁",
+        "useful": {},
+        "variants": [
+            "⻪",
+            "黽",
+            "黾"
+        ],
+        "standalone": "黾",
+        "codepoint": "0x2fcc",
+        "standalone_codepoint": "0x9efe",
+        "variant_codepoint": [
+            "0x2eea",
+            "0x9efd",
+            "0x9efe"
+        ],
+        "viet-pron": "mãnh",
+        "viet-meaning": "loài bò sát"
+    },
+    "⿍": {
+        "meaning": "tripod",
+        "number": 206,
+        "pinyin": "dǐng",
+        "name": "",
+        "strokes": 13,
+        "frequency": "14",
+        "examples": "鼏、鼐、鼒",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " a bronze tripod with two ears",
+            "notes": ""
+        },
+        "variants": [
+            "鼎"
+        ],
+        "standalone": "鼎",
+        "codepoint": "0x2fcd",
+        "standalone_codepoint": "0x9f0e",
+        "variant_codepoint": [
+            "0x9f0e"
+        ],
+        "viet-pron": "đỉnh",
+        "viet-meaning": "cái đỉnh"
+    },
+    "⿎": {
+        "meaning": "drum",
+        "number": 207,
+        "pinyin": "gǔ",
+        "name": "",
+        "strokes": 13,
+        "frequency": "46",
+        "examples": "鼕、鼖、鼗",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "35.0%",
+            "mnemonic": " a drum 口 left and right ends with base and feathers on top 土 hit with stick 支",
+            "notes": ""
+        },
+        "variants": [
+            "鼓"
+        ],
+        "standalone": "鼓",
+        "codepoint": "0x2fce",
+        "standalone_codepoint": "0x9f13",
+        "variant_codepoint": [
+            "0x9f13"
+        ],
+        "viet-pron": "cổ",
+        "viet-meaning": "cái trống"
+    },
+    "⿏": {
+        "meaning": "rat",
+        "number": 208,
+        "pinyin": "shǔ",
+        "name": "",
+        "strokes": 13,
+        "frequency": "92",
+        "examples": "鼢、鼥、鼩",
+        "useful": {
+            "distinguish": [],
+            "variants": [
+                "鼡"
+            ],
+            "rank": "66.3%",
+            "mnemonic": " A mouse with legs tail and whiskers",
+            "notes": ""
+        },
+        "variants": [
+            "鼠",
+            "鼡"
+        ],
+        "standalone": "鼠",
+        "codepoint": "0x2fcf",
+        "standalone_codepoint": "0x9f20",
+        "variant_codepoint": [
+            "0x9f20",
+            "0x9f21"
+        ],
+        "viet-pron": "thử",
+        "viet-meaning": "con chuột"
+    },
+    "⿐": {
+        "meaning": "nose",
+        "number": 209,
+        "pinyin": "bí",
+        "name": "",
+        "strokes": 14,
+        "frequency": "49",
+        "examples": "鼽、鼾、齁",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "44.4%",
+            "mnemonic": " synonym for 自 nose",
+            "notes": ""
+        },
+        "variants": [
+            "鼻"
+        ],
+        "standalone": "鼻",
+        "codepoint": "0x2fd0",
+        "standalone_codepoint": "0x9f3b",
+        "variant_codepoint": [
+            "0x9f3b"
+        ],
+        "viet-pron": "tỵ",
+        "viet-meaning": "cái mũi"
+    },
+    "⿑": {
+        "meaning": "even",
+        "number": 210,
+        "pinyin": "qí",
+        "name": "",
+        "strokes": 14,
+        "frequency": "18",
+        "examples": "齋、齌、齍",
+        "useful": {},
+        "variants": [
+            "⻫",
+            "⻬",
+            "斉",
+            "齊",
+            "齐"
+        ],
+        "standalone": "齐",
+        "codepoint": "0x2fd1",
+        "standalone_codepoint": "0x9f50",
+        "variant_codepoint": [
+            "0x2eeb",
+            "0x2eec",
+            "0x6589",
+            "0x9f4a",
+            "0x9f50"
+        ],
+        "viet-pron": "tề",
+        "viet-meaning": "bằng nhau"
+    },
+    "⿒": {
+        "meaning": "tooth",
+        "number": 211,
+        "pinyin": "chǐ",
+        "name": "",
+        "strokes": 15,
+        "frequency": "162",
+        "examples": "齔、齕、齖",
+        "useful": {},
+        "variants": [
+            "⻭",
+            "⻮",
+            "歯",
+            "齒",
+            "齿"
+        ],
+        "standalone": "齿",
+        "codepoint": "0x2fd2",
+        "standalone_codepoint": "0x9f7f",
+        "variant_codepoint": [
+            "0x2eed",
+            "0x2eee",
+            "0x6b6f",
+            "0x9f52",
+            "0x9f7f"
+        ],
+        "viet-pron": "xỉ",
+        "viet-meaning": "răng"
+    },
+    "⿓": {
+        "meaning": "dragon",
+        "number": 212,
+        "pinyin": "lóng",
+        "name": "",
+        "strokes": 16,
+        "frequency": "14",
+        "examples": "龏、龑、龔",
+        "useful": {},
+        "variants": [
+            "⻯",
+            "⻰",
+            "竜",
+            "龍",
+            "龙"
+        ],
+        "standalone": "龙",
+        "codepoint": "0x2fd3",
+        "standalone_codepoint": "0x9f99",
+        "variant_codepoint": [
+            "0x2eef",
+            "0x2ef0",
+            "0x7adc",
+            "0x9f8d",
+            "0x9f99"
+        ],
+        "viet-pron": "long",
+        "viet-meaning": "con rồng"
+    },
+    "⿔": {
+        "meaning": "turtle",
+        "number": 213,
+        "pinyin": "guī",
+        "name": "",
+        "strokes": 16,
+        "frequency": "24",
+        "examples": "䶰、龝、龞",
+        "useful": {},
+        "variants": [
+            "⻱",
+            "⻲",
+            "⻳",
+            "亀",
+            "龜",
+            "龟"
+        ],
+        "standalone": "龟",
+        "codepoint": "0x2fd4",
+        "standalone_codepoint": "0x9f9f",
+        "variant_codepoint": [
+            "0x2ef1",
+            "0x2ef2",
+            "0x2ef3",
+            "0x4e80",
+            "0x9f9c",
+            "0x9f9f"
+        ],
+        "viet-pron": "quy",
+        "viet-meaning": "con rùa"
+    },
+    "⿕": {
+        "meaning": "flute",
+        "number": 214,
+        "pinyin": "yuè",
+        "name": "",
+        "strokes": 17,
+        "frequency": "19",
+        "examples": "龡、龢、龤",
+        "useful": {
+            "distinguish": [],
+            "variants": [],
+            "rank": "20.0%",
+            "mnemonic": " a mouth blowing 亼 a flute with holes 口, possibly pan-pipes",
+            "notes": ""
+        },
+        "variants": [
+            "龠"
+        ],
+        "standalone": "龠",
+        "codepoint": "0x2fd5",
+        "standalone_codepoint": "0x9fa0",
+        "variant_codepoint": [
+            "0x9fa0"
+        ],
+        "viet-pron": "dược",
+        "viet-meaning": "sáo ba lỗ"
+    }
+}
