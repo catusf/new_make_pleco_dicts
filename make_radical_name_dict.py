@@ -32,7 +32,7 @@ VERSION = "0.9"
 HOME_PAGE = "偏旁"
 NAME_PAGE = "有名字"
 
-fwrite = open(join(DATA_DIR, "radical_name_pleco.txt"), "w", encoding="utf-8")
+fwrite = open(join(DICT_DIR, "radical_name_pleco.txt"), "w", encoding="utf-8")
 fwrite.write(f"// Radical name dictionary (v{VERSION})\n")
 
 FIX_SPECIAL_PINYIN = {"sānpiēér": "sānpiěr"}
