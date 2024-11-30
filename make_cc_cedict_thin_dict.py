@@ -17,7 +17,7 @@ PATTERN_PY = r"\[(.+)\]"
 MAX_ITEMS = 10000000
 # MAX_ITEMS = 100
 
-with open("dict/opencc_pleco.txt", "w", encoding="utf-8") as fwrite:
+with open("dict/CCCE-Thin.txt", "w", encoding="utf-8") as fwrite:
     check_dups = set()
     num = 0
     for key in dictionary:

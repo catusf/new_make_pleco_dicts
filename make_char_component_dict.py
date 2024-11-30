@@ -458,13 +458,14 @@ def main():
 
     # Set up the argument parser
     parser = argparse.ArgumentParser(description="Command line options for the script.")
-    parser.add_argument("--make-pleco", action="store_true", help="Convert to Pleco format.")
+    parser.add_argument("--make-pleco", default=True, action="store_true", help="Convert to Pleco format.")
     args = parser.parse_args()
+    print(f"Arguments: {args}")
 
     # Access the make-pleco argument
     MAKE_PLECO = args.make_pleco
-
-    dict_filepath = join(DICT_DIR, f"Char-Dict_pleco.{"txt" if MAKE_PLECO else "tab"}")
+    print(f"Configuration: {args}")
+    dict_filepath = join(DICT_DIR, f"Char-Component-Dict.txt")
     fwrite = open(dict_filepath, "w", encoding="utf-8")
 
     try:
@@ -692,8 +693,7 @@ def main():
 
                 string += f"{PC_MIDDLE_DOT.join(blue_chars)}"
 
-        string = regex.sub(PATTERN_PY, replace_num_pinyin, string)
-
+        string = replace_num_pinyin(string)
 
         # Each pronunctiation and meaning need a separate line
 

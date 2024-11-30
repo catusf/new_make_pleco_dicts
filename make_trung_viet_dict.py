@@ -42,7 +42,7 @@ def main():
     parser.add_argument(
         "--make-pleco",
         action="store_true",
-        default=False,
+        default=True,
         required=False,
         help="Make Pleco dictionary, instead of HTML one.",
     )
@@ -75,7 +75,7 @@ def main():
 
     clean_dict_data = {}
     
-    output_file = join(DICT_DIR, f"TrungViet-{dict_size}{"_Pleco" if MAKE_PLECO else ""}.txt")
+    output_file = join(DICT_DIR, f"TrungViet-{dict_size}.txt")
     PC_DICT_NAME = f"//TrungViet Beta {dict_size} Dict"
     with open(output_file, "w", encoding="utf-8") as pleco_import_file:
         if MAKE_PLECO:

@@ -2,8 +2,9 @@ import os
 from os.path import join
 
 from tools_configs import DICT_DIR
-
-dict_names = ["char_dict_pleco.txt", "radical_lookup_pleco.txt", "radical_name_pleco.txt", "tvb_pleco.txt"]
+import glob
+# dict_names = ["char_dict_pleco.txt", "radical_lookup_pleco.txt", "radical_name_pleco.txt", "tvb_pleco.txt"]
+dict_names = glob.glob("dict/*.txt")
 
 replaces = {
     chr(0xEAB1): "<br>",
@@ -18,9 +19,10 @@ replaces = {
     "": "",
 }
 
-for filename in dict_names:
-    with open(join(DICT_DIR, filename), "r", encoding="utf-8") as fread:
-        name, ext = os.path.splitext(filename)
+for filepath in dict_names:
+    print(f'{filepath} being read')
+    with open(filepath, "r", encoding="utf-8") as fread:
+        name, ext = os.path.splitext(filepath)
         contents = fread.read()
 
         for key in replaces:
@@ -28,13 +30,14 @@ for filename in dict_names:
 
         lines = contents.split("\n")
 
-        outfile = f"converted/{name}.tab"
-        with open(outfile, "w", encoding="utf-8") as fwrite:
-            for line in lines[1:]:
+        outpath = filepath.replace(".txt", ".tab")
+        with open(outpath, "w", encoding="utf-8") as fwrite:
+            for num, line in enumerate(lines[1:], start=1):
                 if not line.strip():
                     continue
 
                 items = line.split("\t")
+                assert(len(items) == 3)
                 fwrite.write(f"{items[0]}\t{items[1]}<br>{items[2]}\n")
 
-        print(f'{f"converted/{name}.tab"} written')
+        print(f'{outpath} written')

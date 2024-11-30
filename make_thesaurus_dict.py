@@ -8,7 +8,7 @@ import json
 from tools_configs import ChineseDictionary
 from dragonmapper.transcriptions import numbered_to_accented
 from pinyin_jyutping_sentence import pinyin as pinyinget
-
+from pypinyin import pinyin as pinyinget_backup
 # from chin_dict.chindict import ChinDict
 
 
@@ -17,7 +17,7 @@ BIG_ITEMS = 50  # For debug purposes
 
 PC_NEWLINE = chr(0xEAB1)
 PC_RIGHT_TRIANGLE = "»"  # ▸
-PC_SEPARATOR_1 = " "
+PC_SEPARATOR_1 = "▸ "
 PC_SEPARATOR_2 = "、"
 PC_MIDDLE_DOT = "·"
 
@@ -241,7 +241,7 @@ def make_linked_items(cur_item, lines, dict_size):
 
         sep = PC_SEPARATOR_1 if dict_size in ["mid", "big"] else PC_SEPARATOR_2
 
-        if len(words) > 1:
+        if len(lines) > 1:
             contents += f"{circled_number(index)} {sep.join(words)}\n"
         else:
             contents += f"{sep.join(words)}\n"
@@ -266,7 +266,7 @@ def main():
     with open('data/thesaurus_dict.json', 'r', encoding='utf-8') as json_file:
         thesaurus_dict = json.load(json_file)
 
-        pleco_file = "dict/ChineseThesaurus-Pleco.txt"
+        pleco_file = "dict/ChineseThesaurus.txt"
 
         pleco_file = pleco_file.replace(".txt", f"-{dict_size}.txt")
 
@@ -287,6 +287,10 @@ def main():
                     break
 
                 pinyin = pinyinget(headword)
+
+                if pinyin == headword:
+                    pinyin = pinyinget_backup(headword)[0][0]
+
                 contents = f'{headword}\t{pinyin}\t'
 
                 contents += get_headword_def_contents(headword, pinyin, dict_size=dict_size, has_marker=False)
