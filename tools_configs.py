@@ -248,23 +248,21 @@ def replace_blue(match_obj):
 
 
 def _replace_num_pinyin(match_obj):
-    if match_obj.group(1) is not None:
-        return numbered_to_accented(match_obj.group(1))
+    return numbered_to_accented(match_obj.group(1))
 
-def _replace_num_pinyin_fs(match_obj): # Add front space
-    if match_obj.group(1) is not None:
-        return " " + numbered_to_accented(match_obj.group(1))
+def _replace_num_pinyin_fs(match_obj): # Adds front space 
+    return " " + numbered_to_accented(match_obj.group(1))
 
 def replace_num_pinyin_fs(text):
-    PATTERN_PY = r"\[(.+)\]"
 
-    return regex.sub(PATTERN_PY, _replace_num_pinyin_fs, text)
+    return  re.sub(r'\[(.*?)\]', _replace_num_pinyin_fs, text)
 
 
 def replace_num_pinyin(text):
-    PATTERN_PY = r"\[(.+)\]"
+    # PATTERN_PY = r"\[(.+)\]"
 
-    return regex.sub(PATTERN_PY, _replace_num_pinyin, text)
+    # return regex.sub(PATTERN_PY, _replace_num_pinyin, text)
+    return  re.sub(r'\[(.*?)\]', _replace_num_pinyin, text)
 
 import json
 import re

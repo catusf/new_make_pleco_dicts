@@ -38,40 +38,48 @@ from collections import defaultdict
 clean_dict = defaultdict(dict)
 
 dups = 0
-with open("dict/opencc_pleco.txt", "w", encoding="utf-8") as fwrite:
-    check_dups = set()
-    for num, row in enumerate(data_as_tuples):
-        if num >= MAX_ITEMS:
-            break
-        headword = row[1]
-        pinyin = numbered_to_accented(row[2][1:-1]).replace(" ", "")
+check_dups = set()
+for num, row in enumerate(data_as_tuples):
+    if num >= MAX_ITEMS:
+        break
+    headword = row[1]
+    pinyin = numbered_to_accented(row[2][1:-1]).replace(" ", "")
 
-        nocase_key = f"{headword}-{pinyin.lower()}"
+    nocase_key = f"{headword}-{pinyin.lower()}"
 
-        if nocase_key in check_dups:
-            print(f"Duplicate entry: {nocase_key}")
-            dups+=1
-        else:
-            check_dups.add(nocase_key)
+    if nocase_key in check_dups:
+        print(f"Duplicate entry: {nocase_key}")
+        dups+=1
+    else:
+        check_dups.add(nocase_key)
 
-        meanings = remove_chinese_with_pipe(replace_num_pinyin(row[3][:-1])).split("/")
+    meanings = remove_chinese_with_pipe(replace_num_pinyin_fs(row[3][:-1])).split("/")
 
-        if pinyin in clean_dict[nocase_key]:
-            for meaning in meanings:
-                if meaning not in clean_dict[nocase_key][pinyin]:
-                    clean_dict[nocase_key][pinyin].append(meaning)
-        else:
-            clean_dict[nocase_key][pinyin] = meanings
-        pass
+    if pinyin in clean_dict[nocase_key]:
+        for meaning in meanings:
+            if meaning not in clean_dict[nocase_key][pinyin]:
+                clean_dict[nocase_key][pinyin].append(meaning)
+    else:
+        clean_dict[nocase_key][pinyin] = meanings
+    pass
 
 hanzilearn_dict = defaultdict(list)
 
 with open("data/hanzilearn_dedups.json", "w", encoding="utf-8") as dictfile:
     for word_pinyin in clean_dict:
-        word, pinyin = word_pinyin.split("-")
+        word, _ = word_pinyin.split("-")
 
-        for pron in clean_dict[word_pinyin]:
-            hanzilearn_dict[word].append({"pinyin": pron, "meaning": clean_dict[word_pinyin][pron]})
+        keys = sorted(list(clean_dict[word_pinyin].keys()), reverse=True) # sorts so that the lower case pinyin will come first
+        key0 = keys[0]
+
+        meanings = clean_dict[word_pinyin][key0]
+
+        if len(keys) > 1: # Merge all meanings from different pinyins
+            for key in keys[1:]:
+                meanings.extend(clean_dict[word_pinyin][key])
+            pass
+        
+        hanzilearn_dict[word].append({"pinyin": key0, "meaning": meanings})
 
     json.dump(hanzilearn_dict, dictfile, ensure_ascii=False, indent=4)
 

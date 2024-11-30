@@ -9,7 +9,7 @@ from tools_configs import ChineseDictionary
 from dragonmapper.transcriptions import numbered_to_accented
 from pinyin_jyutping_sentence import pinyin as pinyinget
 
-from chin_dict.chindict import ChinDict
+# from chin_dict.chindict import ChinDict
 
 
 # Constants
@@ -120,8 +120,10 @@ def pleco_make_link(text):
 
 DEF_SEPERATOR = "/"
 
-dictionary = ChineseDictionary()
+# dictionary = ChineseDictionary()
 
+with open('data/hanzilearn_dedups.json', 'r', encoding='utf-8') as f:
+    dictionary = json.load(f)
 
 def get_def_contents(item, dict_size, has_marker=False):
     """
@@ -139,7 +141,11 @@ def get_def_contents(item, dict_size, has_marker=False):
          If the dictionary size is "small", only the definitions are included.
          If the word is not found in the dictionary, the function returns an empty string.
     """
-    definitions = dictionary.lookup(item)
+    
+    definitions = []
+
+    if item in dictionary:
+        definitions = dictionary[item]
 
     if not definitions:
         return f"{pleco_make_italic(pinyinget(item))}\n" if dict_size in ["mid", "big"] else "\n"
@@ -148,6 +154,8 @@ def get_def_contents(item, dict_size, has_marker=False):
     if has_marker:
         contents += f"{pleco_make_bold("DEFINITION")}\n"
 
+    count = len(definitions)
+    
     for definition in definitions:
         if dict_size in ["mid", "big"]: # Adds Pinyin
             contents += f"{pleco_make_italic(numbered_to_accented(definition["pinyin"]).replace(" ", ""))} "
@@ -161,6 +169,45 @@ def get_def_contents(item, dict_size, has_marker=False):
 
     return contents
 
+
+def get_headword_def_contents(item, pinyin, dict_size, has_marker=False):
+    """
+    Generate a string containing the definitions and Pinyin (if applicable) for a given HEADWORD.
+
+    Parameters:
+    item (str): The headword for which to retrieve definitions and Pinyin.
+    dict_size (str): The size of the dictionary. It can be one of the following: "small", "mid", "big".
+    has_marker (bool): A flag indicating whether to include a marker for the definition section.
+                        Defaults to False.
+
+    Returns:
+    str: A string containing the definitions and Pinyin (if applicable) for the given word.
+         If the dictionary size is "mid" or "big", the Pinyin is included.
+         If the dictionary size is "small", only the definitions are included.
+         If the word is not found in the dictionary, the function returns an empty string.
+    """
+    
+    definitions = []
+
+    if item in dictionary:
+        definitions = dictionary[item]
+
+    if not definitions:
+        return ""
+
+    contents = ""
+
+    count = len(definitions)
+    
+    for definition in definitions:
+        contents += f"{'; '.join([remove_chinese_with_pipe(convert_to_mark_pinyin(item.strip())) for item in definition['meaning']])}{DEF_SEPERATOR}"
+
+    if contents[-1] == DEF_SEPERATOR:
+        contents = contents[:-1]
+
+    contents += "\n"
+
+    return contents
 
 def make_linked_items(cur_item, lines, dict_size):
     """
@@ -194,7 +241,10 @@ def make_linked_items(cur_item, lines, dict_size):
 
         sep = PC_SEPARATOR_1 if dict_size in ["mid", "big"] else PC_SEPARATOR_2
 
-        contents += f"{circled_number(index)} {sep.join(words)}\n"
+        if len(words) > 1:
+            contents += f"{circled_number(index)} {sep.join(words)}\n"
+        else:
+            contents += f"{sep.join(words)}\n"
 
     return contents
 
@@ -202,7 +252,7 @@ def make_linked_items(cur_item, lines, dict_size):
 def main():
     # Initialize argument parser
     parser = argparse.ArgumentParser(description="Process a thesaurus dictionary and generate output.")
-    parser.add_argument("--dict-size", choices=['small', 'mid', 'big'], default="small", required=False,
+    parser.add_argument("--dict-size", choices=['small', 'mid', 'big'], default="big", required=False,
                         help="Dictionary size: 'small' for Chinese thesaurus only, 'mid' adds Pinyin, 'big' adds definitions for words.")
     parser.add_argument("--num-items", type=int, default=1000000, required=False,
                         help="Maximum number of items to process (default: MAX_ITEMS).")
@@ -212,129 +262,45 @@ def main():
     max_items = args.num_items
     dict_size = args.dict_size
 
-    # Initialize the synonym dictionary with defaultdict
-    thesaurus_dict = defaultdict(lambda: {
-        "SynonymSet": [], "RelatedSet": [], "IndependentSet": [],
-        "AntonymSet": [], "NegationSet": []
-    })
+    # Load JSON output
+    with open('data/thesaurus_dict.json', 'r', encoding='utf-8') as json_file:
+        thesaurus_dict = json.load(json_file)
 
-    # Process thesaurus files
-    with open('data/dict_synonym.txt', 'r', encoding='utf-8') as file:
-        count = 0
-        print("Reading dict_synonym.txt...")
-        for line in file:
-            line = line.strip()
-            if not line:
-                continue
-            if count > max_items:
-                break
-            count += 1
-            try:
-                category, words = line.split(' ', 1)
-            except ValueError:
-                print(f"Invalid format line: {line}")
-                continue
+        pleco_file = "dict/ChineseThesaurus-Pleco.txt"
 
-            type_char = category[-1]
-            thesaurus_type = {
-                '=': "SynonymSet",
-                '#': "RelatedSet",
-                '@': "IndependentSet"
-            }.get(type_char, None)
-            if not thesaurus_type:
-                print(f"Incorrect line: {line}")
-                continue
+        pleco_file = pleco_file.replace(".txt", f"-{dict_size}.txt")
 
-            word_list = words.split()
-            for word in word_list:
-                thesaurus_dict[word][thesaurus_type].append(words)
+        # Generate Pleco dictionary
+        with open(pleco_file, 'w', encoding='utf-8') as snd_file:
+            count = 0
+            print("Generating Pleco dict...")
+            for headword in thesaurus_dict:
+                antonyms = set(thesaurus_dict[headword]["AntonymSet"]) # Removes dups
+                synonyms = set(thesaurus_dict[headword]["SynonymSet"])
+                negations = set(thesaurus_dict[headword]["NegationSet"])
 
-    with open('data/dict_antonym.txt', 'r', encoding='utf-8') as file:
-        count = 0
-        print("Reading dict_antonym.txt...")
-        for line in file:
-            line = line.strip()
-            if not line:
-                continue
-            count += 1
-            if count > max_items:
-                break
-            try:
-                word1, word2 = line.split('-', 1)
-            except ValueError:
-                print(f"Invalid format line: {line}")
-                continue
+                if not (len(antonyms) + len(synonyms) + len(negations)):
+                    continue
 
-            thesaurus_dict[word1]["AntonymSet"].append(word2)
-            thesaurus_dict[word2]["AntonymSet"].append(word1)
+                count += 1
+                if count > max_items:
+                    break
 
-    ignore_negations = {'不', '没'}
-    with open('data/dict_negative.txt', 'r', encoding='utf-8') as file:
-        count = 0
-        print("Reading dict_negative.txt...")
-        negations = []
-        for line in file:
-            line = line.strip()
-            if not line:
-                continue
-            count += 1
-            if count > max_items:
-                break
-            try:
-                word, _ = line.split('\t', 1)
-            except ValueError:
-                print(f"Invalid format line: {line}")
-                continue
-            negations.append(word)
+                pinyin = pinyinget(headword)
+                contents = f'{headword}\t{pinyin}\t'
 
-        for word in thesaurus_dict:
-            if word in ignore_negations:
-                continue
-            for negation in negations:
-                if word in negation:
-                    thesaurus_dict[word]["NegationSet"].append(negation)
+                contents += get_headword_def_contents(headword, pinyin, dict_size=dict_size, has_marker=False)
 
-    # Write JSON output
-    with open('data/thesaurus_dict.json', 'w', encoding='utf-8') as json_file:
-        json.dump(thesaurus_dict, json_file, ensure_ascii=False, indent=4)
+                for thesaurus_type, label in [("AntonymSet", "ANTONYM"), ("SynonymSet", "SYNONYM"), ("NegationSet", "NEGATION")]:
+                    list_items = sorted(list(dict.fromkeys(thesaurus_dict[headword][thesaurus_type]))) # Removes duplicated but keeps order
+                    if list_items:
+                        contents += f"{pleco_make_dark_gray(pleco_make_bold(label))}\n"
+                        contents += make_linked_items(headword, list_items, dict_size=dict_size)
 
-    pleco_file = "data/ChineseThesaurus-Pleco.txt"
+                contents = contents.replace('\n', PC_NEWLINE)
+                snd_file.write(f'{contents}\n')
 
-    pleco_file = pleco_file.replace(".txt", f"-{dict_size}.txt")
-
-    # Generate Pleco dictionary
-    with open(pleco_file, 'w', encoding='utf-8') as snd_file:
-        count = 0
-        print("Generating Pleco dict...")
-        for item in thesaurus_dict:
-            antonyms = set(thesaurus_dict[item]["AntonymSet"])
-            synonyms = set(thesaurus_dict[item]["SynonymSet"])
-            negations = set(thesaurus_dict[item]["NegationSet"])
-
-            if not (len(antonyms) + len(synonyms) + len(negations)):
-                continue
-
-            count += 1
-            if count > max_items:
-                break
-
-            # pinyin = pinyinget(item)
-            contents = f'{item}\t\t'
-
-            contents += get_def_contents(item, dict_size=dict_size, has_marker=False)
-
-            for thesaurus_type, label in [("AntonymSet", "ANTONYM"), ("SynonymSet", "SYNONYM"), ("NegationSet", "NEGATION")]:
-                list_items = sorted(list(set(thesaurus_dict[item][thesaurus_type]))) # Remove duplicated
-                if list_items:
-                    contents += f"{pleco_make_dark_gray(pleco_make_bold(label))}\n"
-                    contents += make_linked_items(item, list_items, dict_size=dict_size)
-
-            contents = contents.replace('\n', PC_NEWLINE)
-            snd_file.write(f'{contents}\n')
-
-        print(f"Created {count} items and saved to {pleco_file}")
-    
-    dictionary.save_lookups()
+            print(f"Created {count} items and saved to {pleco_file}")
 
 
 if __name__ == "__main__":
