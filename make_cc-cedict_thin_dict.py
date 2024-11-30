@@ -1,3 +1,5 @@
+# Create a "thin" version of the CC CE Dictionary, that saves spaces, 
+# compared with the default version in Pleco's dictionary.
 import csv
 import enum
 from dragonmapper.transcriptions import numbered_to_accented

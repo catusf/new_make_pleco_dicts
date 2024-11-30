@@ -1,3 +1,4 @@
+# Creates a Chinese character components dictionary
 from collections import namedtuple
 import sys
 import json
