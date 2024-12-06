@@ -39,19 +39,13 @@ def main():
         required=False,
         help="Dictionary size: 'small' for Vietnamese definitions, 'mid' for definitions and examples, 'big' for all definitions including Chinese.",
     )
-    parser.add_argument(
-        "--make-pleco",
-        action="store_true",
-        default=True,
-        required=False,
-        help="Make Pleco dictionary, instead of HTML one.",
-    )
+
     args = parser.parse_args()
     print(args)
     
     dict_size = args.dict_size
     num_items = args.num_items
-    MAKE_PLECO = args.make_pleco
+    MAKE_PLECO = True
 
     now_datetime = datetime.datetime.now()
 
