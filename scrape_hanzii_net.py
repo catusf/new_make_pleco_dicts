@@ -12,12 +12,13 @@ import json
 
 from tools_configs import *
 
+HTML_FOLDER = "html"
 # with open('words_to_add.txt', 'r', encoding='utf-8') as fin:
 #     words_to_add = [line.strip() for line in fin.readlines()]
 
 # words_to_add = load_frequent_words('red.txt')
 # words_to_add = load_frequent_words('words_to_add.txt')
-words_to_redownload = load_frequent_words('redownload.txt')
+words_to_redownload = load_frequent_words("redownload.txt")
 
 # with open(TOP_WORDS_24K, 'w', encoding='utf-8') as fout:
 #     json.dump(top_words_24k, fout, indent = 4)
@@ -34,12 +35,12 @@ options = webdriver.ChromeOptions()
 options.headless = True
 
 # load website
-url = 'https://hanzii.net/search/word/%E4%BA%BA?hl=vi'
+url = "https://hanzii.net/search/word/%E4%BA%BA?hl=vi"
 
 # get the entire website content
 
 
-print(f'{len(list_to_read)=}')
+print(f"{len(list_to_read)=}")
 
 done_urls = set()
 # new_urls = set()
@@ -47,8 +48,8 @@ new_urls = set([headword_to_url(word) for word in list_to_read])
 
 # https://hanzii.net/search/word/%E4%BA%BA%E5%A4%AB?hl=vi
 
-files = glob.glob(f'{HTML_FOLDER}/*.html')
-print(f'There are existing {len(files)} files')
+files = glob.glob(f"{HTML_FOLDER}/*.html")
+print(f"There are existing {len(files)} files")
 
 files_checked = set()
 broken_files = list()
@@ -86,7 +87,7 @@ for num, filepath in enumerate(files):
             if check_file_contents:
 
                 if filepath not in files_checked:
-                    with open(filepath, 'r', encoding='utf-8') as fin:
+                    with open(filepath, "r", encoding="utf-8") as fin:
                         html = fin.read()
                         files_checked.add(filepath)
 
@@ -106,8 +107,7 @@ for num, filepath in enumerate(files):
                                     new_urls.add(url)
 
                     if num % 100 == 0:
-                        print(
-                            f'File num {num} urls {len(new_urls)=} {len(broken_files)=} {len(has_nodef_files)=}')
+                        print(f"File num {num} urls {len(new_urls)=} {len(broken_files)=} {len(has_nodef_files)=}")
 
         else:
             new_urls.add(url)
@@ -115,13 +115,13 @@ for num, filepath in enumerate(files):
     else:
         new_urls.add(url)
 
-with open('broken_file_list.txt', 'w', encoding='utf-8') as fout:
-    fout.writelines([(line + '\n') for line in broken_files])
+with open("broken_file_list.txt", "w", encoding="utf-8") as fout:
+    fout.writelines([(line + "\n") for line in broken_files])
 
-with open('has_nodef_list.txt', 'w', encoding='utf-8') as fout:
-    fout.writelines([(line + '\n') for line in has_nodef_files])
+with open("has_nodef_list.txt", "w", encoding="utf-8") as fout:
+    fout.writelines([(line + "\n") for line in has_nodef_files])
 
-print(f'Traditional count {trad_count}')
+print(f"Traditional count {trad_count}")
 
 # to_remove = []
 # for url in new_urls:
@@ -133,15 +133,14 @@ print(f'Traditional count {trad_count}')
 # for url in to_remove:
 #     new_urls.remove(url)
 
-print(f'{len(new_urls)=}')
+print(f"{len(new_urls)=}")
 
 if not new_urls:
-    print('No more urls to search')
+    print("No more urls to search")
     exit(0)
 
 # instantiate driver
-driver = webdriver.Chrome(service=ChromeService(
-    ChromeDriverManager().install()), options=options)
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
 new_urls_list = list(new_urls)
 
@@ -151,29 +150,29 @@ while True and len(new_urls_list) > 0:
     headword = url_to_headword(url)
 
     if not headword:
-        print('Wrong headword {headword}')
+        print("Wrong headword {headword}")
         continue
 
-    filename = f'{headword}.html'
+    filename = f"{headword}.html"
 
-    html = ''
+    html = ""
     if is_non_zero_file(filename):
-        print(f'Restoring {headword}')
-        with open(filename, 'r', encoding='utf-8') as fin:
-            html = fin.read()
+        print(f"Restoring {headword}")
+        # with open(filename, "r", encoding="utf-8") as fin:
+        #     html = fin.read()
     else:
-        print(f'Downloading {headword}')
+        print(f"Downloading {headword}")
         driver.get(url)
         time.sleep(WAIT_TIME)
 
         html = driver.page_source
         done_urls.add(url)
 
-        with open(os.path.join(HTML_FOLDER, filename), 'w', encoding='utf-8') as fout:
+        with open(os.path.join(HTML_FOLDER, filename), "w", encoding="utf-8") as fout:
             fout.write(html)
 
     if not new_urls:
-        print('No more urls to search')
+        print("No more urls to search")
         break
 
-    print(f'=== Current Done {len(done_urls)} and New {len(new_urls)}')
+    print(f"=== Current Done {len(done_urls)} and New {len(new_urls)}")
