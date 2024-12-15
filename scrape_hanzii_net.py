@@ -91,6 +91,8 @@ def main():
 
     signal.signal(signal.SIGINT, keyboard_handler)
 
+    os.makedirs(HTML_FOLDER, exist_ok=True)
+
     # Initialize Selenium driver options
     options = webdriver.ChromeOptions()
     # options.headless = True
