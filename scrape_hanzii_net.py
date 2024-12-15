@@ -1,178 +1,130 @@
-import hanzidentifier
+import concurrent.futures
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-import re
-import urllib
 import time
 import os
-import glob
-import json
-
 from tools_configs import *
+import signal
+import readchar
+import sys
 
 HTML_FOLDER = "html"
-# with open('words_to_add.txt', 'r', encoding='utf-8') as fin:
-#     words_to_add = [line.strip() for line in fin.readlines()]
-
-# words_to_add = load_frequent_words('red.txt')
-# words_to_add = load_frequent_words('words_to_add.txt')
-words_to_redownload = load_frequent_words("redownload.txt")
-
-# with open(TOP_WORDS_24K, 'w', encoding='utf-8') as fout:
-#     json.dump(top_words_24k, fout, indent = 4)
-
-# with open(TOP_WORDS_24K, 'r', encoding='utf-8') as fin:
-#     top_words_24k = json.load(fin)
-
-list_to_read = words_to_redownload
-
-# instantiate options
-options = webdriver.ChromeOptions()
-
-# run browser in headless mode
-options.headless = True
-
-# load website
-url = "https://hanzii.net/search/word/%E4%BA%BA?hl=vi"
-
-# get the entire website content
 
 
-print(f"{len(list_to_read)=}")
-
-done_urls = set()
-# new_urls = set()
-new_urls = set([headword_to_url(word) for word in list_to_read])
-
-# https://hanzii.net/search/word/%E4%BA%BA%E5%A4%AB?hl=vi
-
-files = glob.glob(f"{HTML_FOLDER}/*.html")
-print(f"There are existing {len(files)} files")
-
-files_checked = set()
-broken_files = list()
-has_nodef_files = list()
-
-trad_count = 0
-
-find_all_chenese = True
-
-for num, filepath in enumerate(files):
-    headword, ext = os.path.splitext(os.path.split(filepath)[1])
-    # filename = f'{HTML_FOLDER}/{headword}.html'
-    url = headword_to_url(headword)
-
-    # if not hanzidentifier.is_simplified(headword):
-    #     trad_count += 1
-    #     print(f'Traditional {headword}')
-    #     os.remove(filepath)
-    #     new_urls.remove(url)
-
-    #     continue
-    check_file_exists = True
-
-    if check_file_exists:
-        if is_non_zero_file(filepath):
-            done_urls.add(url)
-
-            if url in new_urls:
-                new_urls.remove(url)
-
-            # See if file contains any new words
-
-            check_file_contents = False
-
-            if check_file_contents:
-
-                if filepath not in files_checked:
-                    with open(filepath, "r", encoding="utf-8") as fin:
-                        html = fin.read()
-                        files_checked.add(filepath)
-
-                        if html.find(MARKER_GOOD_FILE) == -1:
-                            broken_files.append(filepath)
-
-                        if html.find(MARKER_HAS_DEF_FILE) == -1:
-                            has_nodef_files.append(filepath)
-
-                        if find_all_chenese:
-                            chinese_words = get_chinese_words(html)
-
-                            for headword in chinese_words:
-                                url = headword_to_url(headword)
-
-                                if url not in done_urls:
-                                    new_urls.add(url)
-
-                    if num % 100 == 0:
-                        print(f"File num {num} urls {len(new_urls)=} {len(broken_files)=} {len(has_nodef_files)=}")
-
-        else:
-            new_urls.add(url)
-
-    else:
-        new_urls.add(url)
-
-with open("broken_file_list.txt", "w", encoding="utf-8") as fout:
-    fout.writelines([(line + "\n") for line in broken_files])
-
-with open("has_nodef_list.txt", "w", encoding="utf-8") as fout:
-    fout.writelines([(line + "\n") for line in has_nodef_files])
-
-print(f"Traditional count {trad_count}")
-
-# to_remove = []
-# for url in new_urls:
-#     headword = url_to_headword(url)
-
-#     if not hanzidentifier.is_simplified(headword):
-#         to_remove.append(url)
-
-# for url in to_remove:
-#     new_urls.remove(url)
-
-print(f"{len(new_urls)=}")
-
-if not new_urls:
-    print("No more urls to search")
-    exit(0)
-
-# instantiate driver
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-
-new_urls_list = list(new_urls)
-
-# count = 0
-while True and len(new_urls_list) > 0:
-    url = new_urls.pop()
-    headword = url_to_headword(url)
-
-    if not headword:
-        print("Wrong headword {headword}")
-        continue
-
+# Function to process a single URL
+def fetch_url(driver_options, url, headword, done_urls):
     filename = f"{headword}.html"
+    filepath = os.path.join(HTML_FOLDER, filename)
 
-    html = ""
-    if is_non_zero_file(filename):
+    if is_non_zero_file(filepath):
         print(f"Restoring {headword}")
-        # with open(filename, "r", encoding="utf-8") as fin:
-        #     html = fin.read()
-    else:
-        print(f"Downloading {headword}")
+        return url  # URL is already processed
+
+    print(f"Downloading {headword}")
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=driver_options)
+    try:
         driver.get(url)
         time.sleep(WAIT_TIME)
 
         html = driver.page_source
         done_urls.add(url)
 
-        with open(os.path.join(HTML_FOLDER, filename), "w", encoding="utf-8") as fout:
+        with open(filepath, "w", encoding="utf-8") as fout:
             fout.write(html)
+    except Exception as e:
+        print(f"Error fetching {url}: {e}")
+    finally:
+        driver.quit()
 
-    if not new_urls:
-        print("No more urls to search")
-        break
+    return url
 
-    print(f"=== Current Done {len(done_urls)} and New {len(new_urls)}")
+
+import glob
+
+
+def remove_existing_items(new_urls, folder=HTML_FOLDER):
+    files = glob.glob(f"{folder}/*.html")
+    print(f"There are existing {len(files)} files")
+
+    done_urls = set()
+
+    for num, filepath in enumerate(files):
+        headword, ext = os.path.splitext(os.path.split(filepath)[1])
+        # filename = f'{HTML_FOLDER}/{headword}.html'
+        url = headword_to_url(headword)
+
+        check_file_exists = True
+
+        if check_file_exists:
+            if is_non_zero_file(filepath):
+                done_urls.add(url)
+
+                if url in new_urls:
+                    new_urls.remove(url)
+
+                # See if file contains any new words
+            else:
+                new_urls.add(url)
+
+        else:
+            new_urls.add(url)
+
+    return new_urls
+
+
+def keyboard_handler(signum, frame):
+    msg = "Ctrl-c was pressed. Do you really want to exit? y/n "
+    print(msg, end="", flush=True)
+    res = readchar.readchar()
+    if res == "y":
+        sys.exit(1)
+    else:
+        print("", end="\r", flush=True)
+        print(" " * len(msg), end="", flush=True)  # clear the printed line
+        print("    ", end="\r", flush=True)
+
+
+# Main parallel processing logic
+def main():
+
+    signal.signal(signal.SIGINT, keyboard_handler)
+
+    # Initialize Selenium driver options
+    options = webdriver.ChromeOptions()
+    # options.headless = True
+    options.add_argument("--headless=new")
+
+    # Load the list of URLs to process
+    words_to_redownload = load_frequent_words("redownload.txt")
+    new_urls = set([headword_to_url(word) for word in words_to_redownload])
+
+    remove_existing_items(new_urls)
+
+    with open("redownload-remains.txt", "w", encoding="utf-8") as file:
+        file.writelines([url_to_headword(item) + "\n" for item in sorted(new_urls)])
+
+    print(f"Total URLs to fetch: {len(new_urls)}")
+    done_urls = set()
+    cpu_count_used = os.cpu_count() - 1
+    print(f"Using {cpu_count_used} CPU cores")
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count_used) as executor:  # Adjust max_workers as needed
+        future_to_url = {
+            executor.submit(fetch_url, options, url, url_to_headword(url), done_urls): url for url in sorted(new_urls)
+        }
+
+        for future in concurrent.futures.as_completed(future_to_url):
+            url = future_to_url[future]
+            try:
+                result = future.result()
+                print(f"Completed: {result}")
+            except Exception as e:
+                print(f"Error processing {url}: {e}")
+
+    print(f"Finished processing {len(done_urls)} URLs")
+
+
+if __name__ == "__main__":
+    main()
