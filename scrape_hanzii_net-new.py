@@ -10,8 +10,18 @@ from concurrent.futures import ThreadPoolExecutor
 
 from tools_configs import *
 
+
+def is_colab():
+    try:
+        import google.colab
+
+        return True
+    except ImportError:
+        return False
+
 # HTML_FOLDER = "html"
-HTML_FOLDER = "/content/drive/My Drive/scrape_hanzii/html"
+
+HTML_FOLDER = "/content/drive/My Drive/scrape_hanzii/html" if is_colab() else "html"
 
 os.makedirs(HTML_FOLDER, exist_ok=True)
 
