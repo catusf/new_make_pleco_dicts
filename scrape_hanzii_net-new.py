@@ -10,7 +10,10 @@ from concurrent.futures import ThreadPoolExecutor
 
 from tools_configs import *
 
-HTML_FOLDER = "html"
+# HTML_FOLDER = "html"
+HTML_FOLDER = "/content/drive/My Drive/scrape_hanzii/html"
+
+os.makedirs(HTML_FOLDER, exist_ok=True)
 
 # Words to process
 words_to_redownload = load_frequent_words("redownload-new.txt")
