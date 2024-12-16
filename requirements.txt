@@ -11,3 +11,6 @@ readchar>=4.0.5
 regex>=2023.10.3
 unicodeblock>=0.3.1
 Levenshtein>=0.23.0
+selenium==4.27.1
+webdriver-manager==4.0.2
+pinyin_jyutping_sentence==1.3

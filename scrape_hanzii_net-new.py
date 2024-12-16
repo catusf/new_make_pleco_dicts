@@ -1,132 +1,146 @@
-import concurrent.futures
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
+import hanzidentifier
+from playwright.sync_api import sync_playwright
+import re
+import urllib
 import time
 import os
+import glob
+import json
+from concurrent.futures import ThreadPoolExecutor
+
 from tools_configs import *
-import signal
-import readchar
-import sys
 
 HTML_FOLDER = "html"
-WAIT_TIME = 3
 
-# Function to process a single URL
-def fetch_url(driver_options, url, headword, done_urls):
-    filename = f"{headword}.html"
-    filepath = os.path.join(HTML_FOLDER, filename)
+# Words to process
+words_to_redownload = load_frequent_words("redownload-new.txt")
+list_to_read = words_to_redownload
 
-    if is_non_zero_file(filepath):
-        print(f"Restoring {headword}")
-        return url  # URL is already processed
+# Website URL template
+base_url = "https://hanzii.net/search/word/"
 
-    print(f"Downloading {headword}")
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=driver_options)
-    try:
-        driver.get(url)
-        time.sleep(WAIT_TIME)
+print(f"{len(list_to_read)=}")
 
-        html = driver.page_source
-        done_urls.add(url)
+done_urls = set()
+new_urls = set([headword_to_url(word) for word in list_to_read])
 
-        with open(filepath, "w", encoding="utf-8") as fout:
-            fout.write(html)
-    except Exception as e:
-        print(f"Error fetching {url}: {e}")
-    finally:
-        driver.quit()
+files = glob.glob(f"{HTML_FOLDER}/*.html")
+print(f"There are existing {len(files)} files")
 
-    return url
+files_checked = set()
+broken_files = []
+has_nodef_files = []
 
+trad_count = 0
 
-import glob
+find_all_chinese = True
 
+for num, filepath in enumerate(files):
+    headword, ext = os.path.splitext(os.path.split(filepath)[1])
+    url = headword_to_url(headword)
 
-def remove_existing_items(new_urls, folder=HTML_FOLDER):
-    files = glob.glob(f"{folder}/*.html")
-    print(f"There are existing {len(files)} files")
+    check_file_exists = True
 
-    done_urls = set()
+    if check_file_exists:
+        if is_non_zero_file(filepath):
+            done_urls.add(url)
 
-    for num, filepath in enumerate(files):
-        headword, ext = os.path.splitext(os.path.split(filepath)[1])
-        # filename = f'{HTML_FOLDER}/{headword}.html'
-        url = headword_to_url(headword)
+            if url in new_urls:
+                new_urls.remove(url)
 
-        check_file_exists = True
+            check_file_contents = False
 
-        if check_file_exists:
-            if is_non_zero_file(filepath):
-                done_urls.add(url)
+            if check_file_contents:
+                if filepath not in files_checked:
+                    with open(filepath, "r", encoding="utf-8") as fin:
+                        html = fin.read()
+                        files_checked.add(filepath)
 
-                if url in new_urls:
-                    new_urls.remove(url)
+                        if html.find(MARKER_GOOD_FILE) == -1:
+                            broken_files.append(filepath)
 
-                # See if file contains any new words
-            else:
-                new_urls.add(url)
+                        if html.find(MARKER_HAS_DEF_FILE) == -1:
+                            has_nodef_files.append(filepath)
+
+                        if find_all_chinese:
+                            chinese_words = get_chinese_words(html)
+
+                            for headword in chinese_words:
+                                url = headword_to_url(headword)
+
+                                if url not in done_urls:
+                                    new_urls.add(url)
+
+                    if num % 100 == 0:
+                        print(f"File num {num} urls {len(new_urls)=} {len(broken_files)=} {len(has_nodef_files)=}")
 
         else:
             new_urls.add(url)
 
-    return new_urls
-
-
-def keyboard_handler(signum, frame):
-    msg = "Ctrl-c was pressed. Do you really want to exit? y/n "
-    print(msg, end="", flush=True)
-    res = readchar.readchar()
-    if res == "y":
-        sys.exit(1)
     else:
-        print("", end="\r", flush=True)
-        print(" " * len(msg), end="", flush=True)  # clear the printed line
-        print("    ", end="\r", flush=True)
+        new_urls.add(url)
+
+with open("broken_file_list.txt", "w", encoding="utf-8") as fout:
+    fout.writelines([(line + "\n") for line in broken_files])
+
+with open("has_nodef_list.txt", "w", encoding="utf-8") as fout:
+    fout.writelines([(line + "\n") for line in has_nodef_files])
+
+print(f"Traditional count {trad_count}")
+
+print(f"{len(new_urls)=}")
+
+if not new_urls:
+    print("No more urls to search")
+    exit(0)
 
 
-# Main parallel processing logic
-def main():
+def process_url(url):
+    headword = url_to_headword(url)
 
-    signal.signal(signal.SIGINT, keyboard_handler)
+    if not headword:
+        print(f"Wrong headword {headword}")
+        return
 
-    os.makedirs(HTML_FOLDER, exist_ok=True)
+    filename = os.path.join(HTML_FOLDER, f"{headword}.html")
 
-    # Initialize Selenium driver options
-    options = webdriver.ChromeOptions()
-    # options.headless = True
-    options.add_argument("--headless=new")
+    html = ""
+    if is_non_zero_file(filename):
+        print(f"Restoring {headword}")
+        with open(filename, "r", encoding="utf-8") as fin:
+            html = fin.read()
+    else:
+        print(f"Downloading {headword}")
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True)
+                context = browser.new_context()
+                page = context.new_page()
 
-    # Load the list of URLs to process
-    words_to_redownload = load_frequent_words("redownload-new.txt")
-    new_urls = set([headword_to_url(word) for word in words_to_redownload])
+                page.goto(url)
+                time.sleep(WAIT_TIME)
 
-    remove_existing_items(new_urls)
+                html = page.content()
+                done_urls.add(url)
 
-    with open("redownload-remains-new.txt", "w", encoding="utf-8") as file:
-        file.writelines([url_to_headword(item) + "\n" for item in sorted(new_urls)])
+                with open(filename, "w", encoding="utf-8") as fout:
+                    fout.write(html)
 
-    print(f"Total URLs to fetch: {len(new_urls)}")
-    done_urls = set()
-    cpu_count_used = os.cpu_count() - 5
-    print(f"Using {cpu_count_used} CPU cores")
-
-    with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count_used) as executor:  # Adjust max_workers as needed
-        future_to_url = {
-            executor.submit(fetch_url, options, url, url_to_headword(url), done_urls): url for url in sorted(new_urls)
-        }
-
-        for future in concurrent.futures.as_completed(future_to_url):
-            url = future_to_url[future]
-            try:
-                result = future.result()
-                print(f"Completed: {result}")
-            except Exception as e:
-                print(f"Error processing {url}: {e}")
-
-    print(f"Finished processing {len(done_urls)} URLs")
+                browser.close()
+        except Exception as e:
+            print(f"Error downloading {headword}: {e}")
 
 
+# Split the URLs into a sorted list
+new_urls_list = sorted(new_urls, reverse=True)
+
+# Parallel processing
 if __name__ == "__main__":
-    main()
+    cpu_count = os.cpu_count()
+    max_workers = max(1, cpu_count)  # Leave 2 cores free
+    print(f"Using {max_workers} threads for parallel processing")
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        executor.map(process_url, new_urls_list)
+
+    print(f"=== Finished processing {len(done_urls)} URLs")

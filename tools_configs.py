@@ -23,7 +23,7 @@ PATTERN_URL = r"(https://hanzii.net/search/word/(.+?)\?hl=vi)"
 PATTERN_ZH = r"[一-龥]+"
 PATTERN_REDUNDANT = r"[.!?。！？]"
 
-WAIT_TIME = 7  # Seconds
+WAIT_TIME = 3  # Seconds
 
 MARKER_GOOD_FILE = "Chi tiết từ"
 MARKER_HAS_DEF_FILE = "Đóng góp bản dịch"
@@ -74,40 +74,39 @@ PATTERN_ZH_MUL = (
 )
 
 
-
 def remove_chinese_with_pipe(text):
     """
     Remove the Traditional Chinese characters before the '|' and the '|' itself in the input string.
-    
+
     Args:
         text (str): The input text to be cleaned.
-        
+
     Returns:
         str: The cleaned text.
     """
-    return re.sub(r'[\u4e00-\u9fff]+\|', '', text)
+    return re.sub(r"[\u4e00-\u9fff]+\|", "", text)
 
 
 def convert_to_mark_pinyin(text):
     # Define the regex as a constant
-    BRACKETS_REGEX = r'(\[[^\]]+\])'
-    
+    BRACKETS_REGEX = r"(\[[^\]]+\])"
+
     # Function to convert matched text to uppercase
     def replace_with_uppercase(match):
         # return match.group(1)
         return f" {numbered_to_accented(match.group(1))[1:-1]}"
-        
+
     return re.sub(BRACKETS_REGEX, replace_with_uppercase, text)
-    
-
-def find_freq(word):
-    return wordset_freq[word] if word in wordset_freq else BIGNUM
 
 
-def sort_by_freq(list_chars):
-    items = sorted([(word, find_freq(word)) for word in list_chars], key=lambda x: (x[1], x[0]))
+# def find_freq(word):
+#     return wordset_freq[word] if word in wordset_freq else BIGNUM
 
-    return [word for word, order in items]
+
+# def sort_by_freq(list_chars):
+#     items = sorted([(word, find_freq(word)) for word in list_chars], key=lambda x: (x[1], x[0]))
+
+#     return [word for word, order in items]
 
 
 def headword_to_url(word):
@@ -250,19 +249,22 @@ def replace_blue(match_obj):
 def _replace_num_pinyin(match_obj):
     return numbered_to_accented(match_obj.group(1))
 
-def _replace_num_pinyin_fs(match_obj): # Adds front space 
+
+def _replace_num_pinyin_fs(match_obj):  # Adds front space
     return " " + numbered_to_accented(match_obj.group(1))
+
 
 def replace_num_pinyin_fs(text):
 
-    return  re.sub(r'\[(.*?)\]', _replace_num_pinyin_fs, text)
+    return re.sub(r"\[(.*?)\]", _replace_num_pinyin_fs, text)
 
 
 def replace_num_pinyin(text):
     # PATTERN_PY = r"\[(.+)\]"
 
     # return regex.sub(PATTERN_PY, _replace_num_pinyin, text)
-    return  re.sub(r'\[(.*?)\]', _replace_num_pinyin, text)
+    return re.sub(r"\[(.*?)\]", _replace_num_pinyin, text)
+
 
 import json
 import re
@@ -673,12 +675,14 @@ class ChineseDictionary:
         """
         results = []
         for item in wordresult:
-            results.append({
-                "meaning": item.meaning,
-                "pinyin": item.pinyin,
-                "simplified": item.simplified,
-                "traditional": item.traditional
-            })
+            results.append(
+                {
+                    "meaning": item.meaning,
+                    "pinyin": item.pinyin,
+                    "simplified": item.simplified,
+                    "traditional": item.traditional,
+                }
+            )
         return results
 
     def load_lookups(self):
@@ -721,4 +725,3 @@ class ChineseDictionary:
         Ensure lookups are saved when the object is destroyed.
         """
         self.save_lookups()
-
