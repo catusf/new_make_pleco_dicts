@@ -14,3 +14,4 @@ Levenshtein>=0.23.0
 selenium==4.27.1
 webdriver-manager==4.0.2
 pinyin_jyutping_sentence==1.3
+playwright==1.49.1
