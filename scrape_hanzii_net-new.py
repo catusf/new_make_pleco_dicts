@@ -99,12 +99,12 @@ def main():
     options.add_argument("--headless=new")
 
     # Load the list of URLs to process
-    words_to_redownload = load_frequent_words("redownload.txt")
+    words_to_redownload = load_frequent_words("redownload-new.txt")
     new_urls = set([headword_to_url(word) for word in words_to_redownload])
 
     remove_existing_items(new_urls)
 
-    with open("redownload-remains.txt", "w", encoding="utf-8") as file:
+    with open("redownload-remains-new.txt", "w", encoding="utf-8") as file:
         file.writelines([url_to_headword(item) + "\n" for item in sorted(new_urls)])
 
     print(f"Total URLs to fetch: {len(new_urls)}")
