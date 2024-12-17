@@ -1,14 +1,20 @@
 import hanzidentifier
+import time
 import os
 import regex
-import urllib.parse
 import json
+import re
+import urllib.parse
 from os.path import join
 from chin_dict.chindict import ChinDict
 import io
+import platform
+from playwright.sync_api import sync_playwright
+import glob
 
 from dragonmapper.transcriptions import numbered_to_accented
-from pinyin_jyutping_sentence import pinyin as pinyinget
+
+# from pinyin_jyutping_sentence import pinyin as pinyinget
 
 TOP_WORDS_50k = "top_50k_words.txt"
 TOP_WORDS_24K = "top_words_24k.txt"
@@ -264,10 +270,6 @@ def replace_num_pinyin(text):
 
     # return regex.sub(PATTERN_PY, _replace_num_pinyin, text)
     return re.sub(r"\[(.*?)\]", _replace_num_pinyin, text)
-
-
-import json
-import re
 
 
 class Radicals:
@@ -527,8 +529,6 @@ class Radicals:
 
 # fmt: on
 
-import regex
-
 
 def build_ids_radical_perfect():
     char_decompositions = {}
@@ -623,7 +623,7 @@ def build_ids_radical_perfect():
 
                     round[i] += 1
                     # print(f"{key}: {char} => {sub}")
-                    changed = True
+                    # changed = True
 
                     expression = expression.replace(char, sub)
 
@@ -725,3 +725,101 @@ class ChineseDictionary:
         Ensure lookups are saved when the object is destroyed.
         """
         self.save_lookups()
+
+
+# Website URL template
+base_url = "https://hanzii.net/search/word/"
+
+
+def is_colab():
+    try:
+        import google.colab
+
+        return True
+    except ImportError:
+        return False
+
+
+HTML_FOLDER = "/content/drive/My Drive/scrape_hanzii/html" if is_colab() else "html"
+HTML_DONE_FOLDER = "data/html-done"
+
+
+def remove_existing_items(new_urls, current_folder=HTML_FOLDER, done_folder=HTML_DONE_FOLDER):
+    patterns = [f"{current_folder}/*.html", f"{done_folder}/*.html"]
+    files = [file for pattern in patterns for file in glob.glob(pattern)]
+
+    print(f"There are existing {len(files)} files")
+
+    done_urls = set()
+
+    for num, filepath in enumerate(files):
+        headword, ext = os.path.splitext(os.path.split(filepath)[1])
+        # filename = f'{HTML_FOLDER}/{headword}.html'
+        url = headword_to_url(headword)
+
+        check_file_exists = True
+
+        if check_file_exists:
+            if is_non_zero_file(filepath):
+                done_urls.add(url)
+
+                if url in new_urls:
+                    new_urls.remove(url)
+
+                # See if file contains any new words
+            else:
+                new_urls.add(url)
+
+        else:
+            new_urls.add(url)
+
+    return new_urls
+
+
+def process_url(url):
+    headword = url_to_headword(url)
+
+    if not headword:
+        print(f"Wrong headword {headword}")
+        return
+
+    filename = os.path.join(HTML_FOLDER, f"{headword}.html")
+
+    html = ""
+    if is_non_zero_file(filename):
+        print(f"Restoring {headword}")
+        with open(filename, "r", encoding="utf-8") as fin:
+            html = fin.read()
+    else:
+        print(f"Downloading {headword}")
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True)
+                context = browser.new_context()
+                page = context.new_page()
+
+                page.goto(url)
+                time.sleep(WAIT_TIME)
+
+                html = page.content()
+                # done_urls.add(url)
+
+                with open(filename, "w", encoding="utf-8") as fout:
+                    fout.write(html)
+
+                print(f"\tDone downloading {filename}")
+
+                browser.close()
+
+        except Exception as e:
+            print(f"\tError downloading {headword}: {e}")
+
+
+def is_running_on_windows():
+    """
+    Check if the code is running on Windows OS.
+
+    Returns:
+        bool: True if running on Windows, False otherwise.
+    """
+    return os.name == "nt" and platform.system() == "Windows"

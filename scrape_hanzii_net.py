@@ -13,6 +13,7 @@ import sys
 HTML_FOLDER = "html"
 WAIT_TIME = 3
 
+
 # Function to process a single URL
 def fetch_url(driver_options, url, headword, done_urls):
     filename = f"{headword}.html"
@@ -104,13 +105,15 @@ def main():
 
     remove_existing_items(new_urls)
 
-    with open("redownload-remains.txt", "w", encoding="utf-8") as file:
+    with open(os.path.join(WORDLIST_DIR, "redownload-remains.txt"), "w", encoding="utf-8") as file:
         file.writelines([url_to_headword(item) + "\n" for item in sorted(new_urls)])
 
     print(f"Total URLs to fetch: {len(new_urls)}")
     done_urls = set()
     cpu_count_used = os.cpu_count() - 5
     print(f"Using {cpu_count_used} CPU cores")
+
+    return
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count_used) as executor:  # Adjust max_workers as needed
         future_to_url = {
