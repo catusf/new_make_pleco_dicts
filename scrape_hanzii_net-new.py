@@ -5,9 +5,10 @@ import urllib
 import time
 import os
 import glob
-import json
-from concurrent.futures import ThreadPoolExecutor
 
+# import json
+from concurrent.futures import ThreadPoolExecutor
+import platform
 from tools_configs import *
 
 
@@ -18,6 +19,7 @@ def is_colab():
         return True
     except ImportError:
         return False
+
 
 # HTML_FOLDER = "html"
 
@@ -139,18 +141,33 @@ def process_url(url):
                 with open(filename, "w", encoding="utf-8") as fout:
                     fout.write(html)
 
+                print(f"\tDone downloading {filename}")
+
                 browser.close()
+
         except Exception as e:
-            print(f"Error downloading {headword}: {e}")
+            print(f"\tError downloading {headword}: {e}")
 
 
 # Split the URLs into a sorted list
 new_urls_list = sorted(new_urls, reverse=True)
 
+
+def is_running_on_windows():
+    """
+    Check if the code is running on Windows OS.
+
+    Returns:
+        bool: True if running on Windows, False otherwise.
+    """
+    return os.name == "nt" and platform.system() == "Windows"
+
+
 # Parallel processing
 if __name__ == "__main__":
     cpu_count = os.cpu_count()
-    max_workers = max(1, cpu_count)  # Leave 2 cores free
+    spared_cpus = 5 if is_running_on_windows() else 0
+    max_workers = max(1, cpu_count - spared_cpus)  # Leave 2 cores free
     print(f"Using {max_workers} threads for parallel processing")
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
