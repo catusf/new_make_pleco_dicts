@@ -5,3 +5,9 @@ setup:
 
 clean:
 	git clean -fdx
+
+scrape_first:
+	uv run python scrape_hanzii_net-first.py
+
+scrape_second:
+	uv run python scrape_hanzii_net-second.py
