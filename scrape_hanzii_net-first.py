@@ -22,8 +22,12 @@ if __name__ == "__main__":
     wordlist_file = "redownload-first.txt"
     words_to_redownload = load_frequent_words(wordlist_file)
     new_urls = set([headword_to_url(word) for word in words_to_redownload])
+    
+    print(f"Wordlist len: {len(new_urls)}")
 
     remove_existing_items(new_urls)
+
+    print(f"To download: {len(new_urls)}")
 
     with open(os.path.join(WORDLIST_DIR, wordlist_file), "w", encoding="utf-8") as file:
         file.writelines([url_to_headword(item) + "\n" for item in sorted(new_urls)])
