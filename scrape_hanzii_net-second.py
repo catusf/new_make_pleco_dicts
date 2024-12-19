@@ -62,7 +62,7 @@ if __name__ == "__main__":
 
     cpu_count = os.cpu_count()
     spared_cpus = 5 if is_running_on_windows() else 0
-    max_workers = max(1, cpu_count - spared_cpus)  # Leave 2 cores free
+    max_workers = max(3, cpu_count - spared_cpus)  # Leave 2 cores free
     print(f"Using {max_workers} threads for parallel processing")
 
     new_urls_list = sorted(new_urls, reverse=True)
