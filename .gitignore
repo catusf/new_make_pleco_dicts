@@ -93,6 +93,7 @@ celerybeat-schedule
 # virtualenv
 venv/
 ENV/
+lv/
 
 # Spyder project settings
 .spyderproject
@@ -106,3 +107,11 @@ google-chrome-stable_current_amd64.deb
 *.jar
 
 **/*.Identifier
+data/dict_data.json
+make_trung_viet_dict.py
+make_trung_viet_dict.py
+dict/TrungViet-big.txt
+dict/TrungViet-small.txt
+dict/TrungViet-small.txt
+data/HanziiData-related.json
+data/new_reccommendations.json
