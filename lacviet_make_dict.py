@@ -5,16 +5,17 @@ from tools_configs import pleco_make_bold, pleco_make_dark_gray, pleco_make_new_
 MAX_LINES = 20000000
 
 HANVIET_KEY = "Hán Việt"
-with open("lv/parsed.json", "r", encoding="utf-8") as file:
+with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as file:
     data_array = json.load(file)
 
-    with open("lv/lacviet_small.txt", "w", encoding="utf-8") as pfile:
-        for item in data_array[:MAX_LINES]:
-            char = item["character"]
+    with open("dict/lacviet_small.txt", "w", encoding="utf-8") as pfile:
+        for char in data_array:
+            # char = item["character"]
+            items = data_array[char]
 
-            for pro in item["pronunciations"]:
+            for pro in items:
                 pleco = ""
-                pinyin = pro["pronunciation"]
+                pinyin = pro["pinyin"]
                 meta = pro["metadata"]
 
                 pleco += f"{char}\t{pinyin}\t"
@@ -33,7 +34,7 @@ with open("lv/parsed.json", "r", encoding="utf-8") as file:
 
                 pleco += "\n".join(viet_defs)
 
-            # print(pleco)
-            pfile.write(pleco_make_new_line(pleco, make_pleco=True) + "\n")
+                # print(pleco)
+                pfile.write(pleco_make_new_line(pleco) + "\n")
 
         print(f"Finished writing {len(data_array)} definitions to filefile")

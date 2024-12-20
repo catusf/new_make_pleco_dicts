@@ -1,6 +1,7 @@
 # Refine data extraction step by step
 import json
 import re
+import unicodedata
 
 # Input text data
 raw = """
@@ -11,11 +12,6 @@ raw = """
 """  # noqa: E501
 
 MAX_LINES = 5000000000000
-
-
-def html_char_to_unicode(match):
-    char_code = int(match.group(1))  # Extract the number
-    return chr(char_code)  # Convert to Unicode characte
 
 
 def split_and_clean_def(line):
@@ -45,28 +41,58 @@ with open("lv/LacViet-zh-vi.html.tab", "r", encoding="utf-8") as file:
 
     print(f"Read {len(lines)} lines")
 
-data_array = []
+data_array = {}
 
 ### Tách ra <d-meta2><d-meta-title>: Bắt đầu ghi chú
 ### Sau đó thay <d-meta2> bằng <d-def>
 ### Not a valid block: <d-prono><d-meta2><d-meta-title>Từ phồn thể:</d-meta-title> (與)</d-meta2>
 ### Có TH pinyin bi5 sai 一事	<d-prono>yīsh́</d-prono>
 
+
+def html_char_to_unicode(match):
+    char_code = int(match.group(1))  # Extract the number
+    return chr(char_code)  # Convert to Unicode characte
+
+
+def has_combining_diacritical_marks(s):
+    # Define the Unicode range for Combining Diacritical Marks
+    combining_diacritics_range = re.compile(r"[\u0300-\u036F]")
+    # Search for any character in the range
+    return bool(combining_diacritics_range.search(s))
+
+
+def replace_html_ref(text):
+    # Replace HTML references like &#466;
+    # Then normalize it do the dicritical mark will be combined too
+    new_text = re.sub(r"&#(\d+);", html_char_to_unicode, text)
+    # new_text1 = unicodedata.normalize("NFC", new_text)
+
+    return new_text
+
+
+def normalize_nfc(text):
+    return unicodedata.normalize("NFC", text)
+
+
+issues = []
+
 # Extract character
 for line in lines[:MAX_LINES]:
-    line = re.sub(
-        r"&#(\d+);", html_char_to_unicode, line
-    )  # Replace HTML references like &#466;
+    # line = re.sub(
+    #     r"&#(\d+);", html_char_to_unicode, line
+    # )  # Replace HTML references like &#466;
 
     # Input text data
 
     # Initialize structure
-    char_result = {"character": "", "pronunciations": []}
+    char_result = []
 
     # Extract character
     character, body = line.strip().split("\t")
-    if character:
-        char_result["character"] = character
+    if not character:
+        print(f"Invalid line: {line}")
+        continue
+    # char_result["character"] = character
 
     PRO_MARK = "<d-prono>"
 
@@ -100,8 +126,15 @@ for line in lines[:MAX_LINES]:
         translations = re.findall(r"<d-eg-tsl>(.+?)</d-eg-tsl>", block)
         notes = re.findall(r"<d-meta2>(.+?)</d-meta2>", block)
 
+        if has_combining_diacritical_marks(replace_html_ref(pronunciation)):
+            issues.append((character, replace_html_ref(pronunciation)))
+
         # Group data under pronunciations
-        prono_data = {"pronunciation": pronunciation, "metadata": {}, "definitions": []}
+        prono_data = {
+            "pinyin": normalize_nfc(replace_html_ref(pronunciation)),
+            "metadata": {},
+            "definitions": [],
+        }
 
         for meta_block in meta_blocks:
             try:
@@ -128,15 +161,17 @@ for line in lines[:MAX_LINES]:
 
         # Add notes
 
-        char_result["pronunciations"].append(prono_data)
+        char_result.append(prono_data)
 
     # Display structured data
     # print(json.dumps(result, ensure_ascii=False, indent=4))
 
-    data_array.append(char_result)
+    data_array[character] = char_result
 
-
-with open("lv/parsed.json", "w", encoding="utf-8") as file:
+with open("data/lacviet_parsed.json", "w", encoding="utf-8") as file:
     json.dump(data_array, file, ensure_ascii=False, indent=4)
+
+with open("data/pinyin_issues.json", "w", encoding="utf-8") as file:
+    json.dump(issues, file, ensure_ascii=False, indent=4)
 
 print(f"Written {len(data_array)} records")

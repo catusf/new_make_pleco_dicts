@@ -260,15 +260,14 @@ def _replace_num_pinyin_fs(match_obj):  # Adds front space
 
 
 def replace_num_pinyin_fs(text):
-
-    return re.sub(r"\[(.*?)\]", _replace_num_pinyin_fs, text)
+    return re.sub(r"\[(.*?)\]", _replace_num_pinyin_fs, text.replace("u:", "ü"))
 
 
 def replace_num_pinyin(text):
     # PATTERN_PY = r"\[(.+)\]"
 
     # return regex.sub(PATTERN_PY, _replace_num_pinyin, text)
-    return re.sub(r"\[(.*?)\]", _replace_num_pinyin, text)
+    return re.sub(r"\[(.*?)\]", _replace_num_pinyin, text.replace("u:", "ü"))
 
 
 class Radicals:

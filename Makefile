@@ -25,3 +25,12 @@ tv_mid:
 
 tv_small:
 	uv run python make_trung_viet_dict.py --dict-size=small
+
+gen_lv_tab:
+#	pyglossary --remove-html=script,a,span,link,span lv/LacViet-vi-zh.ifo tests/lv/LacViet-vi-zh.html.tab
+	pyglossary --remove-html=script,a,span,link,span lv/LacViet-zh-vi.ifo tests/lv/LacViet-zh-vi.html.tab
+
+gen_lv_raw:
+#	pyglossary tests/lv/LacViet-vi-zh.ifo lv/LacViet-vi-zh.tab
+	pyglossary lv/LacViet-zh-vi.ifo lv/LacViet-zh-vi.tab
+	

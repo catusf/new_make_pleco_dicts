@@ -112,6 +112,5 @@ make_trung_viet_dict.py
 make_trung_viet_dict.py
 dict/TrungViet-big.txt
 dict/TrungViet-small.txt
-dict/TrungViet-small.txt
 data/HanziiData-related.json
 data/new_reccommendations.json
