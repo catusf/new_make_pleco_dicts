@@ -1,4 +1,29 @@
 TODO
+[ ] Fix LacViet issues
+
+- [ ] Có nên copy các item trong TrungViet vào LacViet ko?
+
+- [ ] Manual review pinyin in data/lacviet_parsed_issues.json
+
+- [ ] Rules regex bị sai: "vietnamese"
+   "一动不如一静": [
+      {
+         "definitions": [
+            {
+               "examples": [],
+               "vietnamese": "没有把握或无益的事，还是不做为好",
+               "chinese": "比喻多一事不如少一事"
+            },
+            {
+               "examples": [],
+               "vietnamese": "lấy tĩnh chế động; một sự nhịn, chín sự lành; nếu không nắm chắc hoặc thấy không có  lợi ích gì thì tốt nhất không hành động",
+               "chinese": ""
+            }
+         ],
+         "metadata": {
+            "Hán Việt": "NHẤT ĐỘNG BẤT NHƯ NHẤT TĨNH"
+         },
+
 [ ] Thay git lfs bằng bz2 file (sau khi download file từ lfs)
 [ ] Với các từ có nhiều cách đọc và nghĩa khác, khi export ra non-pleco thì chỉ export ra 1 line
 [ ] Creats json file

@@ -8,8 +8,14 @@ HANVIET_KEY = "Hán Việt"
 with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as file:
     data_array = json.load(file)
 
+    count = 0
     with open("dict/lacviet_small.txt", "w", encoding="utf-8") as pfile:
         for char in data_array:
+            count += 1
+
+            if count > MAX_LINES:
+                break
+
             # char = item["character"]
             items = data_array[char]
 
@@ -37,4 +43,4 @@ with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as fil
                 # print(pleco)
                 pfile.write(pleco_make_new_line(pleco) + "\n")
 
-        print(f"Finished writing {len(data_array)} definitions to filefile")
+        print(f"Finished writing {count} definitions to filefile")
