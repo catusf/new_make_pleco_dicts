@@ -13,7 +13,9 @@ scrape_second:
 	uv run python scrape_hanzii_net-second.py
 
 %.json: %.json.bz2
-	bunzip2 -f -k $<
+	@if [ ! -f $@ ] || [ $< -nt $@ ]; then \
+	    bunzip2 -f -k $<; \
+	fi
 
 dict/TrungViet-big.txt: data/new_reccommendations.json data/dict_data.json
 	uv run python make_trung_viet_dict.py --dict-size=big

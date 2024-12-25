@@ -9,6 +9,7 @@ with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as fil
     data_array = json.load(file)
 
     count = 0
+    count_hanviet = 0
     with open("dict/lacviet_small.txt", "w", encoding="utf-8") as pfile:
         for char in data_array:
             count += 1
@@ -25,11 +26,16 @@ with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as fil
                 meta = pro["metadata"]
 
                 pleco += f"{char}\t{pinyin}\t"
+                hanviet = ""
+
                 if HANVIET_KEY in meta:
-                    pleco += (
-                        pleco_make_dark_gray(pleco_make_bold(meta[HANVIET_KEY].lower()))
-                        + "\n"
-                    )
+                    hanviet = meta[HANVIET_KEY].lower()
+                elif "amhanviet" in pro:
+                    hanviet = pro["amhanviet"]
+
+                if hanviet:
+                    count_hanviet += 1
+                    pleco += pleco_make_dark_gray(pleco_make_bold(hanviet)) + "\n"
 
                 viet_defs = []
                 chin_defs = []
@@ -43,4 +49,5 @@ with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as fil
                 # print(pleco)
                 pfile.write(pleco_make_new_line(pleco) + "\n")
 
+        print(f"Amhanviet {count_hanviet} found")
         print(f"Finished writing {count} definitions to filefile")
