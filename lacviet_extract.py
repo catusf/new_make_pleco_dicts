@@ -31,7 +31,10 @@ def split_and_clean_def(line):
         definition = line
         chinese_definition = ""
 
-    return {"vietnamese": definition, "chinese": chinese_definition}
+    return {
+        "vietnamese": replace_html_ref(definition),
+        "chinese": replace_html_ref(chinese_definition),
+    }
 
 
 lines = [line.strip() for line in raw.split("\n") if line.strip()]
@@ -64,10 +67,13 @@ def has_combining_diacritical_marks(s):
 def replace_html_ref(text):
     # Replace HTML references like &#466;
     # Then normalize it do the dicritical mark will be combined too
-    new_text = re.sub(r"&#(\d+);", html_char_to_unicode, text)
+
+    text = text.replace("&#8220;", "").replace("&#8221;", "")
+
+    text = re.sub(r"&#(\d+);", html_char_to_unicode, text)
     # new_text1 = unicodedata.normalize("NFC", new_text)
 
-    return new_text
+    return text
 
 
 def normalize_nfc(text):

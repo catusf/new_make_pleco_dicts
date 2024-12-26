@@ -2,6 +2,7 @@ import json
 
 from tools_configs import pleco_make_bold, pleco_make_dark_gray, pleco_make_new_line
 
+MAX_LINES = 500
 MAX_LINES = 20000000
 
 HANVIET_KEY = "Hán Việt"
@@ -10,7 +11,9 @@ with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as fil
 
     count = 0
     count_hanviet = 0
-    with open("dict/lacviet_small.txt", "w", encoding="utf-8") as pfile:
+
+    outfile = "dict/lacviet_small.txt"
+    with open(outfile, "w", encoding="utf-8") as pfile:
         for char in data_array:
             count += 1
 
@@ -23,12 +26,12 @@ with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as fil
             for pro in items:
                 pleco = ""
                 pinyin = pro["pinyin"]
-                meta = pro["metadata"]
+                meta = pro["metadata"] if "metadata" in pro else None
 
                 pleco += f"{char}\t{pinyin}\t"
                 hanviet = ""
 
-                if HANVIET_KEY in meta:
+                if meta and HANVIET_KEY in meta:
                     hanviet = meta[HANVIET_KEY].lower()
                 elif "amhanviet" in pro:
                     hanviet = pro["amhanviet"]
@@ -44,10 +47,18 @@ with open("data/lacviet_parsed_fixed_pinyin.json", "r", encoding="utf-8") as fil
                     viet_defs.append(defin["vietnamese"])
                     chin_defs.append(defin["chinese"])
 
-                pleco += "\n".join(viet_defs)
+                if len(viet_defs) == 1:
+                    pleco += viet_defs[0]
+                elif len(viet_defs) > 1:
+                    pleco += "\n".join(
+                        [
+                            f"{pleco_make_bold(num)} {text}"
+                            for num, text in enumerate(viet_defs, start=1)
+                        ]
+                    )
 
                 # print(pleco)
                 pfile.write(pleco_make_new_line(pleco) + "\n")
 
         print(f"Amhanviet {count_hanviet} found")
-        print(f"Finished writing {count} definitions to filefile")
+        print(f"Finished writing {count} definitions to {outfile}")
