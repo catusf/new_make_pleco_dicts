@@ -248,7 +248,10 @@ print(f"HV | HZ Char {len(lv_hanzii_char_set)=}")
 print(f"Total {len(total_set)=}")
 
 cc_but_others = set(ccdict_dict) - lv_hanzii_set
-print(f"In CCDICT but not otherother -  {len(cc_but_others)=}")
+print(f"In CCDICT but not other -  {len(cc_but_others)=}")
+
+lv_hanzii_but_others = lv_hanzii_set -set(ccdict_dict) 
+print(f"In lvhanzi but not ccdict -  {len(lv_hanzii_but_others)=}")
 
 with open("data/cc_but_others.json", "w", encoding="utf-8") as file:
     json.dump(sorted(cc_but_others), file, ensure_ascii=False, indent=4)
@@ -324,16 +327,23 @@ for char in lv_hanzii_char_set:
             for defin in pro["definitions"]:
                 viet = defin["vietnamese"]
 
-                pattern = r"^[0-9a-z]\. ?"
+                pattern = r"^[0-9a-z]\.? ?"
 
                 # Replacement string
                 replacement = ""
 
-                # Replace the matching substring
-                defin["vietnamese"] = re.sub(pattern, replacement, viet.strip())
 
+                # Replace the matching substring
+                new_viet = re.sub(pattern, replacement, viet.strip()).strip()
+
+                # if not new_viet:
+                #     continue
+
+                defin["vietnamese"] = new_viet
+                pass
             new_pro = {
-                "definitions": pro["definitions"],
+                "definitions": [item for item in pro["definitions"] if item["vietnamese"]],
+                
                 "oldpinyin": pro["pinyin"].replace("·", " ").replace("…", " "),
                 "metadata": pro["metadata"],
                 "notes": pro["notes"],

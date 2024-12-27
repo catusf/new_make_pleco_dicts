@@ -68,7 +68,12 @@ def replace_html_ref(text):
     # Replace HTML references like &#466;
     # Then normalize it do the dicritical mark will be combined too
 
-    text = text.replace("&#8220;", "").replace("&#8221;", "")
+    text = (
+        text.replace("&#8220;", "")
+        .replace("&#8221;", "")
+        .replace("&#8216;", " '")
+        .replace("&#8217;", "' ")
+    )
 
     text = re.sub(r"&#(\d+);", html_char_to_unicode, text)
     # new_text1 = unicodedata.normalize("NFC", new_text)
