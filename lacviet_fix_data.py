@@ -139,7 +139,7 @@ for item in hanzii:
 
     for defin in definitions:
         vietnamese = correct_wrong_sentence_case(defin["vietnamese"])
-        chinese = defin["chinese"]
+        chinese = defin["chinese"] if "chinese" in defin else ""
 
         if mostly_chinese(vietnamese):
             # print(f"Skipped mostly chinese def: {vietnamese}")
@@ -409,6 +409,7 @@ for char in lv_hanzii_char_set:
         print(f"Key not found: {char}")
 
 with open("data/lacviet_parsed_fixed_pinyin.json", "w", encoding="utf-8") as file:
+    print(f"Fixed count: {len(new_lacviet)}")
     json.dump(new_lacviet, file, ensure_ascii=False, indent=3)
     pass
 

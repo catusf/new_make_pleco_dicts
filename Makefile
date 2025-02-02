@@ -30,6 +30,11 @@ tv_small:
 
 tv_all: tv_big tv_mid tv_small
 
+lacviet:
+#	uv run python lacviet_extract.py
+	uv run python lacviet_fix_data.py
+	uv run python lacviet_make_dict.py
+
 to_html:
 	uv run python pleco_to_html_tsv.py
 
