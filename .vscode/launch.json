@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": ["--dict-size=mid", "--num-items=1000"]
+            "args": ["--dict-size=big", "--num-items=1000"]
         }
     ]
 }

@@ -32,6 +32,12 @@ tv_small:
 
 tv_all: tv_small tv_mid tv_big
 
+tv_all_test:
+	uv run python lacviet_make_dict.py --dict-size=small --num-items=100
+	uv run python lacviet_make_dict.py --dict-size=mid --num-items=100
+	uv run python lacviet_make_dict.py --dict-size=big --num-items=100
+
+
 fix_lacviet_data: data/lacviet_parsed.json data/hanzilearn_dedups.json data/HanziiData.json
 	uv run python lacviet_fix_data.py
 

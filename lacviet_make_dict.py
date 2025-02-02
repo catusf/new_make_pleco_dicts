@@ -115,7 +115,8 @@ def main():
                         if dict_size in ["mid", "big"] and "examples" in defin:
                             examples = defin["examples"]
                             if examples:
-                                pleco += f"\n{pleco_make_dark_gray(PC_DIAMOND + ' ' + PC_VIDU_NEW_MARK)}\n"
+                                pleco += "\n"
+                                pleco += f"{pleco_make_dark_gray(PC_DIAMOND + ' ' + PC_VIDU_NEW_MARK)}\n"
 
                                 for example in examples:
                                     pleco += f"{pleco_make_blue(example['example'])}"
