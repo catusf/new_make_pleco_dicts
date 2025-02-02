@@ -17,23 +17,23 @@ scrape_second:
 	    bunzip2 -f -k $<; \
 	fi
 
-dict/TrungViet-big.txt: data/new_reccommendations.json data/dict_data.json
-	uv run python make_trung_viet_dict.py --dict-size=big
+# dict/TrungViet-big.txt: data/new_reccommendations.json data/dict_data.json
+dict/TrungViet-big.txt:
+	uv run python lacviet_make_dict.py --dict-size=big --num-items
 
 tv_big: dict/TrungViet-big.txt
+	uv run python lacviet_make_dict.py --dict-size=big --num-items=100
 
 tv_mid:
-	uv run python make_trung_viet_dict.py --dict-size=mid
+	uv run python lacviet_make_dict.py --dict-size=mid --num-items=100
 
 tv_small:
-	uv run python make_trung_viet_dict.py --dict-size=small
+	uv run python lacviet_make_dict.py --dict-size=small --num-items=100
 
 tv_all: tv_big tv_mid tv_small
 
-lacviet:
-#	uv run python lacviet_extract.py
+fix_lacviet_data: data/lacviet_parsed.json data/hanzilearn_dedups.json data/HanziiData.json
 	uv run python lacviet_fix_data.py
-	uv run python lacviet_make_dict.py
 
 to_html:
 	uv run python pleco_to_html_tsv.py

@@ -1,4 +1,9 @@
+"""Fixes data of Lacviet Dictionary with the data from Hanzii.net
+
+"""
+
 import copy
+import html
 import json
 import re
 
@@ -62,7 +67,7 @@ def correct_wrong_sentence_case(text):
     
     words = text.split(" ")
 
-    if len(words) < 2:  # One word => propernamepropername
+    if len(words) < 2:  # One word => proper name
         return text
 
     word_chars = only_word_chars(text)
@@ -88,10 +93,35 @@ def correct_wrong_sentence_case(text):
 
 # exit()
 
+def replace_html_entities_in_json(old_file_path, new_file_path):
+    try:
+        with open(old_file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+        
+        def replace_entities(obj):
+            if isinstance(obj, str):
+                return html.unescape(obj)
+            elif isinstance(obj, list):
+                return [replace_entities(item) for item in obj]
+            elif isinstance(obj, dict):
+                return {key: replace_entities(value) for key, value in obj.items()}
+            return obj
+        
+        converted_data = replace_entities(data)
+        
+        with open(new_file_path, 'w', encoding='utf-8') as file:
+            json.dump(converted_data, file, ensure_ascii=False, indent=4)
+        
+        print("HTML entities replaced successfully in JSON file.")
+    except Exception as e:
+        print(f"Error: {e}")
+
 with open("data/hanzilearn_dedups.json", "r", encoding="utf-8") as file:
     ccdict = json.load(file)
 
-with open("data/lacviet_parsed.json", "r", encoding="utf-8") as file:
+replace_html_entities_in_json("data/lacviet_parsed.json", "data/lacviet_fixed.json")
+
+with open("data/lacviet_fixed.json", "r", encoding="utf-8") as file:
     lacviet = json.load(file)
 
 with open("data/HanziiData.json", "r", encoding="utf-8") as file:
@@ -110,7 +140,6 @@ for char in ccdict:
         ccdict_dict[(char, item["pinyin"])] = item["meaning"]
         ccdict_dict_pinyins[char].append(item["pinyin"])
         ccdict_dict_defs[char].append(item["meaning"])
-
 
 hanzii_dict = {}
 
@@ -140,6 +169,9 @@ for item in hanzii:
     for defin in definitions:
         vietnamese = correct_wrong_sentence_case(defin["vietnamese"])
         chinese = defin["chinese"] if "chinese" in defin else ""
+
+        # if "<d-tab></d-tab>" in chinese:
+        #     print(chinese)
 
         if mostly_chinese(vietnamese):
             # print(f"Skipped mostly chinese def: {vietnamese}")
@@ -175,7 +207,7 @@ for item in hanzii:
 
 print(f"{len(hanzii)=}")
 print(f"{len(hanzii_new)=}")
-pass
+# pass
 # added_to_lacviet += 1
 
 #     new_definitions = []
@@ -256,7 +288,6 @@ print(f"In lvhanzi but not ccdict -  {len(lv_hanzii_but_others)=}")
 with open("data/cc_but_others.json", "w", encoding="utf-8") as file:
     json.dump(sorted(cc_but_others), file, ensure_ascii=False, indent=4)
 
-
 ###
 
 print("===== Keys are chinese only ===")
@@ -316,6 +347,16 @@ print(f"Only in LV {len(only_in_lv)=}")
 new_lacviet = {}
 pinyin_issues = {}
 
+def remove_leading_number(text):
+    pattern1 = r"^[0-9a-z]\. ?"
+    pattern2 = r"^[0-9a-z] "
+
+    # Replace the matching substring
+    new_text = re.sub(pattern1, "", text.strip())
+    new_text = re.sub(pattern2, "", new_text).strip()
+    
+    return new_text
+
 for char in lv_hanzii_char_set:
 
     if char in lacviet:  # If in Lacviet priotize it. Fixes issues if any
@@ -327,19 +368,9 @@ for char in lv_hanzii_char_set:
             for defin in pro["definitions"]:
                 viet = defin["vietnamese"]
 
-                pattern = r"^[0-9a-z]\.? ?"
+                # Remove leading number like "1.", "1. ", "a.", "a " etc.
+                defin["vietnamese"] = remove_leading_number(viet)
 
-                # Replacement string
-                replacement = ""
-
-
-                # Replace the matching substring
-                new_viet = re.sub(pattern, replacement, viet.strip()).strip()
-
-                # if not new_viet:
-                #     continue
-
-                defin["vietnamese"] = new_viet
                 pass
             new_pro = {
                 "definitions": [item for item in pro["definitions"] if item["vietnamese"]],
@@ -408,14 +439,14 @@ for char in lv_hanzii_char_set:
         # raise KeyError(char)
         print(f"Key not found: {char}")
 
-with open("data/lacviet_parsed_fixed_pinyin.json", "w", encoding="utf-8") as file:
+with open("data/lacviet_data.json", "w", encoding="utf-8") as file:
     print(f"Fixed count: {len(new_lacviet)}")
-    json.dump(new_lacviet, file, ensure_ascii=False, indent=3)
+    json.dump(new_lacviet, file, ensure_ascii=False, indent=2)
     pass
 
 # Write down this items to check later (192 cases)
 with open("data/lacviet_parsed_issues.json", "w", encoding="utf-8") as file:
     json.dump(pinyin_issues, file, ensure_ascii=False, indent=3)
 
-    print(f"Needs to fixe {len(pinyin_issues)} issues")
+    print(f"Needs to fix {len(pinyin_issues)} issues")
     pass

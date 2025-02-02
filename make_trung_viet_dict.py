@@ -46,7 +46,7 @@ def main():
     parser.add_argument(
         "--dict-size",
         choices=["small", "mid", "big"],
-        default="small",
+        default="mid",
         required=False,
         help="Dictionary size: 'small' for Vietnamese definitions, 'mid' for definitions and examples, 'big' for all definitions including Chinese.",
     )
