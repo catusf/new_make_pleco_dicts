@@ -50,7 +50,7 @@ PC_CLUB_SUIT = "♣"
 PC_SPADE_SUIT = "♠"
 PC_MIDDLE_DOT = "・"
 PC_WIDESPACE = "\u3000"
-PC_DOTTED_SQUARE = "\u2B1A"
+PC_DOTTED_SQUARE = "\u2b1a"
 
 PC_MEANING_MARK = "MEANING"
 PC_TREE_MARK = "TREE"
@@ -125,9 +125,7 @@ def is_non_zero_file(fpath):
 
 
 def pure_traditional(word):
-    return hanzidentifier.is_traditional(word) and not hanzidentifier.is_simplified(
-        word
-    )
+    return hanzidentifier.is_traditional(word) and not hanzidentifier.is_simplified(word)
 
 
 def get_chinese_words(text):
@@ -286,9 +284,7 @@ class Radicals:
         # self.radical_variants = {}
 
         self.radical_set_file = join(WORDLIST_DIR, "radical_set.json")
-        self.radical_norminal_file = join(
-            WORDLIST_DIR, "radical_radical_norminals.json"
-        )
+        self.radical_norminal_file = join(WORDLIST_DIR, "radical_radical_norminals.json")
         self.radical_info_file = join(WORDLIST_DIR, "radicals.txt")
         self.radicals_useful_info_file = join(WORDLIST_DIR, "radicals-useful_info.txt")
         self.kangxi_radical_file = join(WORDLIST_DIR, "kangxi_radical_unicode.txt")
@@ -356,19 +352,13 @@ class Radicals:
         # with open(self.radical_norminal_file, "w", encoding="utf-8") as file:
         #     json.dump(self.radical_nominals, file, indent=4, ensure_ascii=False)
         for rad in self.radical_set:
-            self.radical_set[rad]["variants"] = sorted(
-                self.radical_set[rad]["variants"]
-            )
+            self.radical_set[rad]["variants"] = sorted(self.radical_set[rad]["variants"])
             self.radical_set[rad]["codepoint"] = hex(ord(rad))
             self.radical_set[rad]["standalone_codepoint"] = (
-                hex(ord(self.radical_set[rad]["standalone"]))
-                if self.radical_set[rad]["standalone"]
-                else ""
+                hex(ord(self.radical_set[rad]["standalone"])) if self.radical_set[rad]["standalone"] else ""
             )
 
-            self.radical_set[rad]["variant_codepoint"] = [
-                hex(ord(item)) for item in self.radical_set[rad]["variants"]
-            ]
+            self.radical_set[rad]["variant_codepoint"] = [hex(ord(item)) for item in self.radical_set[rad]["variants"]]
 
         with open(self.radical_set_file, "w", encoding="utf-8") as file:
             json.dump(self.radical_set, file, indent=4, ensure_ascii=False)
@@ -405,13 +395,9 @@ class Radicals:
 
                     if len(radical_strok_items) > 5:
                         app_ex1, app_code1, app_sym1 = radical_strok_items[5].split(" ")
-                        kangxi_unicode_set[number]["approx_symbol"].add(
-                            (app_code1, app_sym1)
-                        )
+                        kangxi_unicode_set[number]["approx_symbol"].add((app_code1, app_sym1))
 
-            with open(
-                self.kangxi_radical_supplement_file, "r", encoding="utf-8"
-            ) as fread:
+            with open(self.kangxi_radical_supplement_file, "r", encoding="utf-8") as fread:
                 next(fread)
                 kangxi_suppl_unicode_set = {}
 
@@ -421,9 +407,7 @@ class Radicals:
                     codepoint, symbol, name, rad_number = radical_strok_items[:4]
                     symbol = symbol.strip()
                     number = (
-                        int(match.group(1))
-                        if (match := regex.search(r"Kangxi Radical (\d+)", rad_number))
-                        else None
+                        int(match.group(1)) if (match := regex.search(r"Kangxi Radical (\d+)", rad_number)) else None
                     )
 
                     if not number:
@@ -441,23 +425,17 @@ class Radicals:
                             index += 1
 
                         # print(items[index])
-                        app_ex, app_code, app_sym = radical_strok_items[index].split(
-                            " "
-                        )
+                        app_ex, app_code, app_sym = radical_strok_items[index].split(" ")
                         kangxi_suppl_unicode_set[number].add((app_sym, app_code))
 
                         index += 1
                     if len(radical_strok_items) > index:
-                        app_ex1, app_code1, app_sym1 = radical_strok_items[index].split(
-                            " "
-                        )
+                        app_ex1, app_code1, app_sym1 = radical_strok_items[index].split(" ")
                         kangxi_suppl_unicode_set[number].add((app_sym1, app_code1))
                         index += 1
 
             for number in kangxi_suppl_unicode_set:
-                kangxi_unicode_set[number]["approx_symbol"].update(
-                    kangxi_suppl_unicode_set[number]
-                )
+                kangxi_unicode_set[number]["approx_symbol"].update(kangxi_suppl_unicode_set[number])
 
             for number in kangxi_unicode_set:
                 symbol, codepoint = kangxi_unicode_set[number]["symbol"]
@@ -662,9 +640,7 @@ def build_ids_radical_perfect():
         if info["standalone"]:
             full_char_decompositions[info["standalone"]] = rads.norminal(rad)
 
-    with open(
-        "./wordlists/IDS_dictionary_radical_perfect.txt", "w", encoding="utf-8"
-    ) as fwrite:
+    with open("./wordlists/IDS_dictionary_radical_perfect.txt", "w", encoding="utf-8") as fwrite:
         items = full_char_decompositions.items()
 
         for head, expression in items:
@@ -766,9 +742,7 @@ HTML_FOLDER = "/content/drive/My Drive/scrape_hanzii/html" if is_colab() else "h
 HTML_DONE_FOLDER = "data/html-done"
 
 
-def remove_existing_items(
-    new_urls, current_folder=HTML_FOLDER, done_folder=HTML_DONE_FOLDER
-):
+def remove_existing_items(new_urls, current_folder=HTML_FOLDER, done_folder=HTML_DONE_FOLDER):
     patterns = [f"{current_folder}/*.html", f"{done_folder}/*.html"]
     files = [file for pattern in patterns for file in glob.glob(pattern)]
 

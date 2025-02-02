@@ -25,31 +25,33 @@ PC_MIDDLE_DOT = "·"
 def remove_chinese_with_pipe(text):
     """
     Remove the Traditional Chinese characters before the '|' and the '|' itself in the input string.
-    
+
     Args:
         text (str): The input text to be cleaned.
-        
+
     Returns:
         str: The cleaned text.
     """
-    return re.sub(r'[\u4e00-\u9fff]+\|', '', text)
+    return re.sub(r"[\u4e00-\u9fff]+\|", "", text)
 
 
 def convert_to_mark_pinyin(text):
     # Define the regex as a constant
-    BRACKETS_REGEX = r'(\[[^\]]+\])'
-    
+    BRACKETS_REGEX = r"(\[[^\]]+\])"
+
     # Function to convert matched text to uppercase
     def replace_with_uppercase(match):
         # return match.group(1)
         return f" {numbered_to_accented(match.group(1))[1:-1]}"
-        
+
     return re.sub(BRACKETS_REGEX, replace_with_uppercase, text)
-    
+
+
 class Timer:
     """
     A Timer class to measure elapsed time with start, stop, and display functionalities.
     """
+
     def __init__(self):
         self.start_time = None
         self.end_time = None
@@ -79,11 +81,7 @@ class Timer:
         seconds = int(elapsed_time % 60)
         milliseconds = int((elapsed_time * 1000) % 1000)
 
-        return {
-            'minutes': minutes,
-            'seconds': seconds,
-            'milliseconds': milliseconds
-        }
+        return {"minutes": minutes, "seconds": seconds, "milliseconds": milliseconds}
 
     def display_elapsed(self):
         """Display the elapsed time."""
@@ -92,8 +90,7 @@ class Timer:
 
 
 def circled_number(n):
-    """ Returns circled numbers, maxes out at 35
-    """
+    """Returns circled numbers, maxes out at 35"""
     if 1 <= n <= 20:
         return chr(9311 + n)  # Unicode offset for circled digits ① to ⑳
     elif 21 <= n <= 35:  # Circled numbers 21–35
@@ -122,8 +119,9 @@ DEF_SEPERATOR = "/"
 
 # dictionary = ChineseDictionary()
 
-with open('data/hanzilearn_dedups.json', 'r', encoding='utf-8') as f:
+with open("data/hanzilearn_dedups.json", "r", encoding="utf-8") as f:
     dictionary = json.load(f)
+
 
 def get_def_contents(item, dict_size, has_marker=False):
     """
@@ -141,7 +139,7 @@ def get_def_contents(item, dict_size, has_marker=False):
          If the dictionary size is "small", only the definitions are included.
          If the word is not found in the dictionary, the function returns an empty string.
     """
-    
+
     definitions = []
 
     if item in dictionary:
@@ -152,13 +150,13 @@ def get_def_contents(item, dict_size, has_marker=False):
 
     contents = ""
     if has_marker:
-        contents += f"{pleco_make_bold("DEFINITION")}\n"
+        contents += f"{pleco_make_bold('DEFINITION')}\n"
 
     count = len(definitions)
-    
+
     for definition in definitions:
-        if dict_size in ["mid", "big"]: # Adds Pinyin
-            contents += f"{pleco_make_italic(numbered_to_accented(definition["pinyin"]).replace(" ", ""))} "
+        if dict_size in ["mid", "big"]:  # Adds Pinyin
+            contents += f"{pleco_make_italic(numbered_to_accented(definition['pinyin']).replace(' ', ''))} "
 
         contents += f"{'; '.join([remove_chinese_with_pipe(convert_to_mark_pinyin(item.strip())) for item in definition['meaning']])}{DEF_SEPERATOR}"
 
@@ -186,7 +184,7 @@ def get_headword_def_contents(item, pinyin, dict_size, has_marker=False):
          If the dictionary size is "small", only the definitions are included.
          If the word is not found in the dictionary, the function returns an empty string.
     """
-    
+
     definitions = []
 
     if item in dictionary:
@@ -198,7 +196,7 @@ def get_headword_def_contents(item, pinyin, dict_size, has_marker=False):
     contents = ""
 
     count = len(definitions)
-    
+
     for definition in definitions:
         contents += f"{'; '.join([remove_chinese_with_pipe(convert_to_mark_pinyin(item.strip())) for item in definition['meaning']])}{DEF_SEPERATOR}"
 
@@ -208,6 +206,7 @@ def get_headword_def_contents(item, pinyin, dict_size, has_marker=False):
     contents += "\n"
 
     return contents
+
 
 def make_linked_items(cur_item, lines, dict_size):
     """
@@ -225,7 +224,7 @@ def make_linked_items(cur_item, lines, dict_size):
     contents = ""
 
     for index, line in enumerate(lines, start=1):
-        tokens = set(line.split(' '))
+        tokens = set(line.split(" "))
         tokens.discard(cur_item)  # Don't repeat the headword
         tokens = sorted(list(tokens))
 
@@ -252,10 +251,20 @@ def make_linked_items(cur_item, lines, dict_size):
 def main():
     # Initialize argument parser
     parser = argparse.ArgumentParser(description="Process a thesaurus dictionary and generate output.")
-    parser.add_argument("--dict-size", choices=['small', 'mid', 'big'], default="big", required=False,
-                        help="Dictionary size: 'small' for Chinese thesaurus only, 'mid' adds Pinyin, 'big' adds definitions for words.")
-    parser.add_argument("--num-items", type=int, default=1000000, required=False,
-                        help="Maximum number of items to process (default: MAX_ITEMS).")
+    parser.add_argument(
+        "--dict-size",
+        choices=["small", "mid", "big"],
+        default="big",
+        required=False,
+        help="Dictionary size: 'small' for Chinese thesaurus only, 'mid' adds Pinyin, 'big' adds definitions for words.",
+    )
+    parser.add_argument(
+        "--num-items",
+        type=int,
+        default=1000000,
+        required=False,
+        help="Maximum number of items to process (default: MAX_ITEMS).",
+    )
     args = parser.parse_args()
 
     # Use the --num-items argument to limit processing
@@ -263,7 +272,7 @@ def main():
     dict_size = args.dict_size
 
     # Load JSON output
-    with open('data/thesaurus_dict.json', 'r', encoding='utf-8') as json_file:
+    with open("data/thesaurus_dict.json", "r", encoding="utf-8") as json_file:
         thesaurus_dict = json.load(json_file)
 
         pleco_file = "dict/ChineseThesaurus.txt"
@@ -271,11 +280,11 @@ def main():
         pleco_file = pleco_file.replace(".txt", f"-{dict_size}.txt")
 
         # Generate Pleco dictionary
-        with open(pleco_file, 'w', encoding='utf-8') as snd_file:
+        with open(pleco_file, "w", encoding="utf-8") as snd_file:
             count = 0
             print("Generating Pleco dict...")
             for headword in thesaurus_dict:
-                antonyms = set(thesaurus_dict[headword]["AntonymSet"]) # Removes dups
+                antonyms = set(thesaurus_dict[headword]["AntonymSet"])  # Removes dups
                 synonyms = set(thesaurus_dict[headword]["SynonymSet"])
                 negations = set(thesaurus_dict[headword]["NegationSet"])
 
@@ -291,18 +300,24 @@ def main():
                 if pinyin == headword:
                     pinyin = pinyinget_backup(headword)[0][0]
 
-                contents = f'{headword}\t{pinyin}\t'
+                contents = f"{headword}\t{pinyin}\t"
 
                 contents += get_headword_def_contents(headword, pinyin, dict_size=dict_size, has_marker=False)
 
-                for thesaurus_type, label in [("AntonymSet", "ANTONYM"), ("SynonymSet", "SYNONYM"), ("NegationSet", "NEGATION")]:
-                    list_items = sorted(list(dict.fromkeys(thesaurus_dict[headword][thesaurus_type]))) # Removes duplicated but keeps order
+                for thesaurus_type, label in [
+                    ("AntonymSet", "ANTONYM"),
+                    ("SynonymSet", "SYNONYM"),
+                    ("NegationSet", "NEGATION"),
+                ]:
+                    list_items = sorted(
+                        list(dict.fromkeys(thesaurus_dict[headword][thesaurus_type]))
+                    )  # Removes duplicated but keeps order
                     if list_items:
                         contents += f"{pleco_make_dark_gray(pleco_make_bold(label))}\n"
                         contents += make_linked_items(headword, list_items, dict_size=dict_size)
 
-                contents = contents.replace('\n', PC_NEWLINE)
-                snd_file.write(f'{contents}\n')
+                contents = contents.replace("\n", PC_NEWLINE)
+                snd_file.write(f"{contents}\n")
 
             print(f"Created {count} items and saved to {pleco_file}")
 

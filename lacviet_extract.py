@@ -68,12 +68,7 @@ def replace_html_ref(text):
     # Replace HTML references like &#466;
     # Then normalize it do the dicritical mark will be combined too
 
-    text = (
-        text.replace("&#8220;", "")
-        .replace("&#8221;", "")
-        .replace("&#8216;", " '")
-        .replace("&#8217;", "' ")
-    )
+    text = text.replace("&#8220;", "").replace("&#8221;", "").replace("&#8216;", " '").replace("&#8217;", "' ")
 
     text = re.sub(r"&#(\d+);", html_char_to_unicode, text)
     # new_text1 = unicodedata.normalize("NFC", new_text)
@@ -113,9 +108,7 @@ for line in lines[:MAX_LINES]:
         print(f"Not a valid definition line: {line}")
         continue
     else:
-        pronunciation_blocks = [
-            PRO_MARK + item.strip() for item in blocks if item.strip()
-        ]
+        pronunciation_blocks = [PRO_MARK + item.strip() for item in blocks if item.strip()]
 
     pro_results = []
 

@@ -1,6 +1,4 @@
-"""Fixes data of Lacviet Dictionary with the data from Hanzii.net
-
-"""
+"""Fixes data of Lacviet Dictionary with the data from Hanzii.net"""
 
 import copy
 import html
@@ -33,38 +31,19 @@ def mostly_chinese(text, check_len=2, threshold=0.8):
     return len(words) > check_len and len(chinese) / len(words) >= threshold
 
 
-exceptions = set(
-    [
-        "Yile",
-        "Joe là",
-        "Lầu năm góc",
-        "Phật; bụt",
-        "Internet，mạng xã hội"
-    ]
-)
+exceptions = set(["Yile", "Joe là", "Lầu năm góc", "Phật; bụt", "Internet，mạng xã hội"])
 
-appearances = [
-    "(tên",
-    "(thương hiệu)",
-    "(họ)",
-    "(thành phố)",
-    "(thành ngữ)",
-    "(thẻ tín dụng)"
-]
+appearances = ["(tên", "(thương hiệu)", "(họ)", "(thành phố)", "(thành ngữ)", "(thẻ tín dụng)"]
+
 
 def correct_wrong_sentence_case(text):
-    if (
-        len(text) < 2
-        or not text[0].isupper()
-        or mostly_chinese(text)
-        or text in exceptions
-    ):
+    if len(text) < 2 or not text[0].isupper() or mostly_chinese(text) or text in exceptions:
         return text
 
     for app in appearances:
         if app in text:
             return text
-    
+
     words = text.split(" ")
 
     if len(words) < 2:  # One word => proper name
@@ -93,11 +72,12 @@ def correct_wrong_sentence_case(text):
 
 # exit()
 
+
 def replace_html_entities_in_json(old_file_path, new_file_path):
     try:
-        with open(old_file_path, 'r', encoding='utf-8') as file:
+        with open(old_file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
-        
+
         def replace_entities(obj):
             if isinstance(obj, str):
                 return html.unescape(obj)
@@ -106,15 +86,16 @@ def replace_html_entities_in_json(old_file_path, new_file_path):
             elif isinstance(obj, dict):
                 return {key: replace_entities(value) for key, value in obj.items()}
             return obj
-        
+
         converted_data = replace_entities(data)
-        
-        with open(new_file_path, 'w', encoding='utf-8') as file:
+
+        with open(new_file_path, "w", encoding="utf-8") as file:
             json.dump(converted_data, file, ensure_ascii=False, indent=4)
-        
+
         print("HTML entities replaced successfully in JSON file.")
     except Exception as e:
         print(f"Error: {e}")
+
 
 with open("data/hanzilearn_dedups.json", "r", encoding="utf-8") as file:
     ccdict = json.load(file)
@@ -242,7 +223,7 @@ def list_not_in_first(first, second, show=False, msg=""):
 
     diff = second_set - first_set
 
-    print(f"{msg + ": " if msg else ""}{len(diff)=}")
+    print(f"{msg + ': ' if msg else ''}{len(diff)=}")
 
     if show:
         " ".join(sorted(diff))
@@ -282,7 +263,7 @@ print(f"Total {len(total_set)=}")
 cc_but_others = set(ccdict_dict) - lv_hanzii_set
 print(f"In CCDICT but not other -  {len(cc_but_others)=}")
 
-lv_hanzii_but_others = lv_hanzii_set -set(ccdict_dict) 
+lv_hanzii_but_others = lv_hanzii_set - set(ccdict_dict)
 print(f"In lvhanzi but not ccdict -  {len(lv_hanzii_but_others)=}")
 
 with open("data/cc_but_others.json", "w", encoding="utf-8") as file:
@@ -291,37 +272,21 @@ with open("data/cc_but_others.json", "w", encoding="utf-8") as file:
 ###
 
 print("===== Keys are chinese only ===")
-list_not_in_first(
-    lacviet_dict_pinyins, ccdict_dict_pinyins, msg="In ccdict but not in lacviet"
-)
+list_not_in_first(lacviet_dict_pinyins, ccdict_dict_pinyins, msg="In ccdict but not in lacviet")
 
-list_not_in_first(
-    ccdict_dict_pinyins, lacviet_dict_pinyins, msg="In lacviet but not in ccdict"
-)
+list_not_in_first(ccdict_dict_pinyins, lacviet_dict_pinyins, msg="In lacviet but not in ccdict")
 
-list_not_in_first(
-    lacviet_dict_pinyins, hanzii_dict_pinyins, msg="In hanzii but not in lacviet"
-)
+list_not_in_first(lacviet_dict_pinyins, hanzii_dict_pinyins, msg="In hanzii but not in lacviet")
 
-list_not_in_first(
-    hanzii_dict_pinyins, lacviet_dict_pinyins, msg="In lacviet but not in hanzii"
-)
+list_not_in_first(hanzii_dict_pinyins, lacviet_dict_pinyins, msg="In lacviet but not in hanzii")
 
-list_not_in_first(
-    ccdict_dict_pinyins, hanzii_dict_pinyins, msg="In hanzii but not in ccdict"
-)
+list_not_in_first(ccdict_dict_pinyins, hanzii_dict_pinyins, msg="In hanzii but not in ccdict")
 
-list_not_in_first(
-    hanzii_dict_pinyins, ccdict_dict_pinyins, msg="In ccdict but not in hanzii"
-)
+list_not_in_first(hanzii_dict_pinyins, ccdict_dict_pinyins, msg="In ccdict but not in hanzii")
 
-common_set_pinyins = (
-    set(ccdict_dict_pinyins) & set(hanzii_dict_pinyins) & set(lacviet_dict_pinyins)
-)
+common_set_pinyins = set(ccdict_dict_pinyins) & set(hanzii_dict_pinyins) & set(lacviet_dict_pinyins)
 
-total_set_pinyins = (
-    set(ccdict_dict_pinyins) | set(hanzii_dict_pinyins) | set(lacviet_dict_pinyins)
-)
+total_set_pinyins = set(ccdict_dict_pinyins) | set(hanzii_dict_pinyins) | set(lacviet_dict_pinyins)
 
 
 print(f"Common {len(common_set_pinyins)=}")
@@ -347,6 +312,7 @@ print(f"Only in LV {len(only_in_lv)=}")
 new_lacviet = {}
 pinyin_issues = {}
 
+
 def remove_leading_number(text):
     pattern1 = r"^[0-9a-z]\. ?"
     pattern2 = r"^[0-9a-z] "
@@ -354,17 +320,16 @@ def remove_leading_number(text):
     # Replace the matching substring
     new_text = re.sub(pattern1, "", text.strip())
     new_text = re.sub(pattern2, "", new_text).strip()
-    
+
     return new_text
 
-for char in lv_hanzii_char_set:
 
+for char in lv_hanzii_char_set:
     if char in lacviet:  # If in Lacviet priotize it. Fixes issues if any
         lacviet_dict_pinyins[char] = []
         new_lacviet[char] = []
 
         for pro in lacviet[char]:
-
             for defin in pro["definitions"]:
                 viet = defin["vietnamese"]
 
@@ -374,7 +339,6 @@ for char in lv_hanzii_char_set:
                 pass
             new_pro = {
                 "definitions": [item for item in pro["definitions"] if item["vietnamese"]],
-                
                 "oldpinyin": pro["pinyin"].replace("·", " ").replace("…", " "),
                 "metadata": pro["metadata"],
                 "notes": pro["notes"],
@@ -397,9 +361,7 @@ for char in lv_hanzii_char_set:
                 new_pinyin = hanzii_dict_pinyins[char]
                 new_pro["newpinyin"] = "~" + new_pinyin
             else:
-                new_pinyin = (
-                    pinyin_jyutping_sentence.pinyin(char).replace(" ，", ",").strip()
-                )
+                new_pinyin = pinyin_jyutping_sentence.pinyin(char).replace(" ，", ",").strip()
                 new_pro["newpinyin"] = ">" + new_pinyin
 
             if new_pinyin.replace(" ", "") == new_pro["oldpinyin"].replace(" ", ""):

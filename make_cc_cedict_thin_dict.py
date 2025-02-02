@@ -1,4 +1,4 @@
-# Create a "thin" version of the CC CE Dictionary, that saves spaces, 
+# Create a "thin" version of the CC CE Dictionary, that saves spaces,
 # compared with the default version in Pleco's dictionary.
 import csv
 import enum
@@ -7,7 +7,7 @@ from tools_configs import *
 # def replace_num_pinyin(match_obj):
 
 
-with open('data/hanzilearn_dedups.json', 'r', encoding='utf-8') as f:
+with open("data/hanzilearn_dedups.json", "r", encoding="utf-8") as f:
     dictionary = json.load(f)
 
 
@@ -32,13 +32,14 @@ with open("dict/CCCE-Thin.txt", "w", encoding="utf-8") as fwrite:
             pleco_text = f"{key}\t{pinyin}\t"
 
             if len(meanings) > 1:
-                pleco_text += f"{"\n".join([f"{pleco_make_bold(num)} {item}" for num, item in enumerate(meanings, start=1)])}"
+                pleco_text += (
+                    f"{'\n'.join([f'{pleco_make_bold(num)} {item}' for num, item in enumerate(meanings, start=1)])}"
+                )
             else:
-                pleco_text += f"{"\n".join([f"{item}" for _, item in enumerate(meanings, start=1)])}"
-                
+                pleco_text += f"{'\n'.join([f'{item}' for _, item in enumerate(meanings, start=1)])}"
+
             fwrite.write(f"{pleco_make_new_line(pleco_text, make_pleco=True)}\n")
 
         pass
 
 print(f"Writing {num} items")
-

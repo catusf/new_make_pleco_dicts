@@ -411,7 +411,7 @@ def replace_chinese_in_tree(match_obj):
         if rad_database.is_radical_variant(key):
             item = rad_database.lookup(key)
             pinyin = item["pinyin"]
-            viet_pron = f" / {item["viet-pron"]} "
+            viet_pron = f" / {item['viet-pron']} "
             # meaning = f"{item['meaning']} (#{item['number']})"
         elif key in char_dict:
             item = char_dict[key]
@@ -450,7 +450,9 @@ def fix_for_html(text):
     """
     return "\n".join([f"<pre>{line}</pre>" for line in text.split("\n")])
 
+
 import argparse
+
 
 # if CONVERT_TO_PLECO:
 def main():
@@ -660,7 +662,7 @@ def main():
                     comp_char = rad_database.norminal(comp)
                     item = rad_database.lookup(comp)
                     pinyin = item["pinyin"]
-                    meaning_text = f"{item["meaning"]} / {item["viet-pron"]}: {item["viet-meaning"]}" 
+                    meaning_text = f"{item['meaning']} / {item['viet-pron']}: {item['viet-meaning']}"
                     variants = sorted(rad_database.get_variants(comp))
 
                     if key in variants:  # If same as key headword, remove
@@ -678,7 +680,7 @@ def main():
                     pinyin = char_dict[comp]["pinyin"][0]
                     meaning_text = ""
                     for num, com_meaning in enumerate(char_dict[comp]["meaning"][0]):
-                        meaning_text += f"{number_in_cirle(num+1)} {com_meaning} "
+                        meaning_text += f"{number_in_cirle(num + 1)} {com_meaning} "
 
                 string += f"{pleco_make_link(comp_char, make_pleco=MAKE_PLECO)} {pleco_make_italic(pinyin, make_pleco=MAKE_PLECO)}: {meaning_text}\n"
 
@@ -702,14 +704,16 @@ def main():
                 meanings = all_meanings[num]
 
                 main_string = f"{key}\t"
-                
+
                 main_string += f"{pinyin}\t"
-        
+
                 main_string += f"{pleco_make_bold(pleco_make_dark_gray(PC_MEANING_MARK, make_pleco=MAKE_PLECO), make_pleco=MAKE_PLECO)}\n"
 
                 for num, meaning in enumerate(meanings):
                     if len(meanings) > 1:
-                        main_string += f"{number_in_cirle(num+1)} {remove_chinese_with_pipe(convert_to_mark_pinyin(meaning))} "
+                        main_string += (
+                            f"{number_in_cirle(num + 1)} {remove_chinese_with_pipe(convert_to_mark_pinyin(meaning))} "
+                        )
                     else:
                         main_string += f"{remove_chinese_with_pipe(convert_to_mark_pinyin(meaning))} "
 
@@ -724,15 +728,17 @@ def main():
             written += 1
         else:
             main_string = f"{key}\t"
-                
+
             for num, pinyin in enumerate(pinyins):
                 meanings = all_meanings[num]
 
                 main_string += f"[{pinyin}]\n"
-        
+
                 for num, meaning in enumerate(meanings):
                     if len(meanings) > 1:
-                        main_string += f"{number_in_cirle(num+1)} {remove_chinese_with_pipe(convert_to_mark_pinyin(meaning))} "
+                        main_string += (
+                            f"{number_in_cirle(num + 1)} {remove_chinese_with_pipe(convert_to_mark_pinyin(meaning))} "
+                        )
                     else:
                         main_string += f"{remove_chinese_with_pipe(convert_to_mark_pinyin(meaning))} "
 
@@ -760,15 +766,14 @@ def main():
 
     print(f"{written=}")
     print(f"Dictionary written {dict_filepath}")
-    
+
+
 if __name__ == "__main__":
     main()
-
 
     # complex_dict_to_excel(char_info_dict, "char_dict.xlsx")
 
     # char_dict_keys = frozenset(char_dict.keys())
-
 
     # print(f"In wordset but not in final list: {len(wordset - char_dict_keys)}")
     # print(f"Not in wordset (new components): {len(char_dict_keys - wordset)}")
@@ -777,4 +782,3 @@ if __name__ == "__main__":
 
     print(f"Elapsed time: {end_datetime - start_datetime}")
     flog.close()
-

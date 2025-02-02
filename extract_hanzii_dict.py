@@ -17,6 +17,7 @@ from tools_configs import DICT_DIR, WORDLIST_DIR, DATA_DIR
 
 DEBUG_ONLY = False
 
+
 def keyboard_handler(signum, frame):
     msg = "Ctrl-c was pressed. Do you really want to exit? y/n "
     print(msg, end="", flush=True)
@@ -118,7 +119,7 @@ for num, filepath in enumerate(files):
     if num >= MAX_ITEMS:
         break
 
-    print(f"Processing {num+1}: {filepath}...", end=" ")
+    print(f"Processing {num + 1}: {filepath}...", end=" ")
     # pleco_string = ""
 
     # The above code is not doing anything. It only contains the word "headword" and three hash
@@ -168,7 +169,7 @@ for num, filepath in enumerate(files):
     # Process Chi tiết từ
     if not (char_pron_soup := word_detail_soup.find("div", class_="box-word")):
         print(f"{filepath=} has no character pronunciation")
-        
+
         if DEBUG_ONLY:
             log_file.write(f"No pronunciation\t{filepath}\n")
 
@@ -193,7 +194,6 @@ for num, filepath in enumerate(files):
     )
 
     if not chinese_word_soup:
-        
         if DEBUG_ONLY:
             log_file.write(f"No Chinese characters\t{filepath}\n")
         continue
@@ -239,7 +239,7 @@ for num, filepath in enumerate(files):
         if not single_def_soup:
             if DEBUG_ONLY:
                 log_file.write(f"No wordkinds_soups\t{filepath}\n")
-            
+
             continue
         else:
             number = 1
@@ -402,7 +402,7 @@ with open(join(DATA_DIR, "wordkinds.json"), "w", encoding="utf-8") as fwrite:
 
 later_datetime = datetime.datetime.now()
 
-print(f"Time elapsed {later_datetime-now_datetime}")
+print(f"Time elapsed {later_datetime - now_datetime}")
 # with open('freq.txt', 'w', encoding='utf-8') as freq_file:
 #     freq_file.writelines([f'{x}\n' for x in freq])
 

@@ -86,9 +86,7 @@ string = string.replace("\n", PC_NEW_LINE)
 fwrite.write(f"{string}\n")
 
 # Write item for radicals with names
-string_has_name = (
-    f"{NAME_PAGE}\tyǒu míngzì\t{pleco_make_dark_gray("RADICALS WITH NAMES")}\n"
-)
+string_has_name = f"{NAME_PAGE}\tyǒu míngzì\t{pleco_make_dark_gray('RADICALS WITH NAMES')}\n"
 
 for rad in radicals:
     # fmt: off
@@ -109,7 +107,7 @@ for rad in radicals:
     notes = data["useful"]["notes"] if data["useful"] else ""
     items = data["useful"]["distinguish"] if data["useful"] else []
     distinguish = PC_MIDDLE_DOT.join([pleco_make_blue(item) for item in items])
-    
+
     variants_usefule = data["useful"]["variants"] if data["useful"] else ""
     rank = data["useful"]["rank"] if data["useful"] else ""
     mnemonic = data["useful"]["mnemonic"] if data["useful"] else ""
@@ -141,7 +139,7 @@ for rad in radicals:
         if not name:
             continue
         string_has_name += f"{pleco_make_link(rad)} {name_pinyins[num]} {pleco_make_blue(name)} {pleco_make_bold(meaning)}\n"
-    
+
         string_name_head = f"{name}\t{name_pinyins[num]}\tName of radical number {number} {pleco_make_link(rad)}{meaning_str}{examples_str}{back_home}"
         string_name_head = string_name_head.replace("\n", PC_NEW_LINE)
         fwrite.write(f"{string_name_head}\n")

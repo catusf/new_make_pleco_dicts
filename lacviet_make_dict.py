@@ -23,6 +23,7 @@ MAX_LINES = 500
 MAX_LINES = 20000000
 REPORT_COUNT = 1000
 
+
 def main():
     parser = argparse.ArgumentParser(description="Dictionary processing tool")
     parser.add_argument(
@@ -49,9 +50,7 @@ def main():
     if dict_size in ["big"]:
         print("Open new recommendation file")
         try:
-            with open(
-                join(DATA_DIR, "new_reccommendations.json"), "r", encoding="utf-8"
-            ) as fread:
+            with open(join(DATA_DIR, "new_reccommendations.json"), "r", encoding="utf-8") as fread:
                 new_recomend = json.load(fread)
         except Exception as e:
             print(f"Error: {e}")
@@ -73,11 +72,11 @@ def main():
                     break
 
                 if (count + 1) % REPORT_COUNT == 0:
-                        print(f"Processing item {count+1}...")
+                    print(f"Processing item {count + 1}...")
 
                 # char = item["character"]
                 items = dict_data[char]
-    
+
                 related = {}
 
                 for pro in items:
@@ -104,36 +103,30 @@ def main():
 
                     for num, defin in enumerate(pro["definitions"]):
                         if total > 1:
-                            pleco += f"{pleco_make_dark_gray(pleco_make_bold(num+1))} "
+                            pleco += f"{pleco_make_dark_gray(pleco_make_bold(num + 1))} "
 
                         pleco += f"{defin['vietnamese']}"
 
-                        if dict_size == "big" and defin['chinese']:
-                            pleco += (
-                                f"{PC_MIDDLE_DOT}{pleco_make_blue(defin['chinese'])}"
-                            )
+                        if dict_size == "big" and defin["chinese"]:
+                            pleco += f"{PC_MIDDLE_DOT}{pleco_make_blue(defin['chinese'])}"
 
                         pleco += "\n"
 
                         if dict_size in ["mid", "big"] and "examples" in defin:
                             examples = defin["examples"]
                             if examples:
-                                pleco += f"\n{pleco_make_dark_gray(PC_DIAMOND + " " + PC_VIDU_NEW_MARK)}\n"
+                                pleco += f"\n{pleco_make_dark_gray(PC_DIAMOND + ' ' + PC_VIDU_NEW_MARK)}\n"
 
                                 for example in examples:
-                                    pleco += (
-                                        f"{pleco_make_blue(example['example'])}"
-                                    )
+                                    pleco += f"{pleco_make_blue(example['example'])}"
                                     pleco += f"{example['translation']}\n"
 
                 if dict_size in ["big"] and char in new_recomend:
                     reccs = new_recomend[char]
                     if reccs:
-
                         related["related"] = reccs
 
-                        pleco += f"\n{pleco_make_dark_gray(
-                            PC_CLUB_SUIT)} {pleco_make_dark_gray(PC_RELATED_MARK)}\n"
+                        pleco += f"\n{pleco_make_dark_gray(PC_CLUB_SUIT)} {pleco_make_dark_gray(PC_RELATED_MARK)}\n"
 
                         for rec in reccs:
                             key = list(rec.keys())[0]
@@ -144,12 +137,14 @@ def main():
 
                             if key in dict_data:
                                 pleco += f"{pleco_make_dark_gray(PC_ARROW)} {pleco_make_link(key)} {
-                                    pleco_make_italic(item['pinyin'])} {item['mean']}\n"
+                                    pleco_make_italic(item['pinyin'])
+                                } {item['mean']}\n"
                             else:
                                 pleco += f"{pleco_make_dark_gray(PC_ARROW)} {pleco_make_blue(key)} {
-                                    pleco_make_italic(item['pinyin'])} {item['mean']}\n"
-                                
-                pleco = pleco.replace("\n\n","\n").replace("<d-tab></d-tab>", "")    
+                                    pleco_make_italic(item['pinyin'])
+                                } {item['mean']}\n"
+
+                pleco = pleco.replace("\n\n", "\n").replace("<d-tab></d-tab>", "")
                 pleco = pleco_make_new_line(pleco)
 
                 pleco_import_file.write(pleco_make_new_line(pleco) + "\n")

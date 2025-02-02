@@ -3,6 +3,7 @@ from dragonmapper.transcriptions import numbered_to_accented
 # from tools_configs import *
 # def replace_num_pinyin(match_obj):
 
+
 def read_csv_to_tuples(file_path):
     """
     Reads a CSV file and returns its contents as a list of tuples.
@@ -14,12 +15,13 @@ def read_csv_to_tuples(file_path):
         list of tuple: Each tuple represents a row in the CSV file.
     """
     data = []
-    with open(file_path, mode='r', encoding='utf-8') as file:
-        csv_reader = csv.reader(file, delimiter=',')  # Tab-separated values
+    with open(file_path, mode="r", encoding="utf-8") as file:
+        csv_reader = csv.reader(file, delimiter=",")  # Tab-separated values
         next(csv_reader)  # Skip the header row
         for row in csv_reader:
             data.append(row)  # Convert row to a tuple and add to the list
     return data
+
 
 # Example usage
 file_path = "data/words.csv"  # Replace with the actual path to your file
@@ -32,6 +34,7 @@ MAX_ITEMS = 1000000
 # MAX_ITEMS = 5
 
 from collections import Counter
+
 
 class ItemCounter:
     def __init__(self):
@@ -57,6 +60,7 @@ class ItemCounter:
         """Reset the counter."""
         self.counter.clear()
 
+
 items = []
 
 with open("dict/opencc_pleco.txt", "w", encoding="utf-8") as fwrite:
@@ -67,12 +71,15 @@ with open("dict/opencc_pleco.txt", "w", encoding="utf-8") as fwrite:
         item = row[1]
         items.append(f"{row[0]}-{row[1][1:-1]}")
         continue
-        
+
         # definitions = dictionary.lookup(item)
 
         pinyin = numbered_to_accented(row[2][1:-1])
-        meanings = [remove_chinese_with_pipe(regex.sub(PATTERN_PY, replace_num_pinyin_fs, item)) for item in row[3][:-1].split("/")]
-        pleco_text = f"{simpl}\t{pinyin}\t{"\n".join([f"{pleco_make_bold(num)} {item}" for num, item in enumerate(meanings, start=1)])}"
+        meanings = [
+            remove_chinese_with_pipe(regex.sub(PATTERN_PY, replace_num_pinyin_fs, item))
+            for item in row[3][:-1].split("/")
+        ]
+        pleco_text = f"{simpl}\t{pinyin}\t{'\n'.join([f'{pleco_make_bold(num)} {item}' for num, item in enumerate(meanings, start=1)])}"
         contents = get_def_contents(item)
         for content in contents:
             fwrite.write(f"{pleco_make_new_line(content, make_pleco=True)}\n")

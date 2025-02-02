@@ -49,9 +49,7 @@ for num, row in enumerate(data_as_tuples):
         break
     headword = row[1]
     raw_pinyin = row[2][1:-1].replace("u:", "ü")  # Prepocess this
-    pinyin = dragonmapper.transcriptions.numbered_to_accented(raw_pinyin).replace(
-        " ", ""
-    )
+    pinyin = dragonmapper.transcriptions.numbered_to_accented(raw_pinyin).replace(" ", "")
 
     nocase_key = f"{headword}-{pinyin.lower()}"
 
@@ -61,10 +59,7 @@ for num, row in enumerate(data_as_tuples):
     else:
         check_dups.add(nocase_key)
 
-    meanings = (
-        remove_chinese_with_pipe(replace_num_pinyin_fs(row[3][:-1]))
-        .split("/")
-    )
+    meanings = remove_chinese_with_pipe(replace_num_pinyin_fs(row[3][:-1])).split("/")
 
     if pinyin in clean_dict[nocase_key]:
         for meaning in meanings:

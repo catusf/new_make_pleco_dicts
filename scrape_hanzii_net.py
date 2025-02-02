@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     new_urls_list = sorted(new_urls, reverse=True)
 
-    half = int(len(new_urls_list)/2)
+    half = int(len(new_urls_list) / 2)
 
     list_first = new_urls_list[:half]
     list_second = new_urls_list[half:]
@@ -35,10 +35,8 @@ if __name__ == "__main__":
     print(f"{len(list_first)=}")
     print(f"{len(list_second)=}")
 
-
     with open(os.path.join(WORDLIST_DIR, "redownload-first.txt"), "w", encoding="utf-8") as file:
         file.writelines([url_to_headword(item) + "\n" for item in list_first])
 
     with open(os.path.join(WORDLIST_DIR, "redownload-second.txt"), "w", encoding="utf-8") as file:
         file.writelines([url_to_headword(item) + "\n" for item in list_second])
-

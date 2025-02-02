@@ -22,15 +22,15 @@ dict/TrungViet-big.txt:
 	uv run python lacviet_make_dict.py --dict-size=big --num-items
 
 tv_big: dict/TrungViet-big.txt
-	uv run python lacviet_make_dict.py --dict-size=big --num-items=100
+	uv run python lacviet_make_dict.py --dict-size=big
 
 tv_mid:
-	uv run python lacviet_make_dict.py --dict-size=mid --num-items=100
+	uv run python lacviet_make_dict.py --dict-size=mid
 
 tv_small:
-	uv run python lacviet_make_dict.py --dict-size=small --num-items=100
+	uv run python lacviet_make_dict.py --dict-size=small
 
-tv_all: tv_big tv_mid tv_small
+tv_all: tv_small tv_mid tv_big
 
 fix_lacviet_data: data/lacviet_parsed.json data/hanzilearn_dedups.json data/HanziiData.json
 	uv run python lacviet_fix_data.py

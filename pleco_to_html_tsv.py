@@ -4,6 +4,7 @@ from os.path import join
 
 from tools_configs import DICT_DIR
 import glob
+
 # dict_names = ["char_dict_pleco.txt", "radical_lookup_pleco.txt", "radical_name_pleco.txt", "tvb_pleco.txt"]
 dict_names = glob.glob("dict/*.txt")
 
@@ -21,7 +22,7 @@ replaces = {
 }
 
 for filepath in dict_names:
-    print(f'{filepath} being read')
+    print(f"{filepath} being read")
     with open(filepath, "r", encoding="utf-8") as fread:
         name, ext = os.path.splitext(filepath)
         contents = fread.read()
@@ -38,7 +39,7 @@ for filepath in dict_names:
                     continue
 
                 items = line.split("\t")
-                assert(len(items) == 3)
+                assert len(items) == 3
                 fwrite.write(f"{items[0]}\t{items[1]}<br>{items[2]}\n")
 
-        print(f'\t{outpath} written')
+        print(f"\t{outpath} written")

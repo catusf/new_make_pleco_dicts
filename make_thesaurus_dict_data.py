@@ -25,31 +25,33 @@ PC_MIDDLE_DOT = "·"
 def remove_chinese_with_pipe(text):
     """
     Remove the Traditional Chinese characters before the '|' and the '|' itself in the input string.
-    
+
     Args:
         text (str): The input text to be cleaned.
-        
+
     Returns:
         str: The cleaned text.
     """
-    return re.sub(r'[\u4e00-\u9fff]+\|', '', text)
+    return re.sub(r"[\u4e00-\u9fff]+\|", "", text)
 
 
 def convert_to_mark_pinyin(text):
     # Define the regex as a constant
-    BRACKETS_REGEX = r'(\[[^\]]+\])'
-    
+    BRACKETS_REGEX = r"(\[[^\]]+\])"
+
     # Function to convert matched text to uppercase
     def replace_with_uppercase(match):
         # return match.group(1)
         return f" {numbered_to_accented(match.group(1))[1:-1]}"
-        
+
     return re.sub(BRACKETS_REGEX, replace_with_uppercase, text)
-    
+
+
 class Timer:
     """
     A Timer class to measure elapsed time with start, stop, and display functionalities.
     """
+
     def __init__(self):
         self.start_time = None
         self.end_time = None
@@ -79,11 +81,7 @@ class Timer:
         seconds = int(elapsed_time % 60)
         milliseconds = int((elapsed_time * 1000) % 1000)
 
-        return {
-            'minutes': minutes,
-            'seconds': seconds,
-            'milliseconds': milliseconds
-        }
+        return {"minutes": minutes, "seconds": seconds, "milliseconds": milliseconds}
 
     def display_elapsed(self):
         """Display the elapsed time."""
@@ -92,8 +90,7 @@ class Timer:
 
 
 def circled_number(n):
-    """ Returns circled numbers, maxes out at 35
-    """
+    """Returns circled numbers, maxes out at 35"""
     if 1 <= n <= 20:
         return chr(9311 + n)  # Unicode offset for circled digits ① to ⑳
     elif 21 <= n <= 35:  # Circled numbers 21–35
@@ -122,8 +119,9 @@ DEF_SEPERATOR = "/"
 
 # dictionary = ChineseDictionary()
 
-with open('data/hanzilearn_dedups.json', 'r', encoding='utf-8') as f:
+with open("data/hanzilearn_dedups.json", "r", encoding="utf-8") as f:
     dictionary = json.load(f)
+
 
 def get_def_contents(item, dict_size, has_marker=False):
     """
@@ -141,7 +139,7 @@ def get_def_contents(item, dict_size, has_marker=False):
          If the dictionary size is "small", only the definitions are included.
          If the word is not found in the dictionary, the function returns an empty string.
     """
-    
+
     definitions = []
 
     if item in dictionary:
@@ -152,13 +150,13 @@ def get_def_contents(item, dict_size, has_marker=False):
 
     contents = ""
     if has_marker:
-        contents += f"{pleco_make_bold("DEFINITION")}\n"
+        contents += f"{pleco_make_bold('DEFINITION')}\n"
 
     count = len(definitions)
-    
+
     for definition in definitions:
-        if dict_size in ["mid", "big"]: # Adds Pinyin
-            contents += f"{pleco_make_italic(numbered_to_accented(definition["pinyin"]).replace(" ", ""))} "
+        if dict_size in ["mid", "big"]:  # Adds Pinyin
+            contents += f"{pleco_make_italic(numbered_to_accented(definition['pinyin']).replace(' ', ''))} "
 
         contents += f"{'; '.join([remove_chinese_with_pipe(convert_to_mark_pinyin(item.strip())) for item in definition['meaning']])}{DEF_SEPERATOR}"
 
@@ -186,7 +184,7 @@ def get_headword_def_contents(item, pinyin, dict_size, has_marker=False):
          If the dictionary size is "small", only the definitions are included.
          If the word is not found in the dictionary, the function returns an empty string.
     """
-    
+
     definitions = []
 
     if item in dictionary:
@@ -198,7 +196,7 @@ def get_headword_def_contents(item, pinyin, dict_size, has_marker=False):
     contents = ""
 
     count = len(definitions)
-    
+
     for definition in definitions:
         contents += f"{'; '.join([remove_chinese_with_pipe(convert_to_mark_pinyin(item.strip())) for item in definition['meaning']])}{DEF_SEPERATOR}"
 
@@ -208,6 +206,7 @@ def get_headword_def_contents(item, pinyin, dict_size, has_marker=False):
     contents += "\n"
 
     return contents
+
 
 def make_linked_items(cur_item, lines, dict_size):
     """
@@ -225,7 +224,7 @@ def make_linked_items(cur_item, lines, dict_size):
     contents = ""
 
     for index, line in enumerate(lines, start=1):
-        tokens = set(line.split(' '))
+        tokens = set(line.split(" "))
         tokens.discard(cur_item)  # Don't repeat the headword
         tokens = sorted(list(tokens))
 
@@ -250,27 +249,31 @@ def make_linked_items(cur_item, lines, dict_size):
 
 
 def main():
-    """    
-        Generates a json data file for thesaurus making.
-        
-    """ 
+    """
+    Generates a json data file for thesaurus making.
+
+    """
 
     parser = argparse.ArgumentParser(description="Process a thesaurus dictionary and generate output.")
-    parser.add_argument("--num-items", type=int, default=1000000, required=False,
-                        help="Maximum number of items to process (default: MAX_ITEMS).")
+    parser.add_argument(
+        "--num-items",
+        type=int,
+        default=1000000,
+        required=False,
+        help="Maximum number of items to process (default: MAX_ITEMS).",
+    )
     args = parser.parse_args()
 
     # Use the --num-items argument to limit processing
     max_items = args.num_items
 
     # Initialize the synonym dictionary with defaultdict
-    thesaurus_dict = defaultdict(lambda: {
-        "SynonymSet": [], "RelatedSet": [], "IndependentSet": [],
-        "AntonymSet": [], "NegationSet": []
-    })
+    thesaurus_dict = defaultdict(
+        lambda: {"SynonymSet": [], "RelatedSet": [], "IndependentSet": [], "AntonymSet": [], "NegationSet": []}
+    )
 
     # Process thesaurus files
-    with open('data/dict_synonym.txt', 'r', encoding='utf-8') as file:
+    with open("data/dict_synonym.txt", "r", encoding="utf-8") as file:
         count = 0
         print("Reading dict_synonym.txt...")
         for line in file:
@@ -281,17 +284,13 @@ def main():
                 break
             count += 1
             try:
-                category, words = line.split(' ', 1)
+                category, words = line.split(" ", 1)
             except ValueError:
                 print(f"Invalid format line: {line}")
                 continue
 
             type_char = category[-1]
-            thesaurus_type = {
-                '=': "SynonymSet",
-                '#': "RelatedSet",
-                '@': "IndependentSet"
-            }.get(type_char, None)
+            thesaurus_type = {"=": "SynonymSet", "#": "RelatedSet", "@": "IndependentSet"}.get(type_char, None)
             if not thesaurus_type:
                 print(f"Incorrect line: {line}")
                 continue
@@ -300,7 +299,7 @@ def main():
             for word in word_list:
                 thesaurus_dict[word][thesaurus_type].append(words)
 
-    with open('data/dict_antonym.txt', 'r', encoding='utf-8') as file:
+    with open("data/dict_antonym.txt", "r", encoding="utf-8") as file:
         count = 0
         print("Reading dict_antonym.txt...")
         for line in file:
@@ -311,19 +310,21 @@ def main():
             if count > max_items:
                 break
             try:
-                word1, word2 = line.split('-', 1)
+                word1, word2 = line.split("-", 1)
             except ValueError:
                 print(f"Invalid format line: {line}")
                 continue
 
-            if "," in word2: # ignores the case "没有反义词,可以参考孤独的反义词" = has no antonym. You can refer to the antonym of loneliness
+            if (
+                "," in word2
+            ):  # ignores the case "没有反义词,可以参考孤独的反义词" = has no antonym. You can refer to the antonym of loneliness
                 continue
-            
+
             thesaurus_dict[word1]["AntonymSet"].append(word2)
             thesaurus_dict[word2]["AntonymSet"].append(word1)
 
-    ignore_negations = {'不', '没'}
-    with open('data/dict_negative.txt', 'r', encoding='utf-8') as file:
+    ignore_negations = {"不", "没"}
+    with open("data/dict_negative.txt", "r", encoding="utf-8") as file:
         count = 0
         print("Reading dict_negative.txt...")
         negations = []
@@ -335,7 +336,7 @@ def main():
             if count > max_items:
                 break
             try:
-                word, _ = line.split('\t', 1)
+                word, _ = line.split("\t", 1)
             except ValueError:
                 print(f"Invalid format line: {line}")
                 continue
@@ -349,7 +350,7 @@ def main():
                     thesaurus_dict[word]["NegationSet"].append(negation)
 
     # Write JSON output
-    with open('data/thesaurus_dict.json', 'w', encoding='utf-8') as json_file:
+    with open("data/thesaurus_dict.json", "w", encoding="utf-8") as json_file:
         json.dump(thesaurus_dict, json_file, ensure_ascii=False, indent=4)
 
 
