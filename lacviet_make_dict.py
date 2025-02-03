@@ -58,6 +58,7 @@ def main():
     HANVIET_KEY = "Hán Việt"
     with open("data/lacviet_data.json", "r", encoding="utf-8") as data_file:
         dict_data = json.load(data_file)
+        keys = sorted(dict_data.keys())
 
         count = 0
         count_hanviet = 0
@@ -65,7 +66,7 @@ def main():
         outfile = join(DICT_DIR, f"TrungViet-{dict_size}.txt")
         # outfile = "dict/lacviet_small.txt"
         with open(outfile, "w", encoding="utf-8") as pleco_import_file:
-            for char in dict_data:
+            for char in keys:
                 count += 1
 
                 if count >= num_items:

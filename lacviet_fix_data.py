@@ -180,23 +180,9 @@ for item in hanzii:
         }
     )
 
-# print("=========")
-# print("Lacviet")
-# pprint(lacviet["二"])
-# print("Hanzii new")
-# pprint(hanzii_new["二"])
 
 print(f"{len(hanzii)=}")
 print(f"{len(hanzii_new)=}")
-# pass
-# added_to_lacviet += 1
-
-#     new_definitions = []
-
-#     for defin in definitions:
-#         new_definitions.append("")
-
-#     lacviet[char]["definitions"].extend(new_definitions)
 
 print(f"{added_to_lacviet=}")
 lacviet_dict = {}
@@ -314,8 +300,8 @@ pinyin_issues = {}
 
 
 def remove_leading_number(text):
-    pattern1 = r"^[0-9a-z]\. ?"
-    pattern2 = r"^[0-9a-z] "
+    pattern1 = r"^[0-9a-z]{1,2}\. ?"
+    pattern2 = r"^[0-9a-z]{1,2} "
 
     # Replace the matching substring
     new_text = re.sub(pattern1, "", text.strip())

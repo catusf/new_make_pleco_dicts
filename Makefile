@@ -45,8 +45,10 @@ to_html:
 	uv run python pleco_to_html_tsv.py
 
 to_bz2:
-	bzip2 -z -f dict/TrungViet-big.txt
-	bzip2 -z -f dict/TrungViet-big.tab
+	bzip2 -z -f -k dict/TrungViet-big.txt
+	bzip2 -z -f -k dict/TrungViet-big.tab
+	bzip2 -z -f -k data/lacviet_parsed.json
+	bzip2 -z -f -k data/lacviet_data.json
 
 gen_lv_tab:
 #	pyglossary --remove-html=script,a,span,link,span lv/LacViet-vi-zh.ifo tests/lv/LacViet-vi-zh.html.tab
